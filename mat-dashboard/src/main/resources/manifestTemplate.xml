@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifest SYSTEM "../schema/manifest.dtd">
+<manifest>
+	<runner channel="tablet" edition="national">
+		$RunneMainfestTabletNationalPlaceHolder$
+	</runner>
+	<runner channel="tablet" edition="ireland">
+		$RunnerMainfestTabletIrelandPlaceHolder$
+	</runner>
+	<runner channel="digital" edition="ireland">
+		$RunnerMainfestDigitalIrelandPlaceHolder$
+	</runner>
+	<runner channel="print" edition="ireland">
+		$RunnerMainfestPrintIrelandPlaceHolder$
+	</runner>
+</manifest>

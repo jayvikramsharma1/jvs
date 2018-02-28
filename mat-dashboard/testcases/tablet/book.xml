@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="BookCoverforNational"
+	comments="Executing testcase in National Edition in Main Book slot. TC_ID:https://newsroom360.testrail.com/index.php?/tests/view/228395">
+	<steps>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="bookCover" method="bookcover" require="NewSearchQuery"
+			screenshot="true">
+			<inputs>
+				<input value="BS_1_26_reg1_BookCover*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publishSlotUUID" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Published the cover book for Ireland" value="times"
+					element="cpi:publication" type="S3" feedType="book" />
+			</expected>
+		</step>
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan" />
+		<!-- <step name="slotSelection" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="allContent" method="allContent" require="EditorialPlan" /> -->
+	</steps>
+</testCase>

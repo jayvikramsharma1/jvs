@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="DeeplinkingArticle">
+	<steps>
+		<!-- <step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step> -->
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQueryChildArticle" require="NewSearchQuery">
+			<inputs>
+				<input value="BS_child_article_blue_panel_Story_5*" type="STRING" />
+				<input value="childArticle" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+			<step name="preparingtheArticle" method="storyPreparationCHP"
+			require="ArticlePreparation">
+			<inputs>
+			<input value="Child Article" type="STRING" />
+				<input value="Automation Standfirst" type="STRING" />
+				<input value="Automation onecolumnStandfirst" type="STRING" />
+				<input value="Automation floorlineHeadline" type="STRING" />
+			</inputs>
+		</step>
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_child_article_blue_panel_Image_5*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveandPublishtheArticle" method="publishArticle"
+			require="ArticlePreparation" />
+		<step name="openQuickMetadata" method="quickmetadata" require="ArticlePreparation" />
+		<step name="Selectingthetablettab" method="selectingTablet"
+			require="QuickMetadataTablet" />
+		<step name="childArticlePanel" method="panelSettings" require="QuickMetadataTablet" />
+		<step name="publishtheArticlewithChildPanel" method="publishArticle"
+			require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="navigatingtoTabPageFlow" method="releasePage"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickingontheStatus" method="tabPageFlow" require="TabPageFlow">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="navigatingtoWorkFlowWindow" method="workflowNational"
+			require="EditorialPlan" />
+		<step name="ChangingStatustoDone" method="editorialPlanDoneStatus"
+			require="EditorialWorkFlow" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan">
+			<expected>
+				<result message="Panel should set as blue" value="bluePanel"
+					element="cpi:style" type="S3" feedType="articleMetadata" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

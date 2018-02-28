@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundaytimesIrishHideNavigation"
+	comments="Executing testcase in Irish Edition at News Book at News Page Section at Slot1. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228260">
+	<steps>
+		<step name="moveDowntoNewsSlot" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_1_17_st_irish_HideNavigation*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_17_st_irish_HideNavigation*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublishSlotUUID" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Slot should not hide from navigation" value=""
+					element="cpi:hideInNav" type="S3" feedType="slotMetadata"
+					s3Content="true" />
+			</expected>
+		</step>
+		<step name="selectSlot" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="OpenBookSectionSlotMetadata" method="stBookSectionMetadata"
+			require="EditorialPlan" />
+		<step name="selectHideNavigationCheckBox" method="hideNavigationSlot"
+			require="SectionMetatadata" screenshot="true" />
+		<step name="publishtheSlotwithhideNavigation" method="stPublishSlotUUID"
+			require="EditorialPlan" screenshot="true">
+			<expected>
+				<result message="Slot should hide from navigation" value="true"
+					element="cpi:hideInNav" type="S3" feedType="slotMetadata" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

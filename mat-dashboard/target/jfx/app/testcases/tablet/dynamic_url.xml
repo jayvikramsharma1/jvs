@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="DynamicURL"
+	comments="Executing the test case times2 Book in Times2 section slot1">
+	<steps>
+		<step name="openShapeLibrary" method="shapeLibrary" require="EditorialPlan" />
+		<step name="SelecttheTemplate" method="templatePattern" require="EditorialPlan">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="enterandSearchthetemplateDesign" method="searchTemplateDesign"
+			require="EditorialPlan">
+			<inputs>
+				<input value="TT_TD_Dynamic_url_Root_article_Mark" type="STRING" />
+			</inputs>
+		</step>
+		<step name="movetheTemplateinSlot1" method="tdSlot2" require="EditorialPlan" />
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="createanArticle" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickCreatebutton" method="storyCreateBtn" require="NewStory" />
+		<step name="performSaveAsfunction" method="saveFileAs" require="SaveStory">
+			<inputs>
+				<input value="SA_DynamicUrl_4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="opentheArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopyaction" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="clickAddRelatedLink" method="addRelatedLink" require="ArticlePreparation" />
+		<step name="Movedownforpreparearticlelink" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="12" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="openHyperLink" method="insertRelatedLink" require="ArticlePreparation">
+		</step>
+		<step name="clickandentertheWebAddress" method="clickOnTextAreawebUrl"
+			require="Hyperlink">
+			<inputs>
+			<input value="facebook" type="STRING" />
+				<input value="http://www.facebook.com" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickokBtn" method="clickOKBtn" require="Hyperlink"/>
+			<step name="Moveup" method="mousewheeler" require="ArticlePreparation">
+				<inputs>
+					<input value="up" type="STRING" />
+					<input value="15" type="INTEGER" />
+				</inputs>
+			</step>
+			<step name="ArticleDescription" method="articleDescription"
+				require="ArticlePreparation">
+				<inputs>
+					<input value="down" type="STRING" />
+					<input value="10" type="INTEGER" />
+					<input
+						value="All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it."
+						type="STRING" />
+				</inputs>
+			</step>
+			<step name="inlineStoryPreparation" method="inlineStoryPreparation"
+				require="ArticlePreparation">
+				<inputs>
+					<input value="up" type="STRING" />
+					<input value="30" type="INTEGER" />
+					<input value="Dynamic Url" type="STRING" />
+				</inputs>
+			</step>
+			<step name="getImageFromCHP" method="addImageCHP" require="CHP">
+				<inputs>
+					<input value="BS_Column_Percentage*" type="STRING" />
+				</inputs>
+			</step>
+			<step name="saveTheArticlelinkedstory" method="saveArticle"
+				require="ArticlePreparation" />
+			<step name="getArticleUUIDlinkedstory" method="articleUUIDBtn"
+				require="ArticlePreparation" />
+			<step name="closetheArticlePreparationPagelinkedstory" method="closeArticlePreparation"
+				require="ArticlePreparation" />
+			<step name="closetemplatepagelinkedstory" method="close_window"
+				require="TemplatePlan" />
+			<step name="publishtheSlotlinkedstory" method="publish" require="EditorialPlan" />
+	</steps>
+</testCase>
+		

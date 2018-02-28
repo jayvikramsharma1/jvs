@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="AdditionalImage" comments="Executing the testcase in Front Section Slot1">
+	<steps>
+		<step name="selectingtheSlot" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="SA_AdditionalImage_6" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory" />
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="ScrollingToInlineArea" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="18" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="addCarosual1" method="addcarosual1" require="ArticlePreparation">
+			<inputs>
+				<input value="BS_1_AdditionalImage*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="InsertingImageinline" method="dropDownBtn" require="AssertInsertInline">
+			<inputs>
+				<input value="0" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingOk" method="assetInsertOkBtn" require="AssertInsertInline">
+		</step>
+		<step name="addCarosual2" method="addcarosual2" require="ArticlePreparation">
+			<inputs>
+				<input value="BS_2_AdditionalImage*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="InsertingImageinline2" method="dropDownBtn" require="AssertInsertInline">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingOkforsecondimage" method="assetInsertOkBtn"
+			require="AssertInsertInline">
+		</step>
+		<step name="MovingUp" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="60" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="entertheArticleText" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man might very 
+			likely be mutually related in the same fashion and there can be nothing so 
+			remote that we cannot reach to it. All those things which falls under the 
+			cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it. All those 
+			things which falls under the cognizance of man might very likely be mutually 
+			related in the same fashion and there can be nothing so remote that we cannot 
+			reach to it. All those things which falls under the cognizance of man might 
+			very likely be mutually related in the same fashion and there can be nothing 
+			so remote that we cannot reach to it. All those things which falls under 
+			the cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it. All those 
+			things which falls under the cognizance of man might very likely be mutually 
+			related in the same fashion and there can be nothing so remote that we cannot 
+			reach to it. All those things which falls under the cognizance of man might 
+			very likely be mutually related in the same fashion and there can be nothing 
+			so remote that we cannot reach to it. All those things which falls under 
+			the cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it.All those things which falls under the cognizance of man might very 
+			likely be mutually related in the same fashion and there can be nothing so 
+			remote that we cannot reach to it. All those things which falls under the 
+			cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it. All those 
+			things which falls under the cognizance of man might very likely be mutually 
+			related in the same fashion and there can be nothing so remote that we cannot 
+			reach to it. All those things which falls under the cognizance of man might 
+			very likely be mutually related in the same fashion and there can be nothing 
+			so remote that we cannot reach to it. All those things which falls under 
+			the cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it. All those 
+			things which falls under the cognizance of man might very likely be mutually 
+			related in the same fashion and there can be nothing so remote that we cannot 
+			reach to it. All those things which falls under the cognizance of man might 
+			very likely be mutually related in the same fashion and there can be nothing 
+			so remote that we cannot reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="preparingtheArticle" method="inlineStoryPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="60" type="INTEGER" />
+				<input value="Addition Image Article" type="STRING" />
+			</inputs>
+		</step>
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_3_AdditionalImage*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveandPublishtheArticle" method="saveArticle"
+			require="ArticlePreparation" />
+		<step name="gettingArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closeArticlePreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" >
+		<expected>
+				<result message="Image Column Width" value="middle" element="cpi:anchor"
+					type="S3" feedType="imagePositional" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

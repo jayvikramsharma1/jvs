@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="PositionalVerticalAlign" >
+	<steps>
+		<step name="slotSelection" method="slot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="BS_positional_vertical_align_Story_5*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+			<step name="preparingtheArticle" method="storyPreparationCHP"
+			require="ArticlePreparation">
+			<inputs>
+			<input value="Positional vertical Alignment" type="STRING" />
+				<input value="Automation Standfirst" type="STRING" />
+				<input value="Automation onecolumnStandfirst" type="STRING" />
+				<input value="Automation floorlineHeadline" type="STRING" />
+			</inputs>
+		</step>
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_positional_vertical_align_image_5*" type="STRING" />
+			</inputs>
+		</step>
+		<!-- <step name="saveandPublishtheArticle" method="publishArticle"
+			require="ArticlePreparation" /> -->
+		<step name="imageMetadata" method="clickingOnImage" require="ArticlePreparation">
+		</step>
+		<step name="SettingtheColumnwidth" method="positionalsVerticalAlign"
+			require="ArticleImageMetadata">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="ClickSavebutton" method="medataPanelSaveBtn" require="ArticleImageMetadata">
+		</step>
+		<step name="closeStoryPreparation" method="gettingImageUUID"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<!-- <step name="navigatingtoTabPageFlow" method="releasePage"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickingontheStatus" method="tabPageFlow" require="TabPageFlow">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="navigatingtoWorkFlowWindow" method="workflowIrish"
+			require="EditorialPlan" />
+		<step name="ChangingStatustoDone" method="editorialPlanDoneStatus"
+			require="EditorialWorkFlow" /> -->
+		<step name="publishtheSlot" method="publish" require="EditorialPlan">
+			<expected>
+				<result message="Image vertical Allignment" value="top"
+					element="cpi:anchor" type="S3" feedType="imagePositional" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

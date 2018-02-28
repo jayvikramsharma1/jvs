@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ChpStoriesAdvancedsearch" comments="Executing the scenario to get the word count bigger">
+	<steps>
+		<step name="clickingOnSearchCHP" method="chpadvancedsearchStory"
+			require="CHPFolder">
+			<inputs>
+				<input value="News" type="STRING" />
+				<input value="35" type="INTEGER" />
+				<input value="1" type="INTEGER" />
+				<input value="1800" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonStory01" method="sendToProduction01" require="PagePlanner" />
+		<step name="sendToProductionStory01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_PositionalPage1" type="STRING" />
+			</inputs>
+		</step> 
+		<step name="clickonStory02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionStory02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_PositionalPage2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="searchForPictures" method="pictureSearch" require="CHP" />
+		<step name="clickonImage01" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionImage01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_PositionalPage1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonImage02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionImage02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_PositionalPage2" type="STRING" />
+			</inputs>
+		</step>
+	<!-- 	<step name="clickonStory" method="sendToProductionCHAdvanced01"
+			require="PagePlanner" />
+		<step name="sendToProductionStory" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_News_Image_1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonImage02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionImage02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_Sports_Image_2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closingCHP" method="closeChp" require="CHP" /> -->
+		</steps>
+</testCase>

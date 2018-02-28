@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="TemplateDesign">
+	<steps>
+		<step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan">
+		</step>
+		<step name="selectingTabletPattern" method="templatePattern"
+			require="EditorialPlan">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickOntheSearchBoxandSelecttheDesign" method="searchTemplateDesign"
+			require="EditorialPlan">
+			<inputs>
+				<input value="TT_TD_Business_CityPeople" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingtheSlot1" method="tdSlot1" require="EditorialPlan">
+		</step>
+	</steps>
+</testCase>

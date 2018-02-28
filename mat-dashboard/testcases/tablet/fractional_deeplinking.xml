@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="FractionalDeeplinking"
+	comments="Executing the test case scotland section slot4 and 5">
+	<steps>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_Fractional_Deeplink_1*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_Fractional_Deeplink_1*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+		<step name="openselectedslotforFractionalDeeplink" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="createDeeplinking" method="createChildArticle"
+			require="TemplatePlan" />
+		<step name="clickingOnFractionalDeeplink" method="createFractionalDeeplink"
+			require="NewStory" />
+		<step name="clickingOnCreateButton" method="storyCreateBtn"
+			require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="SA_Fractional_5" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory" />
+		<step name="openingChildArticle" method="openchildarticle"
+			require="TemplatePlan" />
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="navigatetoHypertextwindow" method="addingDeeplink"
+			require="ArticlePreparation" />
+		<step name="preparingFractionalDeeplink" method="insertHyperlink"
+			require="Hyperlink">
+			<inputs>
+				<input value="Scottish National Party" type="STRING" />
+			</inputs>
+		</step>
+		<step name="getImageFromCHP" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_Column_Percentage*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetheArticlePreparationPageFractionalDeeplink" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="gettingQuickAccesslinkedstory" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileNamelinkedstory" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_Fractional_Deeplink_2*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindowlinkedstory" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindowlinkedstory" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_Fractional_Deeplink_2*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticlelinkedstory" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUIDlinkedstory" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPagelinkedstory" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepagelinkedstory" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlotlinkedstory" method="publish" require="EditorialPlan" />
+		<!-- <step name="closetemplatepage" method="close_window" require="TemplatePlan" 
+			/> <step name="publishtheSlot" method="publish" require="EditorialPlan" /> -->
+	</steps>
+</testCase>
+		

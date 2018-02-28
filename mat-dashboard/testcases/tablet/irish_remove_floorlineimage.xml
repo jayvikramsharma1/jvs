@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="IrishRemoveFloorLineImage"
+	comments="Executing this testcase in World section Slot7. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228270 ">
+	<steps>
+	<!-- 	<step name="moveDowntoNewsSlot" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step> -->
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileNameforFloorLine" method="floorLineImage"
+			require="NewSearchQuery">
+			<inputs>
+				<input value="BS_1_23_story_floorlineimage*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccessforFloorLine" method="searchQuery"
+			require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_1_23_irishRemoveFloorLine*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_23_irishfloorlineimage*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="withFloorLineScreenshot" method="screenshotCapture"
+			require="TemplatePlan" screenshot="true">
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Added PullQuote to the Article" value="link"
+					element="atom:link[@cpi:qualifier='articleMetaData']" type="S3"
+					feedType="article" s3Content="true" />
+			</expected>
+		</step>
+		<step name="OpenTheSelectedSlottoRemovefloorline" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="removeFloorLine" method="removefloorLine" require="TemplatePlan" />
+		<step name="clickYesBtn" method="yesBtn" require="Confirmation" />
+		<step name="withoutFloorLineScreenshot" method="screenshotCapture"
+			require="TemplatePlan" screenshot="true"/>
+			<step name="closetemplatepagewithremovingFloorLine" method="close_window"
+				require="TemplatePlan" />
+			<step name="publishtheSlotwithFloorLineremove" method="publish"
+				require="EditorialPlan" screenshot="true">
+				<expected>
+					<result message="Added PullQuote to the Article" value="link"
+						element="atom:link[@cpi:qualifier='articleMetaData']" type="S3"
+						feedType="article" />
+				</expected>
+			</step>
+	</steps>
+</testCase>

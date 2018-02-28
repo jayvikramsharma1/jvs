@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="IrishSectionMetadata" comments="Executing testcase in National edition in Front Section ">
+	<steps>
+		<step name="selectTheSlot" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigatingtoTabPageFlow" method="releasePage"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="capturetheWindow" method="screenCapture" require="TabPageFlow" screenshot="true"/>
+		<step name="closeWindow" method="closeWindow" require="TabPageFlow" />
+	</steps>
+</testCase>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundayTimesIrishPositionalOverridePage4to5"
+	comments="Executing the testcase in Business Book at Business Page section Slot2. TC_ID:https://newsroom360.testrail.com/index.php?/tests/view/228370 ">
+	<steps>
+	<!-- <step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step> -->
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_1_15_st_irish_Positionpage4*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_15_st_irish_Positionpage4*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveandPublishtheArticle" method="saveArticle"
+			require="ArticlePreparation" />
+		<step name="MovingTopOftheArticle" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="imageMetadata" method="clickingOnImage" require="ArticlePreparation"
+			screenshot="true">
+		</step>
+		<step name="SettingthePositionalwidth" method="positionalsPage"
+			require="ArticleImageMetadata" screenshot="true">
+			<inputs>
+				<input value="4" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="ClickSavebutton" method="medataPanelSaveBtn" require="ArticleImageMetadata">
+		</step>
+		<step name="MovingTopOftheArticletogetImageUUID" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="gettingImageUUID" method="imageUUIDBtn" require="ArticlePreparation">
+		</step>
+		<step name="closeStoryPreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Image displaying page is 4" value="4"
+					element="cpi:pagenumber" type="S3" feedType="imagePositional"
+					s3Content="true" />
+			</expected>
+		</step>
+		<step name="OpenTheSelectedSlottoAmendImagePosition" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="opentheArticletoMakechangeinImagePosition" method="openarticle"
+			require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="SettingthePositionalwidthwithamend" method="positionalpage"
+			require="ArticlePreparation" screenshot="true">
+			<inputs>
+				<input value="5" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="MovingTopOftheArticletocaptureagainWithAmend" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="capturetheamend" method="capturepositionalpageChange"
+			require="ArticlePreparation" screenshot="true" />
+		<step name="MovingTopOftheArticletogetImageUUIDforAmend" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="gettingImageUUIDwithamend" method="imageUUIDBtn"
+			require="ArticlePreparation" />
+		<step name="closeStoryPreparationWindowwithAmend" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepagewithAmend" method="close_window"
+			require="TemplatePlan" />
+		<step name="publishtheSlotwithamend" method="stPublish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Image displaying page is 5" value="5"
+					element="cpi:pagenumber" type="S3" feedType="imagePositional" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

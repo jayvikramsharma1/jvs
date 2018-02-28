@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.news.controller.RunnerWindowControllerNew">
+   <children>
+      <SplitPane fx:id="runnerSplitPane" dividerPositions="0.0505" layoutX="92.0" layoutY="70.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="runnerSplitPaneLeft" minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="221.0" style="-fx-background-color: #263238;">
+               <children>
+                  <Button fx:id="printImage" layoutX="-5.0" layoutY="-6.0" mnemonicParsing="false" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="10.0" />
+                  <Button fx:id="tabletImage" layoutX="5.0" layoutY="118.0" mnemonicParsing="false" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="95.0" />
+                  <Button fx:id="digitalImage" layoutX="5.0" layoutY="200.0" mnemonicParsing="false" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="180.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="432.0">
+               <children>
+                  <SplitPane dividerPositions="0.2467718794835007" layoutX="21.0" layoutY="20.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Accordion fx:id="RunnerCountryAccordion" layoutX="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                <panes>
+                                  <TitledPane fx:id="RunnerTitledPaneNational" animated="false" text="National">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="172.0" />
+                                    </content>
+                                  </TitledPane>
+                                  <TitledPane fx:id="RunnerTitledPaneIreland" animated="false" text="Ireland">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    </content>
+                                  </TitledPane>
+                                </panes>
+                              </Accordion>
+                              <TextField fx:id="testSearch" layoutY="4.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="4.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="runnerTableView" layoutX="14.0" layoutY="46.0" prefHeight="517.0" prefWidth="521.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                                <columns>
+                                  <TableColumn fx:id="runnerTableViewColumnSno" prefWidth="75.0" text="#" />
+                                  <TableColumn fx:id="runnerTableViewColumnRegion" prefWidth="123.0" text="Region" />
+                                    <TableColumn fx:id="runnerTableViewColumnTestCases" prefWidth="322.0" text="Test Cases" />
+                                    <TableColumn fx:id="runnerTableViewColumnTools" prefWidth="75.0" text="Tools" />
+                                    <TableColumn fx:id="runnerTableViewColumnParameters" prefWidth="75.0" text="Parameters" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="RunnerBtnGenerate" layoutX="-20.0" layoutY="-7.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" text="Generate" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Label fx:id="runnerTitle" layoutX="30.0" layoutY="14.0" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

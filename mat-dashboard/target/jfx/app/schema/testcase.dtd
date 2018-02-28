@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT testCase (steps)>
+<!ATTLIST testCase name CDATA #REQUIRED>
+<!ATTLIST testCase comments CDATA #REQUIRED>
+<!ELEMENT steps (step+)>
+<!ELEMENT step (inputs*, expected*)>
+<!ATTLIST step name CDATA #REQUIRED>
+<!ATTLIST step require (Login|MoD|PagePlanner|Publication|EditorialPlan|TemplatePlan|NewStory|SaveStory|ChannelCopy|ArticlePreparation|QuickMetadataTablet|AssertInsertInline|NewSearchQuery|PagePlannerMetadata|ArticleImageMetadata|Formatting|EditorialWorkFlow|Hyperlink|TabPageFlow|CHP|SendToProduction|CHPFolder|InsertPages|PropertyWindow|SectionMetatadata|VideoStory|EditorialLogin|STEditionCreation|Confirmation) #REQUIRED>
+<!ATTLIST step method CDATA #REQUIRED>
+<!ATTLIST step screenshot (true|false) #IMPLIED>
+<!ELEMENT inputs (input*)>
+<!ELEMENT input EMPTY>
+<!ATTLIST input value CDATA #REQUIRED>
+<!ATTLIST input type (INTEGER|STRING|BOOLEAN) #REQUIRED>
+<!ELEMENT expected (result*)>
+<!ELEMENT result EMPTY>
+<!ATTLIST result message CDATA #REQUIRED>
+<!ATTLIST result value CDATA #REQUIRED>
+<!ATTLIST result type (S3|WINDOW) #REQUIRED>
+<!ATTLIST result feedType (edition|book|section|slot|article|image|articleMetadata|slotMetadata|imageMetadata|imagePositional) #REQUIRED>
+<!ATTLIST result s3Content (true|false) #IMPLIED>
+<!ATTLIST result element CDATA #REQUIRED>

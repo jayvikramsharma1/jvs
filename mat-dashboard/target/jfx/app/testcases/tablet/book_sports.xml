@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="BookCoverforSports" comments="Executing testcase in Sports Book in Book Cover slot">
+	<steps>
+		<step name="clickingOnSportsBook" method="stSportsNational"
+			require="STEditionCreation" />
+		<!-- <step name="slotSelectionSportsBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforSports" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforSportsSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step> -->
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="bookCover" method="bookcover" require="NewSearchQuery">
+			<inputs>
+				<input value="BS_Potrait_Image_2*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan">
+			<!-- <expected> <result message="Headline Text Allignment Should be Center" 
+				value="center" element="cpi:headlineTextAlignment" type="S3" feedType="articleMetadata" 
+				/> </expected> -->
+		</step>
+	</steps>
+</testCase>

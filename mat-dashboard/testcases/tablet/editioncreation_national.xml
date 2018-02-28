@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="EditionCreationNational" comments="Creating national Edition. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228527">
+	<steps>
+		<!-- <step name="ExpandingNationalPublishing" method="nationalPlanExtend"
+			require="EditorialPlan" />
+		<step name="slotSelectionMainBook" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step> -->
+		<step name="ExpandingNationalPublishing" method="nationalPlanExtend"
+			require="EditorialPlan" />
+		<step name="slotSelectionMainBook" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlot" method="selectAllSlot"
+			require="EditorialPlan"/>
+			<step name="creatingtheSlotDWP" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="ClickTheNationalTimesBook" method="timesNational"
+			require="EditorialPlan" />
+			<step name="slotSelectiontimes" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforTimes" method="selectAllSlot"
+			require="EditorialPlan"/>
+			<step name="creatingtheSlotDWPforTimesBook" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOnMainBook" method="mainBookNational"
+			require="EditorialPlan" />
+		<step name="navigateToWorkflowWindow" method="workflowNational"
+			require="EditorialPlan" />
+		<step name="changeTheEditionToInprogress" method="editorialPlanInProgress"
+			require="EditorialWorkFlow" />
+		<step name="openPropertyWindow" method="propertyWindow" require="EditorialPlan" />
+		<step name="selectingPropertyUUID" method="gettingEditionPropertyUuid"
+			require="PropertyWindow">
+			<expected>
+				<result message="Getting Edition Property for MainBook" value="link"
+					element="atom:link[@title='Main Book']" type="S3" feedType="edition" />
+				<!-- <result message="Getting Edition Property for Times" value="link"
+					element="atom:link[@title='Times2']" type="S3" feedType="edition" /> -->	
+			</expected>
+			</step>
+		<!--<step name="slotSelectionFrontSection" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="newsSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="opinionSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="worldSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="businessSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="20" type="INTEGER" />
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="registerSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="sportsSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="scotlandSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="25" type="INTEGER" />
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="mindGames" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="20" type="INTEGER" />
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="ClickTheNationalTimesBook" method="timesNational"
+			require="EditorialPlan" />
+		<step name="timesBook" method="slotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="timesSection" method="slotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="artSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="fashionSection" method="sectionDwp" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOnMainBook" method="mainBookNational"
+			require="EditorialPlan" />
+		<step name="navigateToWorkflowWindow" method="workflowNational"
+			require="EditorialPlan" />
+		<step name="changeTheEditionToInprogress" method="editorialPlanInProgress"
+			require="EditorialWorkFlow" />
+		<step name="openPropertyWindow" method="propertyWindow" require="EditorialPlan" />
+		<step name="selectingPropertyUUID" method="gettingEditionPropertyUuid"
+			require="PropertyWindow">
+			<expected>
+				<result message="Getting Edition Property for MainBook" value="link"
+					element="atom:link[@title='Main Book']" type="S3" feedType="edition" />
+				<result message="Getting Edition Property for Times" value="link"
+					element="atom:link[@title='Times2']" type="S3" feedType="edition" />	
+			</expected>
+		</step> -->
+	</steps>
+</testCase>

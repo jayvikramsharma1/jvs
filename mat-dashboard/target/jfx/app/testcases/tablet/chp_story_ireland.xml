@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ChpStoriesireland">
+	<steps>
+		<!-- <step name="clickingOnSearchCHP" method="chpQuery" require="PagePlanner" />
+		<step name="querySelect" method="quickCHPQuery" require="CHP">
+			<inputs>
+				<input value="story" type="STRING" />
+			</inputs>
+		</step> -->
+		<step name="searchingStory" method="storySearch" require="CHP">
+			<inputs>
+				<input value="ireland" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonStory01" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionStory01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_disable_save_article_1" type="STRING" />
+			</inputs>
+		</step>
+
+		<step name="clickonStory02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionStory02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_child_article_blue_panel_1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="searchForPictures" method="pictureSearch" require="CHP" />
+		<step name="clickonImage01" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionImage01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_disable_save_article_Image_2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonImage02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionImage02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_child_article_blue_panel_Image_2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closeCHPQueryWindow" method="closeChp" require="CHP" />
+		<!-- <step name="createPagePlan" method="createPagePlan" require="PagePlanner"> 
+			<inputs> <input value="03/04/2017" type="STRING" /> </inputs> </step> -->
+	</steps>
+</testCase>

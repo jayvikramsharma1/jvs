@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="PublicationAssetsPreview">
+	<steps>
+		<step name="editorialPageDown" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="newsSlotSelection" method="newsSlot" require="EditorialPlan">
+			<inputs>
+				<input value="newsSlot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="searchMethodeQueryIcon" method="methodeQuery"
+			require="TemplatePlan">
+		</step>
+		<step name="searchMethodeQueryFile" method="fileName" require="NewSearchQuery">
+			<inputs>
+				<input value="BS_videostory0902" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickingOkButton" method="okBtn" require="NewSearchQuery"> 
+		</step> 
+		<step name="getVideoStory" method="dragStory" require="TemplatePlan">
+		</step>
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+	</steps>
+</testCase>
+			

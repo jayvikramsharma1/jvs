@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ps790">
+	<steps>
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="ScrollToInline" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="22" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingoninline" method="clickOnInsertInline01"
+			require="ArticlePreparation" />
+		<step name="setHyperLink" method="insertHyperlink" require="Hyperlink">
+			<inputs>
+				<input value="Scottish NSP " type="STRING" />
+			</inputs>
+		</step>
+		<step name="SaveAndCloseArticle" method="saveAndCloseStoryPreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage_story" method="close_window"
+			require="TemplatePlan" />
+		<step name="slotSelection_newstory" method="slot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="BS_publishingarticle_06" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory" />
+		<step name="clickOpenArticle_story" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="entertheArticleText" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="preparingtheArticle" method="storyPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="Automation Headline" type="STRING" />
+				<input value="Automation Standfirst" type="STRING" />
+				<input value="Automation onecolumnStandfirst" type="STRING" />
+				<input value="Automation floorlineHeadline" type="STRING" />
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="SaveAndCloseArticle_story" method="saveAndCloseStoryPreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage_newstory" method="close_window"
+			require="TemplatePlan" />
+		<step name="publishtheSlot_newstory" method="publish" require="EditorialPlan" />
+		<step name="openselectedslot_03" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOpenArticle_03" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="ScrollToInline_deeplink" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="22" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingoninline02" method="clickOnInsertInline02"
+			require="ArticlePreparation" />
+		<step name="setHyperLink02" method="insertHyperlink" require="Hyperlink">
+			<inputs>
+				<input value="Story Published " type="STRING" />
+			</inputs>
+		</step>
+		<step name="SaveAndCloseArticle_02" method="saveAndCloseStoryPreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+	</steps>
+</testCase>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ChildArticleYellowPanel" comments="Executing testcase in National Edition at magazine Book at Magazine Cover Section at Slot1. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228318">
+	<steps>
+	<step name="navigationtoMagazineBook" method="rightNavigation"
+			require="STEditionCreation" />
+		<step name="clickonMagazine" method="stOtherNationalBooks"
+			require="STEditionCreation" />
+		<step name="slotSelectionMagazineBook" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+			<step name="moveDowntoNewsSlot" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="childArticle" type="STRING" />
+			</inputs>
+		</step>
+		<step name="expandNational" method="stNationalExpand" require="NewStory">
+			<inputs>
+				<input value="11" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="SA_5_13_st_childArticleforYellowPanel" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory" screenshot="true"/>
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="childArticle" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="entertheArticleText" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="inlineStoryPreparation" method="inlineStoryPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="Child Article For Yellow Panel" type="STRING" />
+			</inputs>
+		</step>
+		<step name="getImageFromCHP" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_13_st_national_yellowOverride*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="openQuickMetadata" method="quickmetadata" require="ArticlePreparation" />
+		<step name="Selectingthetablettab" method="selectingTablet"
+			require="QuickMetadataTablet" />
+			<step name="childArticlePanel" method="panelSettings"
+			require="QuickMetadataTablet" screenshot="true">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingQuickMetadataSaveButton" method="saveBtnPosition"
+			require="QuickMetadataTablet" />
+			<step name="saveTheArticlewithchildpanel" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_1_13_st_yellowPanel*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_13_st_national_yellowPanel*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetheArticlePreparationPageforMainArticle" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepageformainArticle" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublish" require="EditorialPlan" screenshot="true">
+		<expected>
+				<result message="Panel should set as yellow" value="yellowPanel"
+					element="cpi:style" type="S3" feedType="articleMetadata" s3Content="true" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

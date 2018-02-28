@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundayTimesInlineImageBaseLine"
+	comments="Executing the testcase in Culture Book at Culture Art section Slot6. TC_ID:https://newsroom360.testrail.com/index.php?/tests/view/228387">
+	<steps>
+		<!-- <step name="movingdowntoregistersection" method="editorialPageUpDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step> --> 
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan">
+		</step>
+		<step name="selectingTabletPattern" method="templatePattern"
+			require="EditorialPlan">
+			<inputs>
+				<input value="0" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickOntheSearchBoxandSelecttheDesign" method="searchTemplateDesign"
+			require="EditorialPlan">
+			<inputs>
+				<input value="ST_TD_NEWS_Mark_Inline_Images_NEW_15-Dec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingtheSlot1" method="tdSlot3" require="EditorialPlan" />
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="expandNational" method="stNationalExpand" require="NewStory">
+			<inputs>
+				<input value="9" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="ST_SA_1_15_Irish_BaseLine" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory" screenshot="true"/> 
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="ArticleDescription" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertinlineimage" method="inlineImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_15_st_irish_Baseline*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="InsertingImageinline" method="dropDownBtn" require="AssertInsertInline">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingOk" method="assetInsertOkBtn" require="AssertInsertInline">
+		</step>
+		<step name="saveArticle" method="saveArticle" require="ArticlePreparation">
+		</step>
+		<step name="movingDownToGetTheINLIneImageUUID" method="inlineImagePotraitUUID"
+			require="ArticlePreparation">
+		</step>
+		<step name="inlineStoryPreparation" method="inlineStoryPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="InLine Image Base Line" type="STRING" />
+			</inputs>
+		</step>
+		<step name="getImageFromCHP" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_15_st_irish_BaseColumnWidth*" type="STRING" />
+			</inputs>
+		</step>
+			<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closeArticlePreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Validating Inline Image is presented in the article"
+					value="link" element="cpi:copy/xhtml:div/xhtml:p/xhtml:link[@rel='related']"
+					type="S3" feedType="article" />
+			</expected>
+		</step>
+		<step name="validateTheInlineimageofWidth1000" method="test"
+			require="EditorialPlan">
+			<expected>
+				<result message="Validating Inline Image of width is 1000"
+					value="1000" element="cpi:width" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+		<step name="validateTheInlineimageofHeight1500" method="test"
+			require="EditorialPlan">
+			<expected>
+				<result message="Validating Inline Image of Height is 1500"
+					value="1500" element="cpi:height" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+		<step name="openselectedslotAgain" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOpenArticletoChangetheInlineimage" method="openarticle"
+			require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savethechanges" method="saveArticle" require="ArticlePreparation" />
+		<step name="openImageMetaDATAWINDOW" method="clickOnInlineImagePotrait"
+			require="ArticlePreparation" screenshot="true">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="enterBaseLinevalue6" method="inlineBaseline"
+			require="ArticleImageMetadata" screenshot="true">
+			<inputs>
+				<input value="6" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savethemetadatachanges" method="medataPanelSaveBtn"
+			require="ArticleImageMetadata" />
+		<step name="inlineImageUUIDfor6" method="inlineImagePotraitUUID" require="ArticlePreparation" />
+		<step name="publishtheArticle" method="publishArticle" require="ArticlePreparation">
+			<expected>
+				<result message="Baseline value is 6" value="6"
+					element="cpi:baseline" type="S3" feedType="imagePositional" s3Content="true"/>
+			</expected>
+		</step>
+		<step name="SelectTheInlineImage" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="openImageMetaDATAWINDOWtoChange12" method="clickOnInlineImagePotrait"
+			require="ArticlePreparation" screenshot="true">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="enterBaseLinevalue12" method="inlineBaseline"
+			require="ArticleImageMetadata" screenshot="true">
+			<inputs>
+				<input value="12" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savethemetadatachangesAgain" method="medataPanelSaveBtn"
+			require="ArticleImageMetadata" />
+		<step name="inlineImageUUIDAgain" method="inlineImagePotraitUUID"
+			require="ArticlePreparation" />
+		<step name="publishtheArticleAgain" method="publishArticle"
+			require="ArticlePreparation">
+			<expected>
+				<result message="Baseline value is 12" value="12"
+					element="cpi:baseline" type="S3" feedType="imagePositional" s3Content="true"/>
+			</expected>
+		</step>
+		<step name="closeArticlePreparationWindowafterchangingthecolumnwidth" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepageafterchangingthecolumnwidth" method="close_window" require="TemplatePlan" />
+	</steps>
+</testCase>

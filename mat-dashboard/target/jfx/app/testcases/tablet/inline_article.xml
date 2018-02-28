@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="InlineArticle"
+	comments="Executing the testcases in ireland at scotland section in slot3">
+	<steps>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_inlinelink_1*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_inlinelink_1*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+	<step name="OpenTheSelectedSlotforinlineArticle" method="openSlotSelection"
+		require="EditorialPlan">
+		<inputs>
+			<input value="slot3" type="STRING" />
+		</inputs>
+	</step>
+	<step name="gettingQuickAccessforinlineArticle" method="methodeQuery"
+		require="TemplatePlan" />
+	<step name="fileNameforinlineArticle" method="dwpMethodeQuery"
+		require="NewSearchQuery">
+		<inputs>
+			<input value="SA_InsertINlineArticle_1*" type="STRING" />
+			<input value="articleSpec" type="STRING" />
+		</inputs>
+	</step>
+	<step name="CheckingWindowforinlineArticle" method="checkChannelCopyWindow"
+		require="CHP" />
+	<step name="GetselectWindowforinlineArticle" method="addImageCHP"
+		require="CHP">
+		<inputs>
+			<input value="BS_LetterSpacing*" type="STRING" />
+		</inputs>
+	</step>
+	<step name="saveandPublishtheArticleforinlineArticle" method="saveArticle"
+		require="ArticlePreparation" />
+	<step name="InsertingforinlineArticle" method="mousewheeler"
+		require="ArticlePreparation">
+		<inputs>
+			<input value="up" type="STRING" />
+			<input value="18" type="INTEGER" />
+		</inputs>
+	</step>
+	<step name="InsertingInlineArticle" method="mousewheeler" require="ArticlePreparation">
+		<inputs>
+			<input value="down" type="STRING" />
+			<input value="20" type="INTEGER" />
+		</inputs>
+	</step>
+	<step name="QuickAcessforinlineArticle" method="getQuickAccessBar"
+		require="ArticlePreparation" />
+	<!-- We have to drag and drop the none channel story for inline story -->
+	<step name="insertinlineimage" method="inlineImageCHP" require="CHP">
+		<inputs>
+			<input value="SA_inlinelink_1*" type="STRING" />
+		</inputs>
+	</step>
+	<step name="InsertingImageinline" method="dropDownBtn" require="AssertInsertInline">
+		<inputs>
+			<input value="0" type="INTEGER" />
+		</inputs>
+	</step>
+	<step name="clickingOk" method="assetInsertOkBtn" require="AssertInsertInline">
+	</step>
+	<step name="closeStoryPreparationWindow" method="closeArticlePreparation"
+		require="ArticlePreparation">
+	</step>
+	<step name="closetemplatepageAfteraddinginlineArticle" method="close_window" require="TemplatePlan" />
+	<step name="publishtheSlotAfteraddinginlineArticle" method="publish" require="EditorialPlan">
+		<!-- <expected>
+			<result message="validating Inline article should present"
+				value="a"
+				element="//cpi:copy/xhtml:div/xhtml:p/xhtml:a[@dtxInsert='Related link - Insert headline as hyperlink']"
+				type="S3" feedType="article" />
+		</expected> -->
+	</step>
+</steps>
+</testCase>

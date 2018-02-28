@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Methode Null Suite" duration-ms="0" started-at="2017-11-02T06:59:52Z" finished-at="2017-11-02T06:59:52Z">
+    <groups>
+    </groups>
+  </suite> <!-- Methode Null Suite -->
+</testng-results>

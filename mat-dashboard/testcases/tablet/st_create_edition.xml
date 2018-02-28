@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="STEditionCreationNational"
+	comments="Executing testcase for creating edition in national">
+	<steps>
+		<step name="ExpandingNationalPublishing" method="nationalPlanExtend"
+			require="EditorialPlan" />
+		<step name="slotSelectionNewsBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforNews" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforNewsSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="slotSelection" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickingOnSportsBook" method="stSportsNational"
+			require="STEditionCreation" />
+		<step name="slotSelectionSportsBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforSports" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforSportsSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="slotSelectionSports" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigationtoMagazineBook" method="rightNavigation"
+			require="STEditionCreation" />
+		<step name="clickonMagazine" method="stOtherNationalBooks"
+			require="STEditionCreation" />
+		<step name="slotSelectionMagazineBook" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforMagazine" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforMagazineSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="slotSelectionMagazine" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigationtoBuisnessBook" method="rightNavigation"
+			require="STEditionCreation" />
+		<step name="clickonBuisness" method="stOtherNationalBooks"
+			require="STEditionCreation" />
+		<step name="slotSelectionBuisnessBook" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforBuisness" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforBuisnessSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigationtoNewsReviewBook" method="rightNavigation"
+			require="STEditionCreation" />
+		<step name="clickonNewsReview" method="stOtherNationalBooks"
+			require="STEditionCreation" />
+		<step name="slotSelectionNewsReviewBook" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforNewsReview" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforNewsReviewSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigationtoCultureBook" method="rightNavigation"
+			require="STEditionCreation" />
+		<step name="clickonCulture" method="stOtherNationalBooks"
+			require="STEditionCreation" />
+		<step name="slotSelectionCultureBook" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforCulture" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforCultureSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigationtoStyleBook" method="rightNavigation"
+			require="STEditionCreation" />
+		<step name="clickonStyle" method="stOtherNationalBooks" require="STEditionCreation" />
+		<step name="slotSelectionStyleBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforStyle" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforStyleSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigationtoTravelBook" method="rightNavigation"
+			require="STEditionCreation" />
+		<step name="clickonTravel" method="stTravelNationalBooks"
+			require="STEditionCreation" />
+		<step name="slotSelectionTravelBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingallSlotforTravel" method="selectAllSlot"
+			require="EditorialPlan" />
+		<step name="creatingtheSlotDWPforTravelSlot" method="slotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="navigationtoNews" method="leftNavigation" require="STEditionCreation" />
+		<step name="clickingOnNewsBook" method="stNewsNational" require="STEditionCreation" />
+		<step name="navigateToWorkflowWindow" method="workflowNational"
+			require="EditorialPlan" />
+		<step name="changeTheEditionToInprogress" method="editorialPlanInProgress"
+			require="EditorialWorkFlow" />
+		<step name="openPropertyWindow" method="propertyWindow" require="EditorialPlan" />
+		<step name="selectingPropertyUUID" method="gettingEditionPropertyUuid"
+			require="PropertyWindow">
+			<expected>
+				<result message="vaidating News Book is Created" value="link"
+					element="atom:link[@title='News']" type="S3" feedType="edition" />
+				<result message="vaidating Sport Book is Created" value="link"
+					element="atom:link[@title='Sport']" type="S3" feedType="edition" />
+				<result message="vaidating Magazine Book is Created" value="link"
+					element="atom:link[@title='Magazine']" type="S3" feedType="edition" />
+				<result message="vaidating Buisness Book is Created" value="link"
+					element="atom:link[@title='Business']" type="S3" feedType="edition" />
+				<result message="vaidating News Review Book is Created"
+					value="link" element="atom:link[@title='News Review']" type="S3"
+					feedType="edition" />
+				<result message="vaidating Style Book is Created" value="link"
+					element="atom:link[@title='Style']" type="S3" feedType="edition" />
+				<result message="vaidating Travel Book is Created" value="link"
+					element="atom:link[@title='Travel']" type="S3" feedType="edition" />
+				<result message="vaidating Culture Book is Created" value="link"
+					element="atom:link[@title='Culture']" type="S3" feedType="edition" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

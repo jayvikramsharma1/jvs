@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="CloseMODWindow" comments = "closing the MOD window">
+	<steps>
+		<step name="close" method="close"  require="MoD"/>
+	</steps>
+</testCase>

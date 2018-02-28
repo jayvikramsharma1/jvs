@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ChpStoriesComments">
+	<steps>
+		<!-- <step name="clickingOnSearchCHP" method="chpQuery" require="PagePlanner" />
+		<step name="querySelect" method="quickCHPQuery" require="CHP">
+			<inputs>
+				<input value="story" type="STRING" />
+			</inputs>
+		</step> -->
+		<!-- <step name="searchingStory" method="storySearch" require="CHP">
+			<inputs>
+				<input value="comments" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonStory01" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionStory01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_hide_navigation_Slot_1" type="STRING" />
+			</inputs>
+		</step> -->
+
+		<step name="clickonStory02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionStory02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_masthead_style_Slot_1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="searchForPictures" method="pictureSearch" require="CHP" />
+		<step name="clickonImage01" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionImage01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_hide_navigation_Image_2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonImage02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionImage02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_masthead_style_Image_2" type="STRING" />
+			</inputs>
+		</step>
+	</steps>
+	</testCase>

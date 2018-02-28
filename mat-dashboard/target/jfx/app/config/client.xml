@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE clientConfig SYSTEM "../schema/client.dtd">
+<clientConfig>
+	<windows>
+		<default>
+			<defaultarticleImage x="400" y="800" />
+			<defaultCandidateImagePosition1 x="1700"
+				y="370" />
+			<defaultCandidateImagePosition2 x="1700"
+				y="600" />
+			<defaultCandidateImagePosition3 x="1700"
+				y="800" />
+		</default>
+		<window name="Times Publication Selection" id="TT_SELECTION"
+			title="Select a News UK Methode Publication">
+			<properties>
+				<ttOKBtn id="[ID:1]" x="60" y="14" />
+				<ttCancelBtn id="[ID:2]" x="60" y="15" />
+				<ttTitleSelection id="[ID:101]" x="76" y="19" />
+			</properties>
+
+		</window>
+		<window name="Sunday Times Publication Selection" id="ST_SELECTION"
+			title="Select a News UK Methode Publication">
+			<properties>
+				<stOKBtn id="[ID:1]" x="60" y="14" />
+				<stCancelBtn id="[ID:2]" x="60" y="15" />
+				<stTitleSelection id="[ID:101]" x="251" y="49" />
+			</properties>
+		</window>
+		<window name="Sun Publication Selection" id="SUN_SELECTION"
+			title="Select a News UK Methode Publication">
+			<properties>
+				<sunOKBtn id="[ID:1]" x="60" y="14" />
+				<sunCancelBtn id="[ID:2]" x="60" y="15" />
+				<sunTitleSelection id="[ID:101]" x="216" y="74" />
+			</properties>
+		</window>
+		<window name="Login" id="LOGIN" title="Connect to ">
+			<properties>
+				<loginBtn id="[CLASS:Button; INSTANCE:4]" x="33" y="12" />
+				<loginCancelBtn id="[ID:2]" x="42" y="10" />
+				<loginUsername id="[CLASS:Edit; INSTANCE:1]" x="25" y="10" />
+				<loginPassword id="[CLASS:Edit; INSTANCE:2]" x="25" y="10" />
+				<loginDevExpander id="[ID:208]" x="686" y="327" />
+				<loginSiExpander id="[ID:208]" x="14" y="121" />
+				<loginSiDB1 id="[ID:208]" x="94" y="86" />
+			</properties>
+		</window>
+		<window name="Login Connection Error" id="LOGIN_CONNECTION_ERROR"
+			title="Connection error ">
+			<properties>
+				<connectionErrorOkBtn id="[ID:2]" x="35" y="11" />
+			</properties>
+		</window>
+		<window name="Login Error" id="LOGIN_ERROR" title="Error">
+			<properties>
+				<errorOkBtn id="[ID:1]" x="38" y="11" />
+			</properties>
+		</window>
+		<window name="Message Of The Day" id="MOD" title="Message Of The Day">
+			<properties>
+				<modOkBtn id="[ID:1]" x="38" y="10" />
+			</properties>
+		</window>
+		<window name="EidosMedia Methode" id="MAIN" title="EidosMedia Méthode">
+			<menus>
+				<menu name="FILE" id="[ID:59398]" shortcuts="{ALT}" x="22" y="11" />
+				<menu name="VIEW" id="[ID:59398]" shortcuts="{ALT}" x="62" y="12" />
+				<menu name="TOPICS" id="[ID:59398]" shortcuts="{ALT}" x="103"
+					y="12" />
+				<menu name="OPTIONS" id="[ID:59398]" shortcuts="{ALT}" x="159"
+					y="11" />
+				<menu name="TOOLS" id="[ID:59398]" shortcuts="{ALT}" x="209" y="12" />
+				<menu name="WINDOW" id="[ID:59398]" shortcuts="{ALT}" x="261"
+					y="11" />
+				<menu name="HELP" id="[ID:59398]" shortcuts="{ALT}" x="309" y="11" />
+			</menus>
+			<properties>
+				<searchTopics id="[ID:59592]" x="63" y="14" />
+				<searchChp id="[ID:59592]" x="116" y="14" />
+				<stSearchChp id="[ID:59592]" x="92" y="14" />
+				<searchMethode id="[ID:59592]" x="17" y="13" />
+				<selectQuery id="[ID:59592]" x="158" y="10" />
+				<clickOnChpStory01 id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="322" y="238" />
+				<clickOnChpStory02 id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="376" y="591" />
+				<clickOnAllAssets id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="383" y="12" />
+				<chpWindowStory id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="333" y="73" />
+				<chpWindowPictures id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="329" y="51" />
+				<chpSearchTextArea id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="214" y="12" />
+				<searchClickBtn id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="451" y="11" />
+				<clickOnCHPFolder id="[ID:59392]" x="183" y="12" />
+				<clickOnCHPAdvancedSearchIcon
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="507" y="13" />
+				<clickOnCHPAdvancedSearchImages
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="357" y="343" />
+				<clickOnSelectArea01 id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="330" y="383" />
+					<clickOnEquals id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="111" y="410" />
+					<wordCountNumeric id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="182" y="410" />
+				<clickOnAddBtn01 id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="480" y="325" />
+				<clickOnTextArea01 id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="184" y="356" />
+				<clickOnSelectArea02 id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="300" y="400" />
+				<clickOnTextArea02 id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="200" y="425" />
+				<clickOnSearchOkBtn id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="28" y="650" />
+			</properties>
+		</window>
+		<window name="New Story" id="NEW_STORY" title="New Story">
+			<properties>
+				<newstoryCreateBtn id="[ID:15729]" x="37" y="13" />
+				<newstoryQuickCreateBtn id="[ID:15778]" x="51"
+					y="13" />
+				<newstoryCancelBtn id="[ID:2]" x="41" y="14" />
+				<timesDeck id="[ID:906]" x="79" y="10" />
+				<fractionalDeeplinking id="[ID:1]" x="54" y="95" />
+				<stNationalExpand id="[ID:906]" x="32" y="23" />
+				<stIrelandExpand id="[ID:906]" x="32" y="41" />
+			</properties>
+		</window>
+		<window name="Save As" id="Save_As" title="[REGEXPTITLE:(?i) - Save as]">
+			<properties>
+				<saveAsBtn id="[ID:1]" x="46" y="13" />
+				<saveAsCancelBtn id="[ID:2]" x="52" y="13" />
+				<saveAsName id="[ID:41771]" x="344" y="11" />
+				<saveAsdescription id="[ID:41809]" x="332" y="12" />
+			</properties>
+		</window>
+		<window name="Open" id="OPEN" title="[REGEXPTITLE:(?i) - Open]">
+			<properties>
+				<openBtn id="[ID:1]" x="35" y="11" />
+				<openCancelBtn id="[ID:2]" x="30" y="16" />
+				<openFileName id="[ID:41771]" x="350" y="14" />
+			</properties>
+		</window>
+		<window name="Quick Open" id="QUICK_OPEN" title="Open">
+			<properties>
+				<quickOpenChannelSelect id="[ID:901]" x="83"
+					y="11" />
+				<quickOpenDateSelect id="[ID:904]" x="83" y="9" />
+				<quickPagePlan id="[ID:1]" x="100" y="33" />
+				<quickOpenOkBtn id="[CLASS:Button; INSTANCE:3]" x="34"
+					y="14" />
+				<quickOpenCancelBtn id="[ID:2]" x="34" y="14" />
+			</properties>
+		</window>
+		<window name="New PagePlan " id="NEW_PAGEPLAN" title="New Page Plan">
+			<properties>
+				<newPagePlanChannelSelect id="[ID:901]" x="120"
+					y="11" />
+				<newPagePlanDateSelect id="[ID:904]" x="103"
+					y="11" />
+				<mondayTemplate id="[ID:1160]" x="75" y="10" />
+				<tuesdayTemplate id="[ID:1160]" x="75" y="25" />
+				<wednesdayTemplate id="[ID:1160]" x="75" y="41" />
+				<thursdayTemplate id="[ID:1160]" x="75" y="57" />
+				<fridayTemplate id="[ID:1160]" x="75" y="73" />
+				<saturdayTemplate id="[ID:1160]" x="75" y="90" />
+				<newSTPageTemplate id="[ID:1160]" x="75" y="10" />
+				<newPagePlanOkBtn id="[ID:1]" x="36" y="12" />
+				<newPagePlanCancelBtn id="[ID:2]" x="35" y="12" />
+				<newPagePlanName id="[ID:1003]" x="93" y="8" />
+			</properties>
+		</window>
+		<window name="Page Planner " id="PAGE_PLANNER_MENU" title="[REGEXPTITLE:(?i)prp]">
+			<menus>
+				<menu name="FILE" id="[ID:59398]" shortcuts="[ALT]f" x="25" y="12" />
+				<menu name="EDIT" id="[ID:59398]" shortcuts="[ALT]e" x="57" y="12" />
+				<menu name="VIEW" id="[ID:59398]" shortcuts="[ALT]v" x="96" y="13" />
+				<menu name="INSERT" id="[ID:59398]" shortcuts="[ALT]i" x="137"
+					y="14" />
+				<menu name="PAGE" id="[ID:59398]" shortcuts="[ALT]p" x="179" y="12" />
+				<menu name="ITEM" id="[ID:59398]" shortcuts="[ALT]m" x="218" y="12" />
+				<menu name="ADS" id="[ID:59398]" shortcuts="[ALT]a" x="256" y="12" />
+				<menu name="TOPICS" id="[ID:59398]" shortcuts="[ALT]c" x="292"
+					y="13" />
+				<menu name="TOOLS" id="[ID:59398]" shortcuts="[ALT]t" x="341"
+					y="13" />
+				<menu name="WINDOW" id="[ID:59398]" shortcuts="[ALT]w" x="384"
+					y="12" />
+				<menu name="HELP" id="[ID:59398]" shortcuts="[ALT]h" x="440" y="13" />
+			</menus>
+			<properties>
+				<nationalPagePlanExpander id="[ID:200]" x="10"
+					y="24" />
+				<nationalMainbookBtn id="[ID:200]"
+					x="140" y="38" />
+				<nationalTimes id="[ID:200]" x="263"
+					y="38" />
+				<publishBtn id="[ID:59392]" x="570" y="12" />
+				<copyDwpBtn id="[ID:59392]" x="562" y="13" />
+				<previewBtn id="[ID:59392]" x="515" y="13" />
+				<bookSectionMetadata id="[ID:59392]" x="489" y="14" />
+				<chpClipboardBtn id="[ID:59392]" x="660" y="13" />
+				<editionMetadata id="[ID:59392]" x="466" y="14" />
+				<allContent id="[ID:59392]" x="290" y="14" />
+				<irishPagePlanExpander id="[CLASS:AfxWnd100u; INSTANCE:1]"
+					x="10" y="79" />
+				<irishMainBookBtn id="[CLASS:AfxWnd100u; INSTANCE:1]"
+					x="150" y="93" />
+				<irishTimes id="[CLASS:AfxWnd100u; INSTANCE:1]" x="265"
+					y="93" />
+				<!-- <slotMove id="[ID:59648]" x="476" y="210" /> <slot1 id="[ID:59648]" 
+					x="150" y="544" /> <slot2 id="[ID:59648]" x="508" y="541" /> <slot3 id="[ID:59648]" 
+					x="138" y="535" /> <slot4 id="[ID:59648]" x="469" y="693" /> <slot5 id="[ID:59648]" 
+					x="755" y="498" /> -->
+				<slotMove id="[ID:59648]" x="451" y="225" />
+				<slot1 id="[ID:59648]" x="136" y="225" />
+				<slot2 id="[ID:59648]" x="451" y="225" />
+				<slot3 id="[ID:59648]" x="773" y="225" />
+				<slot4 id="[ID:59648]" x="1111" y="225" />
+				<eatingSlot id="[ID:59648]" x="821" y="529" />
+				<designTemplate id="[ID:15543]" x="269" y="12" />
+				<templateSearchBox id="[ID:30000]" x="43" y="12" />
+				<templateSearchBoxDropdown id="[ID:30000]"
+					x="164" y="12" />
+				<closeShapeLibrary id="[ID:35957]" x="291" y="10" />
+				<clickOnMagazine id="[ID:200]" x="696" y="38" />
+				<closeSectionMetadata id="[ID:48510]" x="290"
+					y="9" />
+				<hideNavigation id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="49" y="78" />
+				<saveSectionMetadata id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="100" y="835" />
+				<stNewsNational id="[ID:200]" x="134" y="37" />
+				<stSportsNational id="[ID:200]" x="233" y="37" />
+				<stOtherNationalBooks id="[ID:200]" x="215" y="37" />
+				<stNationalTravellBook id="[ID:200]" x="174"
+					y="37" />
+				<rightnavigation id="[ID:200]" x="292" y="869" />
+				<leftnavigation id="[ID:200]" x="9" y="869" />
+				<stNewsIreland id="[ID:200]" x="134" y="100" />
+				<stSportsIreland id="[ID:200]" x="233" y="100" />
+				<stOtherIrelandBooks id="[ID:200]" x="200" y="100" />
+				<stIrelandTravellBook id="[ID:200]" x="174" y="100" />
+				<stPublish id="[ID:59392]" x="538" y="13" />
+				<stPreview id="[ID:59392]" x="481" y="13" />
+				<stSlotUUID id="[ID:59392]" x="627" y="13" />
+				<stBookSectionMetadata id="[ID:59392]" x="455" y="13" />
+			</properties>
+		</window>
+		<window name="Dwp Page " id="DWP_PAGE" title="[REGEXPTITLE:(?i)dwp]">
+			<menus>
+				<menu name="FILE" id="[ID:59398]" shortcuts="[ALT]f" x="27" y="10" />
+				<menu name="EDIT" id="[ID:59398]" shortcuts="[ALT]e" x="58" y="11" />
+				<menu name="VIEW" id="[ID:59398]" shortcuts="[ALT]v" x="101" y="13" />
+				<menu name="INSERT" id="[ID:59398]" shortcuts="[ALT]i" x="137"
+					y="14" />
+				<menu name="FORMAT" id="[ID:59398]" shortcuts="[ALT]o" x="188"
+					y="13" />
+				<menu name="TABLE" id="[ID:59398]" shortcuts="[ALT]a" x="231"
+					y="13" />
+				<menu name="TOPICS" id="[ID:59398]" shortcuts="[ALT]c" x="277"
+					y="13" />
+				<menu name="TOOLS" id="[ID:59398]" shortcuts="[ALT]t" x="322"
+					y="13" />
+				<menu name="WINDOW" id="[ID:59398]" shortcuts="[ALT]w" x="380"
+					y="12" />
+				<menu name="HELP" id="[ID:59398]" shortcuts="[ALT]h" x="422" y="10" />
+			</menus>
+			<properties>
+				<articleSpec id="[ID:59648]" x="250" y="50" />
+				<childArticle id="[ID:59648]" x="300" y="160" />
+				<articleAdv id="[ID:59648]" x="250" y="220" />
+				<articleGallery id="[ID:59648]" x="250" y="270" />
+				<floorline id="[ID:59648]" x="250" y="320" />
+				<outsideFrame id="[ID:59648]" x="250" y="800" />
+				<quickAcessBar id="[ID:59419]" x="786" y="35" />
+				<searchQueryIcon id="[ID:59592]" x="17" y="12" />
+				<newquerystorydrag id="[CLASS:EmBrowseCtrlClass:INSTANCE:1]"
+					x="21" y="30" />
+				<activateCandidateBrowser id="[ID:54460]"
+					x="125" y="9" />
+				<newImageCandidateBrowserDwp id="[ID:15543]"
+					x="103" y="10" />
+				<mediaStoryPosition id="[ID:1]" x="149" y="31" />
+				<closeQueryStories id="[ID:34246]" x="289" y="8" />
+			</properties>
+		</window>
+		<window name="Story Preparation Page " id="STORY_PREPARATION_PAGE"
+			title="[REGEXPTITLE:(?i)xml]">
+			<menus>
+				<menu name="FILE" id="[ID:59398]" shortcuts="[ALT]f" x="27" y="10" />
+				<menu name="EDIT" id="[ID:59398]" shortcuts="[ALT]e" x="58" y="11" />
+				<menu name="VIEW" id="[ID:59398]" shortcuts="[ALT]v" x="100" y="13" />
+				<menu name="INSERT" id="[ID:59398]" shortcuts="[ALT]i" x="137"
+					y="14" />
+				<menu name="FORMAT" id="[ID:59398]" shortcuts="[ALT]o" x="188"
+					y="13" />
+				<menu name="TABLE" id="[ID:59398]" shortcuts="[ALT]a" x="231"
+					y="13" />
+				<menu name="TOPICS" id="[ID:59398]" shortcuts="[ALT]c" x="277"
+					y="13" />
+				<menu name="TOOLS" id="[ID:59398]" shortcuts="[ALT]t" x="322"
+					y="13" />
+				<menu name="WINDOW" id="[ID:59398]" shortcuts="[ALT]w" x="380"
+					y="12" />
+				<menu name="HELP" id="[ID:59398]" shortcuts="[ALT]h" x="422" y="10" />
+			</menus>
+			<properties>
+				<articlePublishBtn id="[ID:59392]" x="724" y="13" />
+				<relatedLinks id="[ID:59392]" x="587" y="14" />
+				<articleChpUuidBtn id="[ID:59392]" x="838" y="13" />
+				<chpCommunityBtn id="[ID:59392]" x="374" y="13" />
+				<articleHeadLine id="[ID:59648]" x="171" y="82" />
+				<videoArticleHeadLine id="[ID:59648]" x="238"
+					y="60" />
+				<articleStandfirst id="[ID:59648]" x="215" y="139" />
+				<articleOverrideHeadLine id="[ID:59648]" x="171"
+					y="200" />
+				<articleOverrideStandfirst id="[ID:59648]"
+					x="171" y="264" />
+				<oneColumnStandfirst id="[ID:59648]" x="171" y="324" />
+				<floorlineHeadline id="[ID:59648]" x="171" y="379" />
+				<floorlineCopy id="[ID:59648]" x="125" y="573" />
+				<articleText id="[ID:59648]" x="111" y="648" />
+				<tabletAllFeild
+					id="[CLASS:HwndWrapper[DefaultDomain;;a7aab67f-47c9-4126-83b6-6df66fcad344]; INSTANCE:1]"
+					x="211" y="37" />
+				<newImageCandidateBrowser id="[ID:15543]"
+					x="270" y="11" />
+				<candidateImage id="[CLASS:EmThumbNailCtrlClass; INSTANCE:1]"
+					x="89" y="107" />
+				<pullQuotes id="[CLASS:Afx:ControlBar:3f970000:8:10003:10; INSTANCE:1]"
+					x="80" y="12" />
+				<pullQuotesTabletSelect id="[ID:15543]" x="95"
+					y="10" />
+				<pullQuoteSelect id="[ID:200]" x="54" y="45" />
+				<pullQuoteLine id="[ID:59648]" x="166" y="576" />
+				<clickingOnImage id="[ID:59648]" x="400" y="700" />
+				<clickingOnInlineImage id="[ID:59648]" x="132"
+					y="478" />
+				<clickingOnInlineImage2 id="[ID:59648]" x="400"
+					y="600" />
+				<clickingOnInlineImage3 id="[ID:59648]" x="400"
+					y="800" />
+				<clickingOnInlineImagePotrait id="[ID:59648]"
+					x="141" y="530" />
+					<insertRelatedLink id="[ID:59648]"
+					x="132" y="608" />
+				<hideHeadline id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="47" y="128" />
+				<twoColumnImage id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="47" y="148" />
+				<fullBleed id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="47" y="168" />
+				<disableCopyFit id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="47" y="188" />
+				<headlineSpanDropDownnumber
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="108" y="206" />
+				<headlineSpanDropDownPosition
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="107" y="226" />
+				<sharingUrlLinkBox id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="61" y="322" />
+				<disableSocialSharing id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="47" y="340" />
+				<disableSavingArticle id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="47" y="357" />
+					<disableSavingArticleFalse id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="47" y="313" />
+				<panelSettings id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="147" y="459" />
+				<panelColorsSettings id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="76" y="560" />
+				<showChildArticleInNavigation
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="47" y="522" />
+				<disableAutomaticFloorline
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="47" y="476" />
+				<getQuickAccessBar id="[ID:59419]" x="661" y="83" />
+				<clickOnSearchQuery id="[ID:59592]" x="19" y="13" />
+				<addingFractionalDeeplink id="[ID:59648]"
+					x="152" y="560" />
+				<setFont
+					id="[CLASS:HwndWrapper[DefaultDomain;;4559aedc-b541-4d82-af10-69c57073f30e]"
+					x="412" y="37" />
+				<rightClickInTextInline01 id="[ID:59648]"
+					x="310" y="256" />
+				<rightClickInTextInline02 id="[ID:59648]"
+					x="433" y="444" />
+				<searchQueryClose
+					id="[CLASS:Afx:ControlBar:3fee0000:8:10003:10; INSTANCE:1]" x="291"
+					y="9" />
+				<embeddedCode id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="95" y="128" />
+				<quickMetadataSaveBtnDefault
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="100" y="755" />
+				<quickMetadataSaveBtnwithPosition
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="100" y="727" />
+					
+			</properties>
+		</window>
+		<window name="Create Channel Copy" id="CREATE_CHANNEL_COPY"
+			title="Create Channel Copy">
+			<properties>
+				<channelCopyinheritBtn id="[ID:15769]" x="11"
+					y="7" />
+				<channelCopyOkBtn id="[ID:1]" x="31" y="11" />
+				<channelCopyCancelBtn id="[ID:2]" x="39" y="11" />
+			</properties>
+		</window>
+		<window name="Metadata" id="META_DATA" title="Metadata">
+			<properties>
+				<metadataOkBtn id="[ID:1]" x="18" y="13" />
+				<metadataCancelBtn id="[ID:41652]" x="49" y="14" />
+			</properties>
+		</window>
+		<window name="Article Image MetaData" id="ARTICLE_IMAGE_METADATA"
+			title="Metadata Panel">
+			<properties>
+				<doNotCropField id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="304" y="53" />
+				<doNotResize id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="304" y="75" />
+				<mandatoryClick id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="304" y="98" />
+				<addToCarousel id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="303" y="120" />
+				<disableTapBehaviour id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="303" y="142" />
+				<disableImageEnhancement
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="304" y="163" />
+				<positionalsPage id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="381" y="231" />
+				<positionalsHorizontalAlign
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="380" y="255" />
+				<positionalsVerticalAlign
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="380" y="276" />
+				<positionalsColumnWidth
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="381" y="297" />
+				<metadataPanelSaveBtn id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="263" y="483" />
+				<metadataPanelCloseBtn
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="233" y="482" />
+				<inlineMetdataColumnPercentage
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="233" y="298" />
+				<inlineMetdataBaseline
+					id="[CLASS:Internet Explorer_Server; INSTANCE:1]" x="233" y="323" />
+				<imageOutsideFrame id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="119" y="401" />
+			</properties>
+		</window>
+		<window name="Article WorkFlow" id="ARTICLE_WORKFLOW" title="Workflow">
+			<properties>
+				<workflowTabSent id="[ID:46130]" x="31" y="25" />
+				<workflowTabApprove id="[ID:46130]" x="49" y="37" />
+				<workflowTabWait id="[ID:46130]" x="40" y="51" />
+				<workflowApplyBtn id="[ID:1050]" x="28" y="12" />
+				<workflowOkBtn id="[ID:1]" x="37" y="12" />
+				<workflowCancelBtn id="[ID:2]" x="32" y="12" />
+				<workflowRemovefromWorkflow id="[ID:46145]"
+					x="6" y="7" />
+			</properties>
+		</window>
+		<window name="Assert Insert" id="INLINE_ASSET_INSERT" title="Asset Insert">
+			<properties>
+				<inlinedropDownratioSelect id="[ID:1006]"
+					x="259" y="10" />
+				<inlineWindowOkBtn id="[ID:1]" x="35" y="10" />
+				<inlineWindowCancelBtn id="[ID:2]" x="39" y="11" />
+			</properties>
+		</window>
+		<window name="PagePlanner Metadata" id="PAGEPLANNER_META_DATA"
+			title="[REGEXPTITLE:(?i)dwp]">
+			<properties>
+				<pagePlannerMetadataWebPublicationClick
+					id="[CLASS:Afx:PropList:3f7a0000:8:10003:10; INSTANCE:1]" x="95" y="8" />
+				<pagePlannerMetadataOkBtn id="[ID:1]" x="45"
+					y="11" />
+				<pagePlannerMetadataCancelBtn id="[ID:41652]"
+					x="45" y="12" />
+			</properties>
+		</window>
+		<window name="Methode Query" id="NEW_METHODE_QUERY" title="New 'Methode' query">
+			<properties>
+				<queryName id="[ID:41771]" x="91" y="9" />
+				<fileName id="[ID:41721]" x="67" y="9" />
+				<clearBtn id="[ID:41828]" x="31" y="9" />
+				<loadFromBtn id="[ID:41829]" x="51" y="11" />
+				<tryBtn id="[ID:41814]" x="38" y="9" />
+				<okBtn id="[ID:1]" x="37" y="7" />
+				<cancelBtn id="[ID:2]" x="35" y="11" />
+			</properties>
+		</window>
+		<window name="Quick Metadata Browser" id="QUICK_METADATA"
+			title="[REGEXPTITLE:(?i)xml]">
+			<properties>
+				<selectingTablet id="[CLASS:Internet Explorer_Server; INSTANCE:1]"
+					x="100" y="21" />
+			</properties>
+		</window>
+		<window name="formattingWindow" id="FORMATTING_HEADLINE" title="Formatting">
+
+			<properties>
+				<lineHeight id="[CLASS:Internet Explorer_Server:INSTANCE:1]"
+					x="230" y="52" />
+				<letterSpacing id="[CLASS:Internet Explorer_Server:INSTANCE:1]"
+					x="229" y="79" />
+				<fontSize id="[CLASS:Internet Explorer_Server:INSTANCE:1]"
+					x="231" y="103" />
+				<formattingSaveBtn id="[CLASS:Internet Explorer_Server:INSTANCE:1]"
+					x="260" y="182" />
+				<formattingCloseBtn id="[CLASS:Internet Explorer_Server:INSTANCE:1]"
+					x="238" y="182" />
+			</properties>
+		</window>
+		<window name="editorialWorkFlow" id="EDITORIAL_WORK_FLOW"
+			title="Workflow">
+			<properties>
+				<inProgressClick id="[ID:46130]" x="25" y="38" />
+				<doneClick id="[ID:46130]" x="17" y="64" />
+				<doneClick2 id="[ID:46130]" x="20" y="50" />
+				<editorialWorkFlowOkBtn id="[ID:1]" x="31" y="11" />
+				<editorialWorkflowCancelBtn id="[ID:2]"
+					x="25" y="9" />
+			</properties>
+		</window>
+		<window name="hyperLink" id="HYPERLINK" title="HyperLink">
+			<properties>
+				<clickOnText id="[ID:1182]" x="311" y="11" />
+				<clickOnHyperlink id="[1001]" x="24" y="7" />
+				<hyperlinkOkBtn id="[ID:1]" x="60" y="11" />
+			</properties>
+		</window>
+		<window name="tabPageFlow" id="TAB_PAGE_FLOW" title="[REGEXPTITLE:(?i)dwp]">
+			<properties>
+				<tabCurrentStatus id="[ID:46130]" x="38" y="25" />
+				<mashtheadStyle id="[CLASS:Static; INSTANCE:6]" x="174"
+					y="258" />
+				<tabCurrentStatusOkBtn id="[ID:1]" x="34" y="11" />
+			</properties>
+		</window>
+		<window name="newChpQuery" id="NEW_CHP_QUERY" title="New 'CHP' query">
+			<properties>
+				<chpQueryName id="[ID:41771]" x="44" y="10" />
+				<searchFor id="[CLASS:Internet Explorer_Server;INSTANCE:1]"
+					x="132" y="14" />
+				<keywords id="[CLASS:Internet Explorer_Server;INSTANCE:1]"
+					x="177" y="38" />
+				<prodNote id="[CLASS:Internet Explorer_Server;INSTANCE:1]"
+					x="217" y="66" />
+				<sortBy id="[CLASS:Internet Explorer_Server;INSTANCE:1]" x="222"
+					y="119" />
+				<dateLoaded id="[CLASS:Internet Explorer_Server;INSTANCE:1]"
+					x="236" y="93" />
+				<liveStory id="[CLASS:Internet Explorer_Server;INSTANCE:1]"
+					x="130" y="147" />
+				<archieveStory id="[CLASS:Internet Explorer_Server;INSTANCE:1]"
+					x="240" y="144" />
+				<okBtnSearchChp id="[ID:1]" x="30" y="9" />
+			</properties>
+		</window>
+		<window name="sendToProduction" id="SEND_TO_PRODUCTION" title="Send To Production">
+			<properties>
+				<editName id="[ID:1082]" x="100" y="10" />
+				<sendToProductionOkBtn id="[ID:1]" x="32" y="11" />
+			</properties>
+		</window>
+		<window name="assertImage" id="SELECT_IMAGE" title="[REGEXPTITLE:(?i)- Select]">
+			<properties>
+				<imageSelect01 id="[CLASS:EmThumbNailCtrlClass;INSTANCE:1]"
+					x="76" y="82" />
+				<imageSelectBtn id="[ID:1]" x="46" y="12" />
+				<cancelSelectBtn id="[ID:2]" x="48" y="10" />
+			</properties>
+		</window>
+		<window name="insertpages" id="INSERT_PAGE" title="Insert Pages">
+			<properties>
+				<clickOnMagazineTree id="[ID:906]" x="32" y="105" />
+				<selectEating id="[ID:906]" x="94" y="122" />
+				<insertPageOkBtn id="[ID:1]" x="35" y="10" />
+				<insertPageCancelBtn id="[ID:2]" x="30" y="10" />
+			</properties>
+		</window>
+		<window name="propertyWindow" id="PROPERTY_WINDOW" title="[REGEXPTITLE:(?i)Properties]">
+			<properties>
+				<uuidProperties id="[ID:46067]" x="36" y="120" />
+			</properties>
+		</window>
+		<window name="csonfirmationWindow" id="CONFIRMATION"
+			title="Methode">
+			<properties>
+				<yesBtn id="[ID:6]" x="41" y="12" />
+				<noBtn id="[ID:7]" x="41" y="12" />
+			</properties>
+			</window>
+			<window name="actionResult" id="ACTION_RESULT"
+			title="Action Results">
+			<properties>
+				<actionOkBtn id="[ID:1]" x="69" y="11" />
+			</properties>
+			</window>
+			<window name="overrideOption" id="OVERRIDE_OPTION"
+			title="Override option">
+			<properties>
+				<overrideCloseBtn id="[ID:2]" x="40" y="10" />
+			</properties>
+			</window>
+	</windows>
+</clientConfig>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.news.controller.RunnerWindowController">
+   <children>
+      <SplitPane dividerPositions="0.18445475638051045" layoutX="92.0" layoutY="70.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="221.0">
+               <children>
+                  <Accordion layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane fx:id="RunnerAccordionTT" animated="false" text="The Times">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="247.0">
+                                 <children>
+                                    <Hyperlink fx:id="RunnerAccordionTTPrint" layoutX="24.0" layoutY="65.0" prefHeight="31.0" prefWidth="227.0" text="Print" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Hyperlink fx:id="RunnerAccordionTTTablet" layoutX="12.0" layoutY="43.0" prefHeight="31.0" prefWidth="227.0" text="Tablet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                                    <Hyperlink fx:id="RunnerAccordionTTDigital" layoutX="34.0" layoutY="75.0" prefHeight="31.0" prefWidth="227.0" text="Digital" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="RunnerAccordionST" animated="false" text="Sunday Times">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Hyperlink fx:id="RunnerAccordionSTPrint" layoutX="105.0" layoutY="51.0" text="Print" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Hyperlink fx:id="RunnerAccordionSTTablet" layoutX="115.0" layoutY="61.0" text="Tablet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                                    <Hyperlink fx:id="RunnerAccordionSTDigital" layoutX="125.0" layoutY="71.0" text="Digital" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="RunnerAccordionSun" animated="false" text="The Sun">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Hyperlink fx:id="RunnerAccordionSunPrint" layoutX="14.0" layoutY="8.0" text="Print" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="432.0">
+               <children>
+                  <SplitPane dividerPositions="0.2467718794835007" layoutX="21.0" layoutY="20.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Accordion fx:id="RunnerCountryAccordion" layoutX="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                <panes>
+                                  <TitledPane fx:id="RunnerTitledPaneNational" animated="false" text="National">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="172.0" />
+                                    </content>
+                                  </TitledPane>
+                                  <TitledPane fx:id="RunnerTitledPaneIreland" animated="false" text="Ireland">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    </content>
+                                  </TitledPane>
+                                </panes>
+                              </Accordion>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="runnerTableView" layoutX="14.0" layoutY="46.0" prefHeight="517.0" prefWidth="521.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                                <columns>
+                                  <TableColumn fx:id="runnerTableViewColumnSno" prefWidth="75.0" text="#" />
+                                  <TableColumn fx:id="runnerTableViewColumnRegion" prefWidth="123.0" text="Region" />
+                                    <TableColumn fx:id="runnerTableViewColumnTestCases" prefWidth="322.0" text="Test Cases" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="RunnerBtnGenerate" layoutX="-20.0" layoutY="-7.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" text="Generate" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

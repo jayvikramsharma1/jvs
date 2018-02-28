@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="837.0" prefWidth="998.0" style="-fx-background-color: #f1f1f1;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.news.controller.GeneralSettingsController">
+   <children>
+      <TabPane layoutX="172.0" layoutY="68.0" prefHeight="510.0" prefWidth="998.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="710.0" prefWidth="998.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Channel" />
+                        <Label layoutX="277.0" layoutY="14.0" text="Title" />
+                        <Label layoutX="513.0" layoutY="14.0" text="Enviornment" />
+                        <Separator layoutY="88.0" prefHeight="11.0" prefWidth="998.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <TabPane layoutX="7.0" layoutY="50.0" prefHeight="631.0" prefWidth="998.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                          <tabs>
+                            <Tab text="Credentials">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="998.0">
+                                       <children>
+                                          <Label layoutX="9.0" layoutY="14.0" prefHeight="21.0" prefWidth="35.0" text="Dev" />
+                                          <Label layoutX="64.0" layoutY="14.0" prefHeight="21.0" prefWidth="81.0" text="User Name" />
+                                          <Label layoutX="546.0" layoutY="14.0" prefHeight="21.0" prefWidth="81.0" text="Password" />
+                                          <TextField fx:id="settingDevUserName" layoutX="145.0" layoutY="9.0" prefHeight="31.0" prefWidth="300.0" />
+                                          <TextField fx:id="settingDevPassword" layoutX="616.0" layoutY="9.0" prefWidth="300.0" />
+                                          <Label layoutX="9.0" layoutY="49.0" prefHeight="21.0" prefWidth="35.0" text="SI" />
+                                          <Label layoutX="64.0" layoutY="49.0" prefHeight="21.0" prefWidth="81.0" text="User Name" />
+                                          <Label layoutX="546.0" layoutY="49.0" prefHeight="21.0" prefWidth="81.0" text="Password" />
+                                          <TextField fx:id="settingSIUserName" layoutX="145.0" layoutY="44.0" prefWidth="300.0" />
+                                          <TextField fx:id="settingSIPassword" layoutX="616.0" layoutY="44.0" prefWidth="300.0" />
+                                          <Label layoutX="9.0" layoutY="84.0" prefHeight="21.0" prefWidth="43.0" text="Stage" />
+                                          <Label layoutX="64.0" layoutY="84.0" prefHeight="21.0" prefWidth="81.0" text="User Name" />
+                                          <Label layoutX="546.0" layoutY="84.0" prefHeight="21.0" prefWidth="81.0" text="Password" />
+                                          <TextField fx:id="settingStageUserName" layoutX="145.0" layoutY="79.0" prefWidth="300.0" />
+                                          <TextField fx:id="settingStagePassword" layoutX="616.0" layoutY="79.0" prefWidth="300.0" />
+                                          <Label layoutX="9.0" layoutY="119.0" prefHeight="21.0" prefWidth="35.0" text="UAT" />
+                                          <Label layoutX="64.0" layoutY="119.0" prefHeight="21.0" prefWidth="81.0" text="User Name" />
+                                          <Label layoutX="546.0" layoutY="119.0" prefHeight="21.0" prefWidth="81.0" text="Password" />
+                                          <TextField fx:id="settingUATUserName" layoutX="145.0" layoutY="114.0" prefWidth="300.0" />
+                                          <TextField fx:id="settingUATPassword" layoutX="616.0" layoutY="114.0" prefWidth="300.0" />
+                                          <Label layoutX="9.0" layoutY="155.0" prefHeight="21.0" prefWidth="35.0" text="Prod" />
+                                          <Label layoutX="64.0" layoutY="155.0" prefHeight="21.0" prefWidth="81.0" text="User Name" />
+                                          <Label layoutX="546.0" layoutY="155.0" prefHeight="21.0" prefWidth="81.0" text="Password" />
+                                          <TextField fx:id="settingProdUserName" layoutX="145.0" layoutY="150.0" prefWidth="300.0" />
+                                          <TextField fx:id="settingProdPassword" layoutX="616.0" layoutY="150.0" prefWidth="300.0" />
+                                          <Button fx:id="settingDevUserNameEdit" layoutX="452.0" layoutY="9.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingSIUserNameEdit" layoutX="453.0" layoutY="43.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingStageUserNameEdit" layoutX="453.0" layoutY="79.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingUATUserNameEdit" layoutX="452.0" layoutY="114.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingProdUserNameEdit" layoutX="452.0" layoutY="149.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingDevPasswordEdit" layoutX="923.0" layoutY="9.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingSIPasswordEdit" layoutX="923.0" layoutY="43.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingStagePasswordEdit" layoutX="923.0" layoutY="77.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingUATPasswordEdit" layoutX="923.0" layoutY="113.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingProdPasswordEdit" layoutX="923.0" layoutY="148.0" mnemonicParsing="false" text="Edit" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="S3 Settings">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="605.0" prefWidth="998.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="21.0" prefHeight="21.0" prefWidth="60.0" text="S3 Url" />
+                                          <TextField fx:id="settingsS3Url" layoutX="74.0" layoutY="16.0" prefHeight="31.0" prefWidth="838.0" />
+                                          <Label layoutX="14.0" layoutY="65.0" prefHeight="21.0" prefWidth="150.0" text="Article Feed Path" />
+                                          <TextField fx:id="settingsArticleFeedPath" layoutX="239.0" layoutY="59.0" prefHeight="31.0" prefWidth="672.0" />
+                                          <Label layoutX="13.0" layoutY="100.0" prefHeight="21.0" prefWidth="152.0" text="Slot Feed  Path" />
+                                          <TextField fx:id="settingsSlotFeedPath" layoutX="239.0" layoutY="93.0" prefHeight="31.0" prefWidth="673.0" />
+                                          <Label layoutX="13.0" layoutY="135.0" prefHeight="21.0" prefWidth="144.0" text="Book Feed Path" />
+                                          <TextField fx:id="settingsBookFeedPath" layoutX="239.0" layoutY="128.0" prefHeight="31.0" prefWidth="674.0" />
+                                          <Label layoutX="13.0" layoutY="169.0" prefHeight="21.0" prefWidth="136.0" text="Section Feed Path" />
+                                          <TextField fx:id="settingsSectionFeedPath" layoutX="239.0" layoutY="162.0" prefHeight="31.0" prefWidth="673.0" />
+                                          <Label layoutX="12.0" layoutY="203.0" prefHeight="21.0" prefWidth="135.0" text="Edition Feed Path" />
+                                          <TextField fx:id="settingsEditionFeedPath" layoutX="239.0" layoutY="196.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <Label layoutX="12.0" layoutY="234.0" prefHeight="21.0" prefWidth="143.0" text="Image Feed Path" />
+                                          <TextField fx:id="settingsImageFeedPath" layoutX="240.0" layoutY="231.0" prefHeight="31.0" prefWidth="673.0" />
+                                          <Label layoutX="10.0" layoutY="269.0" text="Article Metadata Feed Path" />
+                                          <TextField fx:id="settingsAritcleMetadataFeedPath" layoutX="240.0" layoutY="266.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <Label layoutX="10.0" layoutY="305.0" prefHeight="21.0" prefWidth="164.0" text="Slot Metadata Feed Path" />
+                                          <TextField fx:id="settingsSlotMetadataFeedPath" layoutX="240.0" layoutY="298.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <Label layoutX="13.0" layoutY="340.0" prefHeight="21.0" prefWidth="182.0" text="Image Metadata Feed Path" />
+                                          <TextField fx:id="settingsImageMetadataFeedPath" layoutX="240.0" layoutY="333.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <Label layoutX="13.0" layoutY="374.0" prefHeight="21.0" prefWidth="183.0" text="Image Positional Feed Path" />
+                                          <TextField fx:id="settingsImagePositionalFeedPath" layoutX="240.0" layoutY="369.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <Label layoutX="14.0" layoutY="409.0" text="S3 Bucket Name" />
+                                          <Label layoutX="14.0" layoutY="444.0" text="S3 Api Key" />
+                                          <Label layoutX="14.0" layoutY="479.0" text="S3 Api Secret" />
+                                          <Label layoutX="14.0" layoutY="515.0" text="S3 Media Path" />
+                                          <Label layoutX="14.0" layoutY="546.0" text="S3 Report Path" />
+                                          <TextField fx:id="settingsS3BucketName" layoutX="240.0" layoutY="404.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <TextField fx:id="settingsS3MediaPath" layoutX="240.0" layoutY="509.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <TextField fx:id="settingsS3ReportPath" layoutX="240.0" layoutY="544.0" prefHeight="31.0" prefWidth="675.0" />
+                                          <PasswordField fx:id="settingsS3ApiKey" layoutX="240.0" layoutY="439.0" prefHeight="31.0" prefWidth="674.0" />
+                                          <PasswordField fx:id="settingsS3ApiSecret" layoutX="239.0" layoutY="474.0" prefHeight="31.0" prefWidth="677.0" />
+                                          <Button fx:id="settingsS3UrlEdit" layoutX="921.0" layoutY="16.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsArticleFeedPathEdit" layoutX="921.0" layoutY="57.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsSlotFeedPathEdit" layoutX="921.0" layoutY="91.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsBookFeedPathEdit" layoutX="922.0" layoutY="125.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsSectionFeedPathEdit" layoutX="922.0" layoutY="160.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsEditionFeedPathEdit" layoutX="923.0" layoutY="194.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsImageFeedPathEdit" layoutX="923.0" layoutY="228.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsAritcleMetadataFeedPathEdit" layoutX="923.0" layoutY="263.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsSlotMetadataFeedPathEdit" layoutX="923.0" layoutY="296.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsImageMetadataFeedPathEdit" layoutX="923.0" layoutY="330.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsImagePositionalFeedPathEdit" layoutX="923.0" layoutY="366.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsS3BucketNameEdit" layoutX="923.0" layoutY="404.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsS3ApiKeyEdit" layoutX="923.0" layoutY="438.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsS3ApiSecretEdit" layoutX="923.0" layoutY="472.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsS3MediaPathEdit" layoutX="923.0" layoutY="507.0" mnemonicParsing="false" text="Edit" />
+                                          <Button fx:id="settingsS3ReportPathEdit" layoutX="923.0" layoutY="542.0" mnemonicParsing="false" text="Edit" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <Label layoutX="14.0" layoutY="53.0" prefHeight="21.0" prefWidth="101.0" text="Methode Path" />
+                        <TextField fx:id="settingMethodePath" layoutX="115.0" layoutY="48.0" prefHeight="31.0" prefWidth="679.0" />
+                        <Button fx:id="settingsCancel" layoutX="848.0" layoutY="749.0" mnemonicParsing="false" text="Cancel" />
+                        <Button fx:id="settingsSave" layoutX="783.0" layoutY="749.0" mnemonicParsing="false" text="Save" />
+                        <Button fx:id="settingMethodePathEdit" layoutX="816.0" layoutY="45.0" mnemonicParsing="false" text="Edit" />
+                        <ComboBox fx:id="settingsChannel" layoutX="97.0" layoutY="9.0" prefWidth="150.0" />
+                        <ComboBox fx:id="settingsTitle" layoutX="322.0" layoutY="8.0" prefWidth="150.0" />
+                        <ComboBox fx:id="settingsEnviornment" layoutX="610.0" layoutY="9.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="irishDisableFloorLineNavigation"
+	comments="Executing testcase in MainBook in business Section  at Slot1. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228267">
+	<steps>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectWorkFloder" method="workFolder" require="NewStory">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="SA_1_23_irish_DisableFloorlineNavigation" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory"
+			screenshot="true" />
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="entertheArticleText" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man 
+			might very likely be mutually related in the same fashion and there can be 
+			nothing so remote that we cannot reach to it. All those things which falls 
+			under the cognizance of man might very likely be mutually related in the 
+			same fashion and there can be nothing so remote that we cannot reach to it. 
+			All those things which falls under the cognizance of man might very likely 
+			be mutually related in the same fashion and there can be nothing so remote 
+			that we cannot reach to it. All those things which falls under the cognizance 
+			of man might very likely be mutually related in the same fashion and there 
+			can be nothing so remote that we cannot reach to it. All those things which 
+			falls under the cognizance of man might very likely be mutually related in 
+			the same fashion and there can be nothing so remote that we cannot reach 
+			to it. All those things which falls under the cognizance of man might very 
+			likely be mutually related in the same fashion and there can be nothing so 
+			remote that we cannot reach to it. All those things which falls under the 
+			cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it. All those 
+			things which falls under the cognizance of man might very likely be mutually 
+			related in the same fashion and there can be nothing so remote that we cannot 
+			reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="inlineStoryPreparation" method="inlineStoryPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="Disable FloorLine Navigation" type="STRING" />
+			</inputs>
+		</step>
+		<step name="getImageFromCHP" method="addImageCHPWithoutClosingQueryWindow"
+			require="CHP">
+			<inputs>
+				<input value="BS_1_23_irish_disablefloorlinenavigation*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Article Headline Should hide" value="false"
+					element="cpi:hideheadline" type="S3" feedType="articleMetadata"
+					s3Content="true" />
+			</expected>
+		</step>
+		<step name="OpenTheSelectedSlottomakechangeinFloorlineCopy"
+			method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="OpenArticletomakechangeinFloorLineCopy" method="openarticle"
+			require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="enterTextinfloorlinecopy" method="tabletFloorLineCopy"
+			require="ArticlePreparation" screenshot="true">
+			<inputs>
+				<input value="Automation 
+			Floorline Copy" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openQuickMetadata" method="quickmetadata" require="ArticlePreparation" />
+		<step name="Selectingthetablettab" method="selectingTablet"
+			require="QuickMetadataTablet" />
+		<step name="ClickingdisableAutomaticFloorline" method="disableAutomaticFloorline"
+			require="QuickMetadataTablet" screenshot="true" />
+		<step name="clickSaveBtn" method="saveBtnPosition" require="QuickMetadataTablet" />
+		<step name="closetheArticlePreparationPagewithChanges" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepagewithChanges" method="close_window"
+			require="TemplatePlan" />
+		<step name="publishtheSlotwithChanges" method="publish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Article Headline Should hide" value="false"
+					element="cpi:hideheadline" type="S3" feedType="articleMetadata" />
+			</expected>
+		</step>
+	</steps>
+</testCase>
+
+
+<!-- Preparing the testcase from CHP -->
+<!-- <steps> <step name="slotSelection" method="slot" require="EditorialPlan"> 
+	<inputs> <input value="slot4" type="STRING" /> </inputs> </step> <step name="gettingQuickAccess" 
+	method="methodeQuery" require="TemplatePlan" /> <step name="fileName" method="dwpMethodeQuery" 
+	require="NewSearchQuery"> <inputs> <input value="BS_HideHeadline_Story_6*" 
+	type="STRING" /> <input value="articleSpec" type="STRING" /> </inputs> </step> 
+	<step name="CheckingWindow" method="checkChannelCopyWindow" require="CHP" 
+	/> <step name="preparingtheArticle" method="storyPreparationCHP" require="ArticlePreparation"> 
+	<inputs> <input value="Hide Headline" type="STRING" /> <input value="Automation 
+	Standfirst" type="STRING" /> <input value="Automation onecolumnStandfirst" 
+	type="STRING" /> <input value="Automation floorlineHeadline" type="STRING" 
+	/> </inputs> </step> <step name="GetselectWindow" method="addImageCHP" require="CHP"> 
+	<inputs> <input value="BS_HideHeadline_Image_6*" type="STRING" /> </inputs> 
+	</step> <step name="saveandPublishtheArticle" method="publishArticle" require="ArticlePreparation" 
+	/> <step name="openQuickMetadata" method="quickmetadata" require="ArticlePreparation" 
+	/> <step name="Selectingthetablettab" method="selectingTablet" require="QuickMetadataTablet" 
+	/> <step name="clickingHideHeadlinebutton" method="hideHeadline" require="QuickMetadataTablet" 
+	/> <step name="publishtheArticlewhichhideheadline" method="publishArticle" 
+	require="ArticlePreparation" /> <step name="getArticleUUID" method="articleUUIDBtn" 
+	require="ArticlePreparation" /> <step name="closetheArticlePreparationPage" 
+	method="closeArticlePreparation" require="ArticlePreparation" /> <step name="closetemplatepage" 
+	method="close_window" require="TemplatePlan" /> <step name="navigatingtoTabPageFlow" 
+	method="releasePage" require="EditorialPlan"> <inputs> <input value="slot4" 
+	type="STRING" /> </inputs> </step> <step name="clickingontheStatus" method="tabPageFlow" 
+	require="TabPageFlow"> <inputs> <input value="3" type="INTEGER" /> </inputs> 
+	</step> <step name="navigatingtoWorkFlowWindow" method="workflowNational" 
+	require="EditorialPlan" /> <step name="ChangingStatustoDone" method="editorialPlanDoneStatus" 
+	require="EditorialWorkFlow" /> <expected> <result message="Validating the 
+	standfirst" value="updated Automation Standfirst" element="cpi:standfirst/xhtml:div" 
+	type="S3" feedType="article" /> </expected> </step> </steps> </testCase> -->

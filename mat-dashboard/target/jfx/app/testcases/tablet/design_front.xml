@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="DesignFront">
+	 <steps>
+		 <step name="editorialPageDown" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="newsSlotSelection" method="newsSlot" require="EditorialPlan">
+			<inputs>
+				<input value="newsSlot2" type="STRING" />
+			</inputs>
+		</step>  
+		<step name="candiadteBrowserDWP" method="candidateBrowser"
+			require="TemplatePlan">
+		</step>
+		<step name="newsMediaGallery" method="mediaGalleryStory" require="TemplatePlan">
+		</step>
+		<step name="dragMediaStory" method="dragMediaGallery" require="TemplatePlan">
+		</step>
+		<step name="mediaGallery" method="openarticle" require="TemplatePlan">
+		<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+	</steps>
+</testCase>

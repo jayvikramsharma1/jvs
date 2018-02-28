@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ExampleTestCase">
+	<steps>
+		<step name="exampleMethodeWithParam" require="Login" method="doLogin">
+			<inputs>
+				<input value="10" type="INTEGER"/>
+				<input value="33" type="INTEGER"/>
+			</inputs>
+			<expected>
+				<result message="Page Planner should be openned" value="true" type="WINDOW"/>
+				<result message="Article Should be published" value="true" element="cpi:headline" type="S3" feedType="article" />
+			</expected>
+		</step>
+		<step name="exampleMethodeWithoutParams" require="PagePlanner" method="doSelectPublication"/>
+	</steps>
+</testCase>

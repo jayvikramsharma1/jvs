@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="PublishEdition">
+	<steps>
+	<step name="workflowNational" method="workflowNational" require="EditorialPlan" />
+	<step name="ClickingOnDone" method="doneClick" require="EditorialWorkFlow" />
+	<step name="savingWorkflow" method="saveBtn" require="EditorialWorkFlow" />
+	<step name="workflowIrish" method="workflowIrish" require="EditorialPlan" />
+	 <step name="ClickingOnIrishDone" method="doneClick" require="EditorialWorkFlow" />
+	<step name="savingIrishWorkflow" method="saveBtn" require="EditorialWorkFlow" />
+	<!-- <step name="publishtheSlot" method="publish"
+			require="EditorialPlan" /> -->
+	</steps>
+	</testCase>

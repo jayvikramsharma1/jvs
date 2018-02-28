@@ -1,0 +1,1891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT clientConfig (windows)>
+<!ELEMENT windows (default+,window+)>
+
+
+<!ELEMENT window (menus*, properties*)>
+<!ATTLIST window id CDATA #REQUIRED>
+<!ATTLIST window name CDATA #REQUIRED>
+<!ATTLIST window title CDATA #REQUIRED>
+
+<!ELEMENT default (
+defaultarticleImage*,
+defaultCandidateImagePosition1*,
+defaultCandidateImagePosition2*,
+defaultCandidateImagePosition3*
+)>
+
+<!-- defaultArticleImage-->
+<!ELEMENT defaultarticleImage (#PCDATA)>
+<!ATTLIST defaultarticleImage x CDATA #REQUIRED>
+<!ATTLIST defaultarticleImage y CDATA #REQUIRED>
+
+<!-- defaultCandidateImagePosition1-->
+<!ELEMENT defaultCandidateImagePosition1 (#PCDATA)>
+<!ATTLIST defaultCandidateImagePosition1 x CDATA #REQUIRED>
+<!ATTLIST defaultCandidateImagePosition1 y CDATA #REQUIRED>
+
+<!-- defaultCandidateImagePosition2-->
+<!ELEMENT defaultCandidateImagePosition2 (#PCDATA)>
+<!ATTLIST defaultCandidateImagePosition2 x CDATA #REQUIRED>
+<!ATTLIST defaultCandidateImagePosition2 y CDATA #REQUIRED>
+
+<!-- defaultCandidateImagePosition3-->
+<!ELEMENT defaultCandidateImagePosition3 (#PCDATA)>
+<!ATTLIST defaultCandidateImagePosition3 x CDATA #REQUIRED>
+<!ATTLIST defaultCandidateImagePosition3 y CDATA #REQUIRED>
+
+
+<!ELEMENT properties (
+  ttOKBtn*, 
+  ttCancelBtn*, 
+  ttTitleSelection*,
+  stOKBtn*, 
+  stCancelBtn*, 
+  stTitleSelection*,
+  sunOKBtn*,
+  sunCancelBtn*,
+  sunTitleSelection*,
+  loginBtn*,
+  loginCancelBtn*,
+  loginUsername*,
+  loginPassword*,
+  loginDevExpander*,
+  loginSiExpander*,
+  loginSiDB1*,
+  connectionErrorOkBtn*,
+  errorOkBtn*,
+  modOkBtn*,
+  mainFileMenu*,
+  searchTopics*,
+  searchChp*,
+  stSearchChp*,
+  searchMethode*,
+  selectQuery*,
+  clickOnChpStory01*,
+  clickOnChpStory02*,
+  clickOnAllAssets*,
+  chpWindowStory*,
+  chpWindowPictures*,
+  chpSearchTextArea*,
+  searchClickBtn*,
+  clickOnCHPFolder*,
+  clickOnCHPAdvancedSearchIcon*,
+  clickOnCHPAdvancedSearchImages*,
+  clickOnSelectArea01*,
+  clickOnEquals*,
+  wordCountNumeric*,
+  clickOnAddBtn01*,
+  clickOnTextArea01*,
+  clickOnSelectArea02*,
+  clickOnTextArea02*,
+  clickOnSearchOkBtn*,
+  newstoryCreateBtn*,
+  newstoryQuickCreateBtn*,
+  newstoryCancelBtn*,
+  timesDeck*,
+  fractionalDeeplinking*,
+  stNationalExpand*,
+  stIrelandExpand*,
+  saveAsBtn*,
+  saveAsCancelBtn*,
+  saveAsName*,
+  saveAsdescription*,
+  openBtn*,
+  openCancelBtn*,
+  openFileName*,
+  quickOpenChannelSelect*,
+  quickOpenDateSelect*,
+  quickPagePlan*,
+  quickOpenOkBtn*,
+  quickOpenCancelBtn*,
+  newPagePlanChannelSelect*,
+  newPagePlanDateSelect*,
+  mondayTemplate*,
+  tuesdayTemplate*,
+  wednesdayTemplate*,
+  thursdayTemplate*,
+  fridayTemplate*,
+  saturdayTemplate*,
+  newSTPageTemplate*,
+  newPagePlanOkBtn*,
+  newPagePlanCancelBtn*,
+  newPagePlanName*,
+  nationalPagePlanExpander*,
+  nationalMainbookBtn*,
+  nationalTimes*,
+  publishBtn*,
+  copyDwpBtn*,
+  previewBtn*,
+  bookSectionMetadata*,
+  chpClipboardBtn*,
+  editionMetadata*,
+  allContent*,
+  irishPagePlanExpander*,
+  irishMainBookBtn*,
+  irishTimes*,
+  slotMove*,
+  slot1*,
+  slot2*,
+  slot3*,
+  slot4*,
+  slot5*,
+  newsSlot1*,
+  newsSlot2*,
+  newsSlot3*,
+  newsSlot4*,
+  eatingSlot*,
+  designTemplate*,
+  templateSearchBox*,
+  templateSearchBoxDropdown*,
+  closeShapeLibrary*,
+  clickOnMagazine*,
+  closeSectionMetadata*,
+  hideNavigation*,
+  saveSectionMetadata*,
+  stNewsNational*,
+  stSportsNational*,
+  stOtherNationalBooks*,
+  stNationalTravellBook*,
+  rightnavigation*,
+  leftnavigation*,
+  stNewsIreland*,
+  stSportsIreland*,
+  stOtherIrelandBooks*,
+  stIrelandTravellBook*,
+  stPublish*,
+  stPreview*,
+  stSlotUUID*,
+  stBookSectionMetadata*,
+  articleSpec*,
+  childArticle*,
+  articleAdv*,
+  articleGallery*,
+  floorline*,
+  outsideFrame*,
+  quickAcessBar*,
+  searchQueryIcon*,
+  newquerystorydrag*,
+  activateCandidateBrowser*,
+  newImageCandidateBrowserDwp*,
+  mediaStoryPosition*,
+  closeQueryStories*,
+  articlePublishBtn*,
+  relatedLinks*,
+  articleChpUuidBtn*,
+  chpCommunityBtn*,
+  articleHeadLine*,
+  videoArticleHeadLine*,
+  articleStandfirst*,
+  articleOverrideHeadLine*,
+  articleOverrideStandfirst*,
+  oneColumnStandfirst*,
+  floorlineHeadline*,
+  floorlineCopy*,
+  articleText*,
+  tabletAllFeild*,
+  newImageCandidateBrowser*,
+  candidateImage*,
+  pullQuotes*,
+  pullQuotesTabletSelect*,
+  pullQuoteSelect*,
+  pullQuoteLine*,
+  clickingOnImage*,
+  clickingOnInlineImage*,
+  clickingOnInlineImage2*,
+  clickingOnInlineImage3*,
+  clickingOnInlineImagePotrait*,
+  insertRelatedLink*,
+  hideHeadline*,
+  twoColumnImage*,
+  fullBleed*,
+  disableCopyFit*,
+  headlineSpanDropDownnumber*,
+  headlineSpanDropDownPosition*,
+  sharingUrlLinkBox*,
+  disableSocialSharing*,
+  disableSavingArticle*,
+  disableSavingArticleFalse*,
+  panelSettings*,
+  panelColorsSettings*,
+  showChildArticleInNavigation*,
+  disableAutomaticFloorline*,
+  getQuickAccessBar*,
+  clickOnSearchQuery*,
+  addingFractionalDeeplink*,
+  setFont*,
+  rightClickInTextInline01*,
+  rightClickInTextInline02*,
+  searchQueryClose*,
+  embeddedCode*,
+  quickMetadataSaveBtnDefault*,
+  quickMetadataSaveBtnwithPosition*,
+  channelCopyinheritBtn*,
+  channelCopyOkBtn*,
+  channelCopyCancelBtn*,
+  metadataOkBtn*,
+  metadataCancelBtn*,
+  doNotCropField*,
+  doNotResize*,
+  mandatoryClick*,
+  addToCarousel*,
+  disableTapBehaviour*,
+  disableImageEnhancement*,
+  positionalsPage*,
+  positionalsHorizontalAlign*,
+  positionalsVerticalAlign*,
+  positionalsColumnWidth*,
+  metadataPanelSaveBtn*,
+  metadataPanelCloseBtn*,
+  inlineMetdataColumnPercentage*,
+  inlineMetdataBaseline*,
+  imageOutsideFrame*,
+  workflowTabSent*,
+  workflowTabApprove*,
+  workflowTabWait*,
+  workflowApplyBtn*,
+  workflowOkBtn*,
+  workflowCancelBtn*,
+  workflowRemovefromWorkflow*,
+  inlinedropDownratioSelect*,
+  inlineWindowOkBtn*,
+  inlineWindowCancelBtn*,
+  pagePlannerMetadataWebPublicationClick*,
+  pagePlannerMetadataOkBtn*,
+  pagePlannerMetadataCancelBtn*,
+  queryName*,
+  fileName*,
+  clearBtn*,
+  loadFromBtn*, 
+  tryBtn*,
+  okBtn*, 
+  cancelBtn*,
+  selectingTablet*,
+  lineHeight*,
+  letterSpacing*,
+  fontSize*,
+  formattingSaveBtn*,
+  formattingCloseBtn*,
+  inProgressClick*,
+  doneClick*,
+  doneClick2*,
+  editorialWorkFlowOkBtn*,
+  editorialWorkflowCancelBtn*,
+  clickOnText*,
+  clickOnHyperlink*,
+  hyperlinkOkBtn*,
+  tabCurrentStatus*,
+  mashtheadStyle*,
+  tabCurrentStatusOkBtn*,
+  chpQueryName*,
+  searchFor*,
+  keywords*,
+  prodNote*,
+  sortBy*,
+  dateLoaded*,
+  liveStory*,
+  archieveStory*,
+  okBtnSearchChp*,
+  editName*,
+  sendToProductionOkBtn*,
+  imageSelect01*,
+  imageSelectBtn*,
+  cancelSelectBtn*,
+  clickOnMagazineTree*,
+  selectEating*,
+  insertPageOkBtn*,
+  insertPageCancelBtn*,
+  uuidProperties*,
+  yesBtn*,
+  noBtn*,
+  actionOkBtn*,
+  overrideCloseBtn*)>
+  
+  
+<!ELEMENT menus (menu+)>
+<!ELEMENT menu (#PCDATA)>
+<!ATTLIST menu id CDATA #REQUIRED>
+<!ATTLIST menu name CDATA #REQUIRED>
+<!ATTLIST menu x CDATA #REQUIRED>
+<!ATTLIST menu y CDATA #REQUIRED>
+<!ATTLIST menu shortcuts CDATA #REQUIRED>
+
+<!-- ttOKBtn-->
+<!ELEMENT ttOKBtn (#PCDATA)>
+<!ATTLIST ttOKBtn id CDATA #REQUIRED>
+<!ATTLIST ttOKBtn x CDATA #REQUIRED>
+<!ATTLIST ttOKBtn y CDATA #REQUIRED>
+
+<!-- ttCancelBtn-->
+<!ELEMENT ttCancelBtn (#PCDATA)>
+<!ATTLIST ttCancelBtn id CDATA #REQUIRED>
+<!ATTLIST ttCancelBtn x CDATA #REQUIRED>
+<!ATTLIST ttCancelBtn y CDATA #REQUIRED>
+
+<!-- ttTitleSelection-->
+<!ELEMENT ttTitleSelection (#PCDATA)>
+<!ATTLIST ttTitleSelection id CDATA #REQUIRED>
+<!ATTLIST ttTitleSelection x CDATA #REQUIRED>
+<!ATTLIST ttTitleSelection y CDATA #REQUIRED>
+
+<!-- stOKBtn-->
+<!ELEMENT stOKBtn (#PCDATA)>
+<!ATTLIST stOKBtn id CDATA #REQUIRED>
+<!ATTLIST stOKBtn x CDATA #REQUIRED>
+<!ATTLIST stOKBtn y CDATA #REQUIRED>
+
+<!-- stCancelBtn-->
+<!ELEMENT stCancelBtn (#PCDATA)>
+<!ATTLIST stCancelBtn id CDATA #REQUIRED>
+<!ATTLIST stCancelBtn x CDATA #REQUIRED>
+<!ATTLIST stCancelBtn y CDATA #REQUIRED>
+
+<!-- stTitleSelection-->
+<!ELEMENT stTitleSelection (#PCDATA)>
+<!ATTLIST stTitleSelection id CDATA #REQUIRED>
+<!ATTLIST stTitleSelection x CDATA #REQUIRED>
+<!ATTLIST stTitleSelection y CDATA #REQUIRED>
+
+<!-- sunTitleSelection-->
+<!ELEMENT sunTitleSelection (#PCDATA)>
+<!ATTLIST sunTitleSelection id CDATA #REQUIRED>
+<!ATTLIST sunTitleSelection x CDATA #REQUIRED>
+<!ATTLIST sunTitleSelection y CDATA #REQUIRED>
+
+<!-- sunOKBtn-->
+<!ELEMENT sunOKBtn (#PCDATA)>
+<!ATTLIST sunOKBtn id CDATA #REQUIRED>
+<!ATTLIST sunOKBtn x CDATA #REQUIRED>
+<!ATTLIST sunOKBtn y CDATA #REQUIRED>
+
+<!-- sunCancelBtn-->
+<!ELEMENT sunCancelBtn (#PCDATA)>
+<!ATTLIST sunCancelBtn id CDATA #REQUIRED>
+<!ATTLIST sunCancelBtn x CDATA #REQUIRED>
+<!ATTLIST sunCancelBtn y CDATA #REQUIRED>
+
+<!-- loginBtn-->
+<!ELEMENT loginBtn (#PCDATA)>
+<!ATTLIST loginBtn id CDATA #REQUIRED>
+<!ATTLIST loginBtn x CDATA #REQUIRED>
+<!ATTLIST loginBtn y CDATA #REQUIRED>
+
+<!-- loginCancelBtn-->
+<!ELEMENT loginCancelBtn (#PCDATA)>
+<!ATTLIST loginCancelBtn id CDATA #REQUIRED>
+<!ATTLIST loginCancelBtn x CDATA #REQUIRED>
+<!ATTLIST loginCancelBtn y CDATA #REQUIRED>
+
+<!-- loginUsername-->
+<!ELEMENT loginUsername (#PCDATA)>
+<!ATTLIST loginUsername id CDATA #REQUIRED>
+<!ATTLIST loginUsername x CDATA #REQUIRED>
+<!ATTLIST loginUsername y CDATA #REQUIRED>
+
+<!-- loginPassword-->
+<!ELEMENT loginPassword (#PCDATA)>
+<!ATTLIST loginPassword id CDATA #REQUIRED>
+<!ATTLIST loginPassword x CDATA #REQUIRED>
+<!ATTLIST loginPassword y CDATA #REQUIRED>
+
+<!-- loginDevExpander-->
+<!ELEMENT loginDevExpander (#PCDATA)>
+<!ATTLIST loginDevExpander id CDATA #REQUIRED>
+<!ATTLIST loginDevExpander x CDATA #REQUIRED>
+<!ATTLIST loginDevExpander y CDATA #REQUIRED>
+
+<!-- loginSiExpander-->
+<!ELEMENT loginSiExpander (#PCDATA)>
+<!ATTLIST loginSiExpander id CDATA #REQUIRED>
+<!ATTLIST loginSiExpander x CDATA #REQUIRED>
+<!ATTLIST loginSiExpander y CDATA #REQUIRED>
+
+<!-- loginSiDB1-->
+<!ELEMENT loginSiDB1 (#PCDATA)>
+<!ATTLIST loginSiDB1 id CDATA #REQUIRED>
+<!ATTLIST loginSiDB1 x CDATA #REQUIRED>
+<!ATTLIST loginSiDB1 y CDATA #REQUIRED>
+
+<!-- connectionErrorOkBtn-->
+<!ELEMENT connectionErrorOkBtn (#PCDATA)>
+<!ATTLIST connectionErrorOkBtn id CDATA #REQUIRED>
+<!ATTLIST connectionErrorOkBtn x CDATA #REQUIRED>
+<!ATTLIST connectionErrorOkBtn y CDATA #REQUIRED>
+
+<!-- errorOkBtn-->
+<!ELEMENT errorOkBtn (#PCDATA)>
+<!ATTLIST errorOkBtn id CDATA #REQUIRED>
+<!ATTLIST errorOkBtn x CDATA #REQUIRED>
+<!ATTLIST errorOkBtn y CDATA #REQUIRED>
+
+<!-- modOkBtn-->
+<!ELEMENT modOkBtn (#PCDATA)>
+<!ATTLIST modOkBtn id CDATA #REQUIRED>
+<!ATTLIST modOkBtn x CDATA #REQUIRED>
+<!ATTLIST modOkBtn y CDATA #REQUIRED>
+
+<!-- mainFileMenu-->
+<!ELEMENT mainFileMenu (#PCDATA)>
+<!ATTLIST mainFileMenu id CDATA #REQUIRED>
+<!ATTLIST mainFileMenu x CDATA #REQUIRED>
+<!ATTLIST mainFileMenu y CDATA #REQUIRED>
+
+<!-- searchTopics-->
+<!ELEMENT searchTopics (#PCDATA)>
+<!ATTLIST searchTopics id CDATA #REQUIRED>
+<!ATTLIST searchTopics x CDATA #REQUIRED>
+<!ATTLIST searchTopics y CDATA #REQUIRED>
+
+<!-- searchChp-->
+<!ELEMENT searchChp (#PCDATA)>
+<!ATTLIST searchChp id CDATA #REQUIRED>
+<!ATTLIST searchChp x CDATA #REQUIRED>
+<!ATTLIST searchChp y CDATA #REQUIRED>
+
+<!-- stSearchChp-->
+<!ELEMENT stSearchChp (#PCDATA)>
+<!ATTLIST stSearchChp id CDATA #REQUIRED>
+<!ATTLIST stSearchChp x CDATA #REQUIRED>
+<!ATTLIST stSearchChp y CDATA #REQUIRED>
+
+<!-- searchMethode-->
+<!ELEMENT searchMethode (#PCDATA)>
+<!ATTLIST searchMethode id CDATA #REQUIRED>
+<!ATTLIST searchMethode x CDATA #REQUIRED>
+<!ATTLIST searchMethode y CDATA #REQUIRED>
+
+<!-- selectQuery-->
+<!ELEMENT selectQuery (#PCDATA)>
+<!ATTLIST selectQuery id CDATA #REQUIRED>
+<!ATTLIST selectQuery x CDATA #REQUIRED>
+<!ATTLIST selectQuery y CDATA #REQUIRED>
+
+<!-- clickOnChpStory01-->
+<!ELEMENT clickOnChpStory01 (#PCDATA)>
+<!ATTLIST clickOnChpStory01 id CDATA #REQUIRED>
+<!ATTLIST clickOnChpStory01 x CDATA #REQUIRED>
+<!ATTLIST clickOnChpStory01 y CDATA #REQUIRED>
+
+<!-- clickOnChpStory02-->
+<!ELEMENT clickOnChpStory02 (#PCDATA)>
+<!ATTLIST clickOnChpStory02 id CDATA #REQUIRED>
+<!ATTLIST clickOnChpStory02 x CDATA #REQUIRED>
+<!ATTLIST clickOnChpStory02 y CDATA #REQUIRED>
+
+<!-- clickOnAllAssets-->
+<!ELEMENT clickOnAllAssets (#PCDATA)>
+<!ATTLIST clickOnAllAssets id CDATA #REQUIRED>
+<!ATTLIST clickOnAllAssets x CDATA #REQUIRED>
+<!ATTLIST clickOnAllAssets y CDATA #REQUIRED>
+
+<!-- chpWindowStory-->
+<!ELEMENT chpWindowStory (#PCDATA)>
+<!ATTLIST chpWindowStory id CDATA #REQUIRED>
+<!ATTLIST chpWindowStory x CDATA #REQUIRED>
+<!ATTLIST chpWindowStory y CDATA #REQUIRED>
+
+<!-- chpWindowPictures-->
+<!ELEMENT chpWindowPictures (#PCDATA)>
+<!ATTLIST chpWindowPictures id CDATA #REQUIRED>
+<!ATTLIST chpWindowPictures x CDATA #REQUIRED>
+<!ATTLIST chpWindowPictures y CDATA #REQUIRED>
+
+<!-- chpSearchTextArea-->
+<!ELEMENT chpSearchTextArea (#PCDATA)>
+<!ATTLIST chpSearchTextArea id CDATA #REQUIRED>
+<!ATTLIST chpSearchTextArea x CDATA #REQUIRED>
+<!ATTLIST chpSearchTextArea y CDATA #REQUIRED>
+
+<!-- searchClickBtn-->
+<!ELEMENT searchClickBtn (#PCDATA)>
+<!ATTLIST searchClickBtn id CDATA #REQUIRED>
+<!ATTLIST searchClickBtn x CDATA #REQUIRED>
+<!ATTLIST searchClickBtn y CDATA #REQUIRED>
+
+<!-- clickOnCHPFolder-->
+<!ELEMENT clickOnCHPFolder (#PCDATA)>
+<!ATTLIST clickOnCHPFolder id CDATA #REQUIRED>
+<!ATTLIST clickOnCHPFolder x CDATA #REQUIRED>
+<!ATTLIST clickOnCHPFolder y CDATA #REQUIRED>
+
+<!-- clickOnCHPAdvancedSearchIcon-->
+<!ELEMENT clickOnCHPAdvancedSearchIcon (#PCDATA)>
+<!ATTLIST clickOnCHPAdvancedSearchIcon id CDATA #REQUIRED>
+<!ATTLIST clickOnCHPAdvancedSearchIcon x CDATA #REQUIRED>
+<!ATTLIST clickOnCHPAdvancedSearchIcon y CDATA #REQUIRED>
+
+<!-- clickOnCHPAdvancedSearchImages-->
+<!ELEMENT clickOnCHPAdvancedSearchImages (#PCDATA)>
+<!ATTLIST clickOnCHPAdvancedSearchImages id CDATA #REQUIRED>
+<!ATTLIST clickOnCHPAdvancedSearchImages x CDATA #REQUIRED>
+<!ATTLIST clickOnCHPAdvancedSearchImages y CDATA #REQUIRED>
+
+<!-- clickOnSelectArea01-->
+<!ELEMENT clickOnSelectArea01 (#PCDATA)>
+<!ATTLIST clickOnSelectArea01 id CDATA #REQUIRED>
+<!ATTLIST clickOnSelectArea01 x CDATA #REQUIRED>
+<!ATTLIST clickOnSelectArea01 y CDATA #REQUIRED>
+
+<!-- clickOnEquals-->
+<!ELEMENT clickOnEquals (#PCDATA)>
+<!ATTLIST clickOnEquals id CDATA #REQUIRED>
+<!ATTLIST clickOnEquals x CDATA #REQUIRED>
+<!ATTLIST clickOnEquals y CDATA #REQUIRED>
+
+<!-- wordCountNumeric-->
+<!ELEMENT wordCountNumeric (#PCDATA)>
+<!ATTLIST wordCountNumeric id CDATA #REQUIRED>
+<!ATTLIST wordCountNumeric x CDATA #REQUIRED>
+<!ATTLIST wordCountNumeric y CDATA #REQUIRED>
+
+<!-- clickOnAddBtn01-->
+<!ELEMENT clickOnAddBtn01 (#PCDATA)>
+<!ATTLIST clickOnAddBtn01 id CDATA #REQUIRED>
+<!ATTLIST clickOnAddBtn01 x CDATA #REQUIRED>
+<!ATTLIST clickOnAddBtn01 y CDATA #REQUIRED>
+
+<!-- clickOnTextArea01-->
+<!ELEMENT clickOnTextArea01 (#PCDATA)>
+<!ATTLIST clickOnTextArea01 id CDATA #REQUIRED>
+<!ATTLIST clickOnTextArea01 x CDATA #REQUIRED>
+<!ATTLIST clickOnTextArea01 y CDATA #REQUIRED>
+
+<!-- clickOnSelectArea02-->
+<!ELEMENT clickOnSelectArea02 (#PCDATA)>
+<!ATTLIST clickOnSelectArea02 id CDATA #REQUIRED>
+<!ATTLIST clickOnSelectArea02 x CDATA #REQUIRED>
+<!ATTLIST clickOnSelectArea02 y CDATA #REQUIRED>
+
+<!-- clickOnTextArea02-->
+<!ELEMENT clickOnTextArea02 (#PCDATA)>
+<!ATTLIST clickOnTextArea02 id CDATA #REQUIRED>
+<!ATTLIST clickOnTextArea02 x CDATA #REQUIRED>
+<!ATTLIST clickOnTextArea02 y CDATA #REQUIRED>
+
+<!-- clickOnSearchOkBtn-->
+<!ELEMENT clickOnSearchOkBtn (#PCDATA)>
+<!ATTLIST clickOnSearchOkBtn id CDATA #REQUIRED>
+<!ATTLIST clickOnSearchOkBtn x CDATA #REQUIRED>
+<!ATTLIST clickOnSearchOkBtn y CDATA #REQUIRED>
+
+<!-- newstoryCreateBtn-->
+<!ELEMENT newstoryCreateBtn (#PCDATA)>
+<!ATTLIST newstoryCreateBtn id CDATA #REQUIRED>
+<!ATTLIST newstoryCreateBtn x CDATA #REQUIRED>
+<!ATTLIST newstoryCreateBtn y CDATA #REQUIRED>
+
+<!-- newstoryQuickCreateBtn-->
+<!ELEMENT newstoryQuickCreateBtn (#PCDATA)>
+<!ATTLIST newstoryQuickCreateBtn id CDATA #REQUIRED>
+<!ATTLIST newstoryQuickCreateBtn x CDATA #REQUIRED>
+<!ATTLIST newstoryQuickCreateBtn y CDATA #REQUIRED>
+
+<!-- newstoryCancelBtn-->
+<!ELEMENT newstoryCancelBtn (#PCDATA)>
+<!ATTLIST newstoryCancelBtn id CDATA #REQUIRED>
+<!ATTLIST newstoryCancelBtn x CDATA #REQUIRED>
+<!ATTLIST newstoryCancelBtn y CDATA #REQUIRED>
+
+<!-- timesDeck-->
+<!ELEMENT timesDeck (#PCDATA)>
+<!ATTLIST timesDeck id CDATA #REQUIRED>
+<!ATTLIST timesDeck x CDATA #REQUIRED>
+<!ATTLIST timesDeck y CDATA #REQUIRED>
+
+<!-- fractionalDeeplinking-->
+<!ELEMENT fractionalDeeplinking (#PCDATA)>
+<!ATTLIST fractionalDeeplinking id CDATA #REQUIRED>
+<!ATTLIST fractionalDeeplinking x CDATA #REQUIRED>
+<!ATTLIST fractionalDeeplinking y CDATA #REQUIRED>
+
+<!-- stNationalExpand-->
+<!ELEMENT stNationalExpand (#PCDATA)>
+<!ATTLIST stNationalExpand id CDATA #REQUIRED>
+<!ATTLIST stNationalExpand x CDATA #REQUIRED>
+<!ATTLIST stNationalExpand y CDATA #REQUIRED>
+
+<!-- stIrelandExpand-->
+<!ELEMENT stIrelandExpand (#PCDATA)>
+<!ATTLIST stIrelandExpand id CDATA #REQUIRED>
+<!ATTLIST stIrelandExpand x CDATA #REQUIRED>
+<!ATTLIST stIrelandExpand y CDATA #REQUIRED>
+
+<!-- saveAsBtn-->
+<!ELEMENT saveAsBtn (#PCDATA)>
+<!ATTLIST saveAsBtn id CDATA #REQUIRED>
+<!ATTLIST saveAsBtn x CDATA #REQUIRED>
+<!ATTLIST saveAsBtn y CDATA #REQUIRED>
+
+<!-- saveAsCancelBtn-->
+<!ELEMENT saveAsCancelBtn (#PCDATA)>
+<!ATTLIST saveAsCancelBtn id CDATA #REQUIRED>
+<!ATTLIST saveAsCancelBtn x CDATA #REQUIRED>
+<!ATTLIST saveAsCancelBtn y CDATA #REQUIRED>
+
+<!-- saveAsName-->
+<!ELEMENT saveAsName (#PCDATA)>
+<!ATTLIST saveAsName id CDATA #REQUIRED>
+<!ATTLIST saveAsName x CDATA #REQUIRED>
+<!ATTLIST saveAsName y CDATA #REQUIRED>
+
+<!-- saveAsdescription-->
+<!ELEMENT saveAsdescription (#PCDATA)>
+<!ATTLIST saveAsdescription id CDATA #REQUIRED>
+<!ATTLIST saveAsdescription x CDATA #REQUIRED>
+<!ATTLIST saveAsdescription y CDATA #REQUIRED>
+
+<!-- openBtn-->
+<!ELEMENT openBtn (#PCDATA)>
+<!ATTLIST openBtn id CDATA #REQUIRED>
+<!ATTLIST openBtn x CDATA #REQUIRED>
+<!ATTLIST openBtn y CDATA #REQUIRED>
+
+<!-- openCancelBtn-->
+<!ELEMENT openCancelBtn (#PCDATA)>
+<!ATTLIST openCancelBtn id CDATA #REQUIRED>
+<!ATTLIST openCancelBtn x CDATA #REQUIRED>
+<!ATTLIST openCancelBtn y CDATA #REQUIRED>
+
+<!-- openFileName-->
+<!ELEMENT openFileName (#PCDATA)>
+<!ATTLIST openFileName id CDATA #REQUIRED>
+<!ATTLIST openFileName x CDATA #REQUIRED>
+<!ATTLIST openFileName y CDATA #REQUIRED>
+
+<!-- quickOpenChannelSelect-->
+<!ELEMENT quickOpenChannelSelect (#PCDATA)>
+<!ATTLIST quickOpenChannelSelect id CDATA #REQUIRED>
+<!ATTLIST quickOpenChannelSelect x CDATA #REQUIRED>
+<!ATTLIST quickOpenChannelSelect y CDATA #REQUIRED>
+
+<!-- quickPagePlan-->
+<!ELEMENT quickPagePlan (#PCDATA)>
+<!ATTLIST quickPagePlan id CDATA #REQUIRED>
+<!ATTLIST quickPagePlan x CDATA #REQUIRED>
+<!ATTLIST quickPagePlan y CDATA #REQUIRED>
+
+<!-- quickOpenDateSelect-->
+<!ELEMENT quickOpenDateSelect (#PCDATA)>
+<!ATTLIST quickOpenDateSelect id CDATA #REQUIRED>
+<!ATTLIST quickOpenDateSelect x CDATA #REQUIRED>
+<!ATTLIST quickOpenDateSelect y CDATA #REQUIRED>
+
+<!-- quickOpenOkBtn-->
+<!ELEMENT quickOpenOkBtn (#PCDATA)>
+<!ATTLIST quickOpenOkBtn id CDATA #REQUIRED>
+<!ATTLIST quickOpenOkBtn x CDATA #REQUIRED>
+<!ATTLIST quickOpenOkBtn y CDATA #REQUIRED>
+
+<!-- quickOpenCancelBtn-->
+<!ELEMENT quickOpenCancelBtn (#PCDATA)>
+<!ATTLIST quickOpenCancelBtn id CDATA #REQUIRED>
+<!ATTLIST quickOpenCancelBtn x CDATA #REQUIRED>
+<!ATTLIST quickOpenCancelBtn y CDATA #REQUIRED>
+
+<!-- newPagePlanChannelSelect-->
+<!ELEMENT newPagePlanChannelSelect (#PCDATA)>
+<!ATTLIST newPagePlanChannelSelect id CDATA #REQUIRED>
+<!ATTLIST newPagePlanChannelSelect x CDATA #REQUIRED>
+<!ATTLIST newPagePlanChannelSelect y CDATA #REQUIRED>
+
+<!-- newPagePlanDateSelect-->
+<!ELEMENT newPagePlanDateSelect (#PCDATA)>
+<!ATTLIST newPagePlanDateSelect id CDATA #REQUIRED>
+<!ATTLIST newPagePlanDateSelect x CDATA #REQUIRED>
+<!ATTLIST newPagePlanDateSelect y CDATA #REQUIRED>
+
+<!-- mondayTemplate-->
+<!ELEMENT mondayTemplate (#PCDATA)>
+<!ATTLIST mondayTemplate id CDATA #REQUIRED>
+<!ATTLIST mondayTemplate x CDATA #REQUIRED>
+<!ATTLIST mondayTemplate y CDATA #REQUIRED>
+
+<!-- tuesdayTemplate-->
+<!ELEMENT tuesdayTemplate (#PCDATA)>
+<!ATTLIST tuesdayTemplate id CDATA #REQUIRED>
+<!ATTLIST tuesdayTemplate x CDATA #REQUIRED>
+<!ATTLIST tuesdayTemplate y CDATA #REQUIRED>
+
+<!-- wednesdayTemplate-->
+<!ELEMENT wednesdayTemplate (#PCDATA)>
+<!ATTLIST wednesdayTemplate id CDATA #REQUIRED>
+<!ATTLIST wednesdayTemplate x CDATA #REQUIRED>
+<!ATTLIST wednesdayTemplate y CDATA #REQUIRED>
+
+<!-- thursdayTemplate-->
+<!ELEMENT thursdayTemplate (#PCDATA)>
+<!ATTLIST thursdayTemplate id CDATA #REQUIRED>
+<!ATTLIST thursdayTemplate x CDATA #REQUIRED>
+<!ATTLIST thursdayTemplate y CDATA #REQUIRED>
+
+<!-- fridayTemplate-->
+<!ELEMENT fridayTemplate (#PCDATA)>
+<!ATTLIST fridayTemplate id CDATA #REQUIRED>
+<!ATTLIST fridayTemplate x CDATA #REQUIRED>
+<!ATTLIST fridayTemplate y CDATA #REQUIRED>
+
+<!-- saturdayTemplate-->
+<!ELEMENT saturdayTemplate (#PCDATA)>
+<!ATTLIST saturdayTemplate id CDATA #REQUIRED>
+<!ATTLIST saturdayTemplate x CDATA #REQUIRED>
+<!ATTLIST saturdayTemplate y CDATA #REQUIRED>
+
+<!-- newSTPageTemplate-->
+<!ELEMENT newSTPageTemplate (#PCDATA)>
+<!ATTLIST newSTPageTemplate id CDATA #REQUIRED>
+<!ATTLIST newSTPageTemplate x CDATA #REQUIRED>
+<!ATTLIST newSTPageTemplate y CDATA #REQUIRED>
+
+<!-- newPagePlanOkBtn-->
+<!ELEMENT newPagePlanOkBtn (#PCDATA)>
+<!ATTLIST newPagePlanOkBtn id CDATA #REQUIRED>
+<!ATTLIST newPagePlanOkBtn x CDATA #REQUIRED>
+<!ATTLIST newPagePlanOkBtn y CDATA #REQUIRED>
+
+<!-- newPagePlanCancelBtn-->
+<!ELEMENT newPagePlanCancelBtn (#PCDATA)>
+<!ATTLIST newPagePlanCancelBtn id CDATA #REQUIRED>
+<!ATTLIST newPagePlanCancelBtn x CDATA #REQUIRED>
+<!ATTLIST newPagePlanCancelBtn y CDATA #REQUIRED>
+
+<!-- newPagePlanName-->
+<!ELEMENT newPagePlanName (#PCDATA)>
+<!ATTLIST newPagePlanName id CDATA #REQUIRED>
+<!ATTLIST newPagePlanName x CDATA #REQUIRED>
+<!ATTLIST newPagePlanName y CDATA #REQUIRED>
+
+
+<!-- nationalPagePlanExpander-->
+<!ELEMENT nationalPagePlanExpander (#PCDATA)>
+<!ATTLIST nationalPagePlanExpander id CDATA #REQUIRED>
+<!ATTLIST nationalPagePlanExpander x CDATA #REQUIRED>
+<!ATTLIST nationalPagePlanExpander y CDATA #REQUIRED>
+
+<!-- chpClipboardBtn-->
+<!ELEMENT chpClipboardBtn (#PCDATA)>
+<!ATTLIST chpClipboardBtn id CDATA #REQUIRED>
+<!ATTLIST chpClipboardBtn x CDATA #REQUIRED>
+<!ATTLIST chpClipboardBtn y CDATA #REQUIRED>
+
+
+<!-- nationalMainbookBtn-->
+<!ELEMENT nationalMainbookBtn (#PCDATA)>
+<!ATTLIST nationalMainbookBtn id CDATA #REQUIRED>
+<!ATTLIST nationalMainbookBtn x CDATA #REQUIRED>
+<!ATTLIST nationalMainbookBtn y CDATA #REQUIRED>
+
+<!-- nationalTimes-->
+<!ELEMENT nationalTimes (#PCDATA)>
+<!ATTLIST nationalTimes id CDATA #REQUIRED>
+<!ATTLIST nationalTimes x CDATA #REQUIRED>
+<!ATTLIST nationalTimes y CDATA #REQUIRED>
+
+<!-- publishBtn-->
+<!ELEMENT publishBtn (#PCDATA)>
+<!ATTLIST publishBtn id CDATA #REQUIRED>
+<!ATTLIST publishBtn x CDATA #REQUIRED>
+<!ATTLIST publishBtn y CDATA #REQUIRED>
+
+<!-- copyDwpBtn-->
+<!ELEMENT copyDwpBtn (#PCDATA)>
+<!ATTLIST copyDwpBtn id CDATA #REQUIRED>
+<!ATTLIST copyDwpBtn x CDATA #REQUIRED>
+<!ATTLIST copyDwpBtn y CDATA #REQUIRED>
+
+<!-- previewBtn-->
+<!ELEMENT previewBtn (#PCDATA)>
+<!ATTLIST previewBtn id CDATA #REQUIRED>
+<!ATTLIST previewBtn x CDATA #REQUIRED>
+<!ATTLIST previewBtn y CDATA #REQUIRED>
+
+<!-- bookSectionMetadata-->
+<!ELEMENT bookSectionMetadata (#PCDATA)>
+<!ATTLIST bookSectionMetadata id CDATA #REQUIRED>
+<!ATTLIST bookSectionMetadata x CDATA #REQUIRED>
+<!ATTLIST bookSectionMetadata y CDATA #REQUIRED>
+
+<!-- editionMetadata-->
+<!ELEMENT editionMetadata (#PCDATA)>
+<!ATTLIST editionMetadata id CDATA #REQUIRED>
+<!ATTLIST editionMetadata x CDATA #REQUIRED>
+<!ATTLIST editionMetadata y CDATA #REQUIRED>
+
+<!-- allContent-->
+<!ELEMENT allContent (#PCDATA)>
+<!ATTLIST allContent id CDATA #REQUIRED>
+<!ATTLIST allContent x CDATA #REQUIRED>
+<!ATTLIST allContent y CDATA #REQUIRED>
+
+<!-- irishPagePlanExpander-->
+<!ELEMENT irishPagePlanExpander (#PCDATA)>
+<!ATTLIST irishPagePlanExpander id CDATA #REQUIRED>
+<!ATTLIST irishPagePlanExpander x CDATA #REQUIRED>
+<!ATTLIST irishPagePlanExpander y CDATA #REQUIRED>
+
+<!-- irishMainBookBtn-->
+<!ELEMENT irishMainBookBtn (#PCDATA)>
+<!ATTLIST irishMainBookBtn id CDATA #REQUIRED>
+<!ATTLIST irishMainBookBtn x CDATA #REQUIRED>
+<!ATTLIST irishMainBookBtn y CDATA #REQUIRED>
+
+<!-- irishTimes-->
+<!ELEMENT irishTimes (#PCDATA)>
+<!ATTLIST irishTimes id CDATA #REQUIRED>
+<!ATTLIST irishTimes x CDATA #REQUIRED>
+<!ATTLIST irishTimes y CDATA #REQUIRED>
+
+<!-- slotMove-->
+<!ELEMENT slotMove (#PCDATA)>
+<!ATTLIST slotMove id CDATA #REQUIRED>
+<!ATTLIST slotMove x CDATA #REQUIRED>
+<!ATTLIST slotMove y CDATA #REQUIRED>
+
+<!-- slot1-->
+<!ELEMENT slot1 (#PCDATA)>
+<!ATTLIST slot1 id CDATA #REQUIRED>
+<!ATTLIST slot1 x CDATA #REQUIRED>
+<!ATTLIST slot1 y CDATA #REQUIRED>
+
+<!-- slot2-->
+<!ELEMENT slot2 (#PCDATA)>
+<!ATTLIST slot2 id CDATA #REQUIRED>
+<!ATTLIST slot2 x CDATA #REQUIRED>
+<!ATTLIST slot2 y CDATA #REQUIRED>
+
+<!-- slot3-->
+<!ELEMENT slot3 (#PCDATA)>
+<!ATTLIST slot3 id CDATA #REQUIRED>
+<!ATTLIST slot3 x CDATA #REQUIRED>
+<!ATTLIST slot3 y CDATA #REQUIRED>
+
+<!-- slot4-->
+<!ELEMENT slot4 (#PCDATA)>
+<!ATTLIST slot4 id CDATA #REQUIRED>
+<!ATTLIST slot4 x CDATA #REQUIRED>
+<!ATTLIST slot4 y CDATA #REQUIRED>
+
+<!-- slot5-->
+<!ELEMENT slot5 (#PCDATA)>
+<!ATTLIST slot5 id CDATA #REQUIRED>
+<!ATTLIST slot5 x CDATA #REQUIRED>
+<!ATTLIST slot5 y CDATA #REQUIRED>
+
+<!-- newsSlot1-->
+<!ELEMENT newsSlot1 (#PCDATA)>
+<!ATTLIST newsSlot1 id CDATA #REQUIRED>
+<!ATTLIST newsSlot1 x CDATA #REQUIRED>
+<!ATTLIST newsSlot1 y CDATA #REQUIRED>
+
+<!-- newsSlot2-->
+<!ELEMENT newsSlot2 (#PCDATA)>
+<!ATTLIST newsSlot2 id CDATA #REQUIRED>
+<!ATTLIST newsSlot2 x CDATA #REQUIRED>
+<!ATTLIST newsSlot2 y CDATA #REQUIRED>
+
+<!-- newsSlot3-->
+<!ELEMENT newsSlot3 (#PCDATA)>
+<!ATTLIST newsSlot3 id CDATA #REQUIRED>
+<!ATTLIST newsSlot3 x CDATA #REQUIRED>
+<!ATTLIST newsSlot3 y CDATA #REQUIRED>
+
+<!-- newsSlot4-->
+<!ELEMENT newsSlot4 (#PCDATA)>
+<!ATTLIST newsSlot4 id CDATA #REQUIRED>
+<!ATTLIST newsSlot4 x CDATA #REQUIRED>
+<!ATTLIST newsSlot4 y CDATA #REQUIRED>
+
+<!-- eatingSlot-->
+<!ELEMENT eatingSlot (#PCDATA)>
+<!ATTLIST eatingSlot id CDATA #REQUIRED>
+<!ATTLIST eatingSlot x CDATA #REQUIRED>
+<!ATTLIST eatingSlot y CDATA #REQUIRED>
+
+<!-- designTemplate-->
+<!ELEMENT designTemplate (#PCDATA)>
+<!ATTLIST designTemplate id CDATA #REQUIRED>
+<!ATTLIST designTemplate x CDATA #REQUIRED>
+<!ATTLIST designTemplate y CDATA #REQUIRED>
+
+<!-- templateSearchBox-->
+<!ELEMENT templateSearchBox (#PCDATA)>
+<!ATTLIST templateSearchBox id CDATA #REQUIRED>
+<!ATTLIST templateSearchBox x CDATA #REQUIRED>
+<!ATTLIST templateSearchBox y CDATA #REQUIRED>
+
+<!-- templateSearchBoxDropdown-->
+<!ELEMENT templateSearchBoxDropdown (#PCDATA)>
+<!ATTLIST templateSearchBoxDropdown id CDATA #REQUIRED>
+<!ATTLIST templateSearchBoxDropdown x CDATA #REQUIRED>
+<!ATTLIST templateSearchBoxDropdown y CDATA #REQUIRED>
+
+<!-- closeShapeLibrary-->
+<!ELEMENT closeShapeLibrary (#PCDATA)>
+<!ATTLIST closeShapeLibrary id CDATA #REQUIRED>
+<!ATTLIST closeShapeLibrary x CDATA #REQUIRED>
+<!ATTLIST closeShapeLibrary y CDATA #REQUIRED>
+
+<!-- clickOnMagazine-->
+<!ELEMENT clickOnMagazine (#PCDATA)>
+<!ATTLIST clickOnMagazine id CDATA #REQUIRED>
+<!ATTLIST clickOnMagazine x CDATA #REQUIRED>
+<!ATTLIST clickOnMagazine y CDATA #REQUIRED>
+
+<!-- closeSectionMetadata-->
+<!ELEMENT closeSectionMetadata (#PCDATA)>
+<!ATTLIST closeSectionMetadata id CDATA #REQUIRED>
+<!ATTLIST closeSectionMetadata x CDATA #REQUIRED>
+<!ATTLIST closeSectionMetadata y CDATA #REQUIRED>
+
+<!-- hideNavigation-->
+<!ELEMENT hideNavigation (#PCDATA)>
+<!ATTLIST hideNavigation id CDATA #REQUIRED>
+<!ATTLIST hideNavigation x CDATA #REQUIRED>
+<!ATTLIST hideNavigation y CDATA #REQUIRED>
+
+<!-- saveSectionMetadata-->
+<!ELEMENT saveSectionMetadata (#PCDATA)>
+<!ATTLIST saveSectionMetadata id CDATA #REQUIRED>
+<!ATTLIST saveSectionMetadata x CDATA #REQUIRED>
+<!ATTLIST saveSectionMetadata y CDATA #REQUIRED>
+
+<!-- stNewsNational-->
+<!ELEMENT stNewsNational (#PCDATA)>
+<!ATTLIST stNewsNational id CDATA #REQUIRED>
+<!ATTLIST stNewsNational x CDATA #REQUIRED>
+<!ATTLIST stNewsNational y CDATA #REQUIRED>
+
+<!-- stSportsNational-->
+<!ELEMENT stSportsNational (#PCDATA)>
+<!ATTLIST stSportsNational id CDATA #REQUIRED>
+<!ATTLIST stSportsNational x CDATA #REQUIRED>
+<!ATTLIST stSportsNational y CDATA #REQUIRED>
+
+<!-- stOtherNationalBooks-->
+<!ELEMENT stOtherNationalBooks (#PCDATA)>
+<!ATTLIST stOtherNationalBooks id CDATA #REQUIRED>
+<!ATTLIST stOtherNationalBooks x CDATA #REQUIRED>
+<!ATTLIST stOtherNationalBooks y CDATA #REQUIRED>
+
+<!-- stNationalTravellBook-->
+<!ELEMENT stNationalTravellBook (#PCDATA)>
+<!ATTLIST stNationalTravellBook id CDATA #REQUIRED>
+<!ATTLIST stNationalTravellBook x CDATA #REQUIRED>
+<!ATTLIST stNationalTravellBook y CDATA #REQUIRED>
+
+<!-- rightnavigation-->
+<!ELEMENT rightnavigation (#PCDATA)>
+<!ATTLIST rightnavigation id CDATA #REQUIRED>
+<!ATTLIST rightnavigation x CDATA #REQUIRED>
+<!ATTLIST rightnavigation y CDATA #REQUIRED>
+
+<!-- leftnavigation-->
+<!ELEMENT leftnavigation (#PCDATA)>
+<!ATTLIST leftnavigation id CDATA #REQUIRED>
+<!ATTLIST leftnavigation x CDATA #REQUIRED>
+<!ATTLIST leftnavigation y CDATA #REQUIRED>
+
+<!-- stNewsIreland-->
+<!ELEMENT stNewsIreland (#PCDATA)>
+<!ATTLIST stNewsIreland id CDATA #REQUIRED>
+<!ATTLIST stNewsIreland x CDATA #REQUIRED>
+<!ATTLIST stNewsIreland y CDATA #REQUIRED>
+
+<!-- stSportsIreland-->
+<!ELEMENT stSportsIreland (#PCDATA)>
+<!ATTLIST stSportsIreland id CDATA #REQUIRED>
+<!ATTLIST stSportsIreland x CDATA #REQUIRED>
+<!ATTLIST stSportsIreland y CDATA #REQUIRED>
+
+<!-- stOtherIrelandBooks-->
+<!ELEMENT stOtherIrelandBooks (#PCDATA)>
+<!ATTLIST stOtherIrelandBooks id CDATA #REQUIRED>
+<!ATTLIST stOtherIrelandBooks x CDATA #REQUIRED>
+<!ATTLIST stOtherIrelandBooks y CDATA #REQUIRED>
+
+<!-- stIrelandTravellBook-->
+<!ELEMENT stIrelandTravellBook (#PCDATA)>
+<!ATTLIST stIrelandTravellBook id CDATA #REQUIRED>
+<!ATTLIST stIrelandTravellBook x CDATA #REQUIRED>
+<!ATTLIST stIrelandTravellBook y CDATA #REQUIRED>
+
+<!-- stPublish-->
+<!ELEMENT stPublish (#PCDATA)>
+<!ATTLIST stPublish id CDATA #REQUIRED>
+<!ATTLIST stPublish x CDATA #REQUIRED>
+<!ATTLIST stPublish y CDATA #REQUIRED>
+
+<!-- stPreview-->
+<!ELEMENT stPreview (#PCDATA)>
+<!ATTLIST stPreview id CDATA #REQUIRED>
+<!ATTLIST stPreview x CDATA #REQUIRED>
+<!ATTLIST stPreview y CDATA #REQUIRED>
+
+<!-- stSlotUUID-->
+<!ELEMENT stSlotUUID (#PCDATA)>
+<!ATTLIST stSlotUUID id CDATA #REQUIRED>
+<!ATTLIST stSlotUUID x CDATA #REQUIRED>
+<!ATTLIST stSlotUUID y CDATA #REQUIRED>
+
+<!-- stBookSectionMetadata-->
+<!ELEMENT stBookSectionMetadata (#PCDATA)>
+<!ATTLIST stBookSectionMetadata id CDATA #REQUIRED>
+<!ATTLIST stBookSectionMetadata x CDATA #REQUIRED>
+<!ATTLIST stBookSectionMetadata y CDATA #REQUIRED>
+
+<!-- articleSpec-->
+<!ELEMENT articleSpec (#PCDATA)>
+<!ATTLIST articleSpec id CDATA #REQUIRED>
+<!ATTLIST articleSpec x CDATA #REQUIRED>
+<!ATTLIST articleSpec y CDATA #REQUIRED>
+
+<!-- childArticle-->
+<!ELEMENT childArticle (#PCDATA)>
+<!ATTLIST childArticle id CDATA #REQUIRED>
+<!ATTLIST childArticle x CDATA #REQUIRED>
+<!ATTLIST childArticle y CDATA #REQUIRED>
+
+<!-- articleAdv-->
+<!ELEMENT articleAdv (#PCDATA)>
+<!ATTLIST articleAdv id CDATA #REQUIRED>
+<!ATTLIST articleAdv x CDATA #REQUIRED>
+<!ATTLIST articleAdv y CDATA #REQUIRED>
+
+<!-- articleGallery-->
+<!ELEMENT articleGallery (#PCDATA)>
+<!ATTLIST articleGallery id CDATA #REQUIRED>
+<!ATTLIST articleGallery x CDATA #REQUIRED>
+<!ATTLIST articleGallery y CDATA #REQUIRED>
+
+<!-- floorline-->
+<!ELEMENT floorline (#PCDATA)>
+<!ATTLIST floorline id CDATA #REQUIRED>
+<!ATTLIST floorline x CDATA #REQUIRED>
+<!ATTLIST floorline y CDATA #REQUIRED>
+
+<!-- outsideFrame-->
+<!ELEMENT outsideFrame (#PCDATA)>
+<!ATTLIST outsideFrame id CDATA #REQUIRED>
+<!ATTLIST outsideFrame x CDATA #REQUIRED>
+<!ATTLIST outsideFrame y CDATA #REQUIRED>
+
+<!-- quickAcessBar-->
+<!ELEMENT quickAcessBar (#PCDATA)>
+<!ATTLIST quickAcessBar id CDATA #REQUIRED>
+<!ATTLIST quickAcessBar x CDATA #REQUIRED>
+<!ATTLIST quickAcessBar y CDATA #REQUIRED>
+
+<!-- searchQueryIcon-->
+<!ELEMENT searchQueryIcon (#PCDATA)>
+<!ATTLIST searchQueryIcon id CDATA #REQUIRED>
+<!ATTLIST searchQueryIcon x CDATA #REQUIRED>
+<!ATTLIST searchQueryIcon y CDATA #REQUIRED>
+
+<!-- newquerystorydrag-->
+<!ELEMENT newquerystorydrag (#PCDATA)>
+<!ATTLIST newquerystorydrag id CDATA #REQUIRED>
+<!ATTLIST newquerystorydrag x CDATA #REQUIRED>
+<!ATTLIST newquerystorydrag y CDATA #REQUIRED>
+
+<!--newImageCandidateBrowserDwp-->
+<!ELEMENT newImageCandidateBrowserDwp (#PCDATA)>
+<!ATTLIST newImageCandidateBrowserDwp id CDATA #REQUIRED>
+<!ATTLIST newImageCandidateBrowserDwp x CDATA #REQUIRED>
+<!ATTLIST newImageCandidateBrowserDwp y CDATA #REQUIRED>
+
+<!--mediaStoryPosition-->
+<!ELEMENT mediaStoryPosition (#PCDATA)>
+<!ATTLIST mediaStoryPosition id CDATA #REQUIRED>
+<!ATTLIST mediaStoryPosition x CDATA #REQUIRED>
+<!ATTLIST mediaStoryPosition y CDATA #REQUIRED>
+
+<!--closeQueryStories-->
+<!ELEMENT closeQueryStories (#PCDATA)>
+<!ATTLIST closeQueryStories id CDATA #REQUIRED>
+<!ATTLIST closeQueryStories x CDATA #REQUIRED>
+<!ATTLIST closeQueryStories y CDATA #REQUIRED>
+
+<!-- articlePublishBtn-->
+<!ELEMENT articlePublishBtn (#PCDATA)>
+<!ATTLIST articlePublishBtn id CDATA #REQUIRED>
+<!ATTLIST articlePublishBtn x CDATA #REQUIRED>
+<!ATTLIST articlePublishBtn y CDATA #REQUIRED>
+
+<!-- relatedLinks-->
+<!ELEMENT relatedLinks (#PCDATA)>
+<!ATTLIST relatedLinks id CDATA #REQUIRED>
+<!ATTLIST relatedLinks x CDATA #REQUIRED>
+<!ATTLIST relatedLinks y CDATA #REQUIRED>
+
+<!-- articleChpUuidBtn-->
+<!ELEMENT articleChpUuidBtn (#PCDATA)>
+<!ATTLIST articleChpUuidBtn id CDATA #REQUIRED>
+<!ATTLIST articleChpUuidBtn x CDATA #REQUIRED>
+<!ATTLIST articleChpUuidBtn y CDATA #REQUIRED>
+
+<!-- chpCommunityBtn-->
+<!ELEMENT chpCommunityBtn (#PCDATA)>
+<!ATTLIST chpCommunityBtn id CDATA #REQUIRED>
+<!ATTLIST chpCommunityBtn x CDATA #REQUIRED>
+<!ATTLIST chpCommunityBtn y CDATA #REQUIRED>
+
+<!-- articleHeadLine-->
+<!ELEMENT articleHeadLine (#PCDATA)>
+<!ATTLIST articleHeadLine id CDATA #REQUIRED>
+<!ATTLIST articleHeadLine x CDATA #REQUIRED>
+<!ATTLIST articleHeadLine y CDATA #REQUIRED>
+
+<!-- videoArticleHeadLine-->
+<!ELEMENT videoArticleHeadLine (#PCDATA)>
+<!ATTLIST videoArticleHeadLine id CDATA #REQUIRED>
+<!ATTLIST videoArticleHeadLine x CDATA #REQUIRED>
+<!ATTLIST videoArticleHeadLine y CDATA #REQUIRED>
+
+<!-- articleStandfirst-->
+<!ELEMENT articleStandfirst (#PCDATA)>
+<!ATTLIST articleStandfirst id CDATA #REQUIRED>
+<!ATTLIST articleStandfirst x CDATA #REQUIRED>
+<!ATTLIST articleStandfirst y CDATA #REQUIRED>
+
+<!-- articleOverrideHeadLine-->
+<!ELEMENT articleOverrideHeadLine (#PCDATA)>
+<!ATTLIST articleOverrideHeadLine id CDATA #REQUIRED>
+<!ATTLIST articleOverrideHeadLine x CDATA #REQUIRED>
+<!ATTLIST articleOverrideHeadLine y CDATA #REQUIRED>
+
+<!-- articleOverrideStandfirst-->
+<!ELEMENT articleOverrideStandfirst (#PCDATA)>
+<!ATTLIST articleOverrideStandfirst id CDATA #REQUIRED>
+<!ATTLIST articleOverrideStandfirst x CDATA #REQUIRED>
+<!ATTLIST articleOverrideStandfirst y CDATA #REQUIRED>
+
+<!-- oneColumnStandfirst-->
+<!ELEMENT oneColumnStandfirst (#PCDATA)>
+<!ATTLIST oneColumnStandfirst id CDATA #REQUIRED>
+<!ATTLIST oneColumnStandfirst x CDATA #REQUIRED>
+<!ATTLIST oneColumnStandfirst y CDATA #REQUIRED>
+
+<!-- floorlineHeadline-->
+<!ELEMENT floorlineHeadline (#PCDATA)>
+<!ATTLIST floorlineHeadline id CDATA #REQUIRED>
+<!ATTLIST floorlineHeadline x CDATA #REQUIRED>
+<!ATTLIST floorlineHeadline y CDATA #REQUIRED>
+
+<!-- floorlineCopy-->
+<!ELEMENT floorlineCopy (#PCDATA)>
+<!ATTLIST floorlineCopy id CDATA #REQUIRED>
+<!ATTLIST floorlineCopy x CDATA #REQUIRED>
+<!ATTLIST floorlineCopy y CDATA #REQUIRED>
+
+<!-- articleText-->
+<!ELEMENT articleText (#PCDATA)>
+<!ATTLIST articleText id CDATA #REQUIRED>
+<!ATTLIST articleText x CDATA #REQUIRED>
+<!ATTLIST articleText y CDATA #REQUIRED>
+
+<!-- tabletAllFeild-->
+<!ELEMENT tabletAllFeild (#PCDATA)>
+<!ATTLIST tabletAllFeild id CDATA #REQUIRED>
+<!ATTLIST tabletAllFeild x CDATA #REQUIRED>
+<!ATTLIST tabletAllFeild y CDATA #REQUIRED>
+
+<!--activateCandidateBrowser-->
+<!ELEMENT activateCandidateBrowser (#PCDATA)>
+<!ATTLIST activateCandidateBrowser id CDATA #REQUIRED>
+<!ATTLIST activateCandidateBrowser x CDATA #REQUIRED>
+<!ATTLIST activateCandidateBrowser y CDATA #REQUIRED>
+
+<!-- newImageCandidateBrowser-->
+<!ELEMENT newImageCandidateBrowser (#PCDATA)>
+<!ATTLIST newImageCandidateBrowser id CDATA #REQUIRED>
+<!ATTLIST newImageCandidateBrowser x CDATA #REQUIRED>
+<!ATTLIST newImageCandidateBrowser y CDATA #REQUIRED>
+
+<!-- candidateImage-->
+<!ELEMENT candidateImage (#PCDATA)>
+<!ATTLIST candidateImage id CDATA #REQUIRED>
+<!ATTLIST candidateImage x CDATA #REQUIRED>
+<!ATTLIST candidateImage y CDATA #REQUIRED>
+
+<!-- pullQuotes-->
+<!ELEMENT pullQuotes (#PCDATA)>
+<!ATTLIST pullQuotes id CDATA #REQUIRED>
+<!ATTLIST pullQuotes x CDATA #REQUIRED>
+<!ATTLIST pullQuotes y CDATA #REQUIRED>
+
+<!-- pullQuotesTabletSelect-->
+<!ELEMENT pullQuotesTabletSelect (#PCDATA)>
+<!ATTLIST pullQuotesTabletSelect id CDATA #REQUIRED>
+<!ATTLIST pullQuotesTabletSelect x CDATA #REQUIRED>
+<!ATTLIST pullQuotesTabletSelect y CDATA #REQUIRED>
+
+<!-- pullQuoteSelect-->
+<!ELEMENT pullQuoteSelect (#PCDATA)>
+<!ATTLIST pullQuoteSelect id CDATA #REQUIRED>
+<!ATTLIST pullQuoteSelect x CDATA #REQUIRED>
+<!ATTLIST pullQuoteSelect y CDATA #REQUIRED>
+
+<!-- pullQuoteLine-->
+<!ELEMENT pullQuoteLine (#PCDATA)>
+<!ATTLIST pullQuoteLine id CDATA #REQUIRED>
+<!ATTLIST pullQuoteLine x CDATA #REQUIRED>
+<!ATTLIST pullQuoteLine y CDATA #REQUIRED>
+
+<!-- clickingOnImage-->
+<!ELEMENT clickingOnImage (#PCDATA)>
+<!ATTLIST clickingOnImage id CDATA #REQUIRED>
+<!ATTLIST clickingOnImage x CDATA #REQUIRED>
+<!ATTLIST clickingOnImage y CDATA #REQUIRED>
+
+<!--clickingOnInlineImage-->
+<!ELEMENT clickingOnInlineImage (#PCDATA)>
+<!ATTLIST clickingOnInlineImage id CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImage x CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImage y CDATA #REQUIRED>
+
+<!--clickingOnInlineImage2-->
+<!ELEMENT clickingOnInlineImage2 (#PCDATA)>
+<!ATTLIST clickingOnInlineImage2 id CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImage2 x CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImage2 y CDATA #REQUIRED>
+
+<!--clickingOnInlineImage3-->
+<!ELEMENT clickingOnInlineImage3 (#PCDATA)>
+<!ATTLIST clickingOnInlineImage3 id CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImage3 x CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImage3 y CDATA #REQUIRED>
+
+<!--clickingOnInlineImagePotrait-->
+<!ELEMENT clickingOnInlineImagePotrait (#PCDATA)>
+<!ATTLIST clickingOnInlineImagePotrait id CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImagePotrait x CDATA #REQUIRED>
+<!ATTLIST clickingOnInlineImagePotrait y CDATA #REQUIRED>
+
+<!--insertRelatedLink-->
+<!ELEMENT insertRelatedLink (#PCDATA)>
+<!ATTLIST insertRelatedLink id CDATA #REQUIRED>
+<!ATTLIST insertRelatedLink x CDATA #REQUIRED>
+<!ATTLIST insertRelatedLink y CDATA #REQUIRED>
+
+<!-- hideHeadline   -->
+<!ELEMENT hideHeadline (#PCDATA)>
+<!ATTLIST hideHeadline id CDATA #REQUIRED>
+<!ATTLIST hideHeadline x CDATA #REQUIRED>
+<!ATTLIST hideHeadline y CDATA #REQUIRED>
+
+<!-- twoColumnImage   -->
+<!ELEMENT twoColumnImage (#PCDATA)>
+<!ATTLIST twoColumnImage id CDATA #REQUIRED>
+<!ATTLIST twoColumnImage x CDATA #REQUIRED>
+<!ATTLIST twoColumnImage y CDATA #REQUIRED>
+
+<!-- fullBleed   -->
+<!ELEMENT fullBleed (#PCDATA)>
+<!ATTLIST fullBleed id CDATA #REQUIRED>
+<!ATTLIST fullBleed x CDATA #REQUIRED>
+<!ATTLIST fullBleed y CDATA #REQUIRED>
+
+<!-- disableCopyFit   -->
+<!ELEMENT disableCopyFit (#PCDATA)>
+<!ATTLIST disableCopyFit id CDATA #REQUIRED>
+<!ATTLIST disableCopyFit x CDATA #REQUIRED>
+<!ATTLIST disableCopyFit y CDATA #REQUIRED>
+
+<!-- headlineSpanDropDownnumber   -->
+<!ELEMENT headlineSpanDropDownnumber (#PCDATA)>
+<!ATTLIST headlineSpanDropDownnumber id CDATA #REQUIRED>
+<!ATTLIST headlineSpanDropDownnumber x CDATA #REQUIRED>
+<!ATTLIST headlineSpanDropDownnumber y CDATA #REQUIRED>
+
+<!-- headlineSpanDropDownPosition   -->
+<!ELEMENT headlineSpanDropDownPosition (#PCDATA)>
+<!ATTLIST headlineSpanDropDownPosition id CDATA #REQUIRED>
+<!ATTLIST headlineSpanDropDownPosition x CDATA #REQUIRED>
+<!ATTLIST headlineSpanDropDownPosition y CDATA #REQUIRED>
+
+<!-- sharingUrlLinkBox   -->
+<!ELEMENT sharingUrlLinkBox (#PCDATA)>
+<!ATTLIST sharingUrlLinkBox id CDATA #REQUIRED>
+<!ATTLIST sharingUrlLinkBox x CDATA #REQUIRED>
+<!ATTLIST sharingUrlLinkBox y CDATA #REQUIRED>
+
+<!-- disableSocialSharing   -->
+<!ELEMENT disableSocialSharing (#PCDATA)>
+<!ATTLIST disableSocialSharing id CDATA #REQUIRED>
+<!ATTLIST disableSocialSharing x CDATA #REQUIRED>
+<!ATTLIST disableSocialSharing y CDATA #REQUIRED>
+
+<!-- disableSavingArticle   -->
+<!ELEMENT disableSavingArticle (#PCDATA)>
+<!ATTLIST disableSavingArticle id CDATA #REQUIRED>
+<!ATTLIST disableSavingArticle x CDATA #REQUIRED>
+<!ATTLIST disableSavingArticle y CDATA #REQUIRED>
+
+<!-- disableSavingArticleFalse   -->
+<!ELEMENT disableSavingArticleFalse (#PCDATA)>
+<!ATTLIST disableSavingArticleFalse id CDATA #REQUIRED>
+<!ATTLIST disableSavingArticleFalse x CDATA #REQUIRED>
+<!ATTLIST disableSavingArticleFalse y CDATA #REQUIRED>
+
+<!-- panelSettings   -->
+<!ELEMENT panelSettings (#PCDATA)>
+<!ATTLIST panelSettings id CDATA #REQUIRED>
+<!ATTLIST panelSettings x CDATA #REQUIRED>
+<!ATTLIST panelSettings y CDATA #REQUIRED>
+
+<!-- panelColorsSettings   -->
+<!ELEMENT panelColorsSettings (#PCDATA)>
+<!ATTLIST panelColorsSettings id CDATA #REQUIRED>
+<!ATTLIST panelColorsSettings x CDATA #REQUIRED>
+<!ATTLIST panelColorsSettings y CDATA #REQUIRED>
+
+<!-- showChildArticleInNavigation   -->
+<!ELEMENT showChildArticleInNavigation (#PCDATA)>
+<!ATTLIST showChildArticleInNavigation id CDATA #REQUIRED>
+<!ATTLIST showChildArticleInNavigation x CDATA #REQUIRED>
+<!ATTLIST showChildArticleInNavigation y CDATA #REQUIRED>
+
+<!-- disableAutomaticFloorline   -->
+<!ELEMENT disableAutomaticFloorline (#PCDATA)>
+<!ATTLIST disableAutomaticFloorline id CDATA #REQUIRED>
+<!ATTLIST disableAutomaticFloorline x CDATA #REQUIRED>
+<!ATTLIST disableAutomaticFloorline y CDATA #REQUIRED>
+
+<!-- getQuickAccessBar   -->
+<!ELEMENT getQuickAccessBar (#PCDATA)>
+<!ATTLIST getQuickAccessBar id CDATA #REQUIRED>
+<!ATTLIST getQuickAccessBar x CDATA #REQUIRED>
+<!ATTLIST getQuickAccessBar y CDATA #REQUIRED>
+
+<!-- clickOnSearchQuery   -->
+<!ELEMENT clickOnSearchQuery (#PCDATA)>
+<!ATTLIST clickOnSearchQuery id CDATA #REQUIRED>
+<!ATTLIST clickOnSearchQuery x CDATA #REQUIRED>
+<!ATTLIST clickOnSearchQuery y CDATA #REQUIRED>
+
+<!-- addingFractionalDeeplink   -->
+<!ELEMENT addingFractionalDeeplink (#PCDATA)>
+<!ATTLIST addingFractionalDeeplink id CDATA #REQUIRED>
+<!ATTLIST addingFractionalDeeplink x CDATA #REQUIRED>
+<!ATTLIST addingFractionalDeeplink y CDATA #REQUIRED>
+
+<!-- setFont   -->
+<!ELEMENT setFont (#PCDATA)>
+<!ATTLIST setFont id CDATA #REQUIRED>
+<!ATTLIST setFont x CDATA #REQUIRED>
+<!ATTLIST setFont y CDATA #REQUIRED>
+
+<!-- rightClickInTextInline01   -->
+<!ELEMENT rightClickInTextInline01 (#PCDATA)>
+<!ATTLIST rightClickInTextInline01 id CDATA #REQUIRED>
+<!ATTLIST rightClickInTextInline01 x CDATA #REQUIRED>
+<!ATTLIST rightClickInTextInline01 y CDATA #REQUIRED>
+
+<!-- rightClickInTextInline02   -->
+<!ELEMENT rightClickInTextInline02 (#PCDATA)>
+<!ATTLIST rightClickInTextInline02 id CDATA #REQUIRED>
+<!ATTLIST rightClickInTextInline02 x CDATA #REQUIRED>
+<!ATTLIST rightClickInTextInline02 y CDATA #REQUIRED>
+
+<!-- searchQueryClose-->
+<!ELEMENT searchQueryClose (#PCDATA)>
+<!ATTLIST searchQueryClose id CDATA #REQUIRED>
+<!ATTLIST searchQueryClose x CDATA #REQUIRED>
+<!ATTLIST searchQueryClose y CDATA #REQUIRED>
+
+<!-- embeddedCode-->
+<!ELEMENT embeddedCode (#PCDATA)>
+<!ATTLIST embeddedCode id CDATA #REQUIRED>
+<!ATTLIST embeddedCode x CDATA #REQUIRED>
+<!ATTLIST embeddedCode y CDATA #REQUIRED>
+
+<!-- quickMetadataSaveBtnDefault-->
+<!ELEMENT quickMetadataSaveBtnDefault (#PCDATA)>
+<!ATTLIST quickMetadataSaveBtnDefault id CDATA #REQUIRED>
+<!ATTLIST quickMetadataSaveBtnDefault x CDATA #REQUIRED>
+<!ATTLIST quickMetadataSaveBtnDefault y CDATA #REQUIRED>
+
+<!-- quickMetadataSaveBtnwithPosition-->
+<!ELEMENT quickMetadataSaveBtnwithPosition (#PCDATA)>
+<!ATTLIST quickMetadataSaveBtnwithPosition id CDATA #REQUIRED>
+<!ATTLIST quickMetadataSaveBtnwithPosition x CDATA #REQUIRED>
+<!ATTLIST quickMetadataSaveBtnwithPosition y CDATA #REQUIRED>
+
+<!-- channelCopyinheritBtn-->
+<!ELEMENT channelCopyinheritBtn (#PCDATA)>
+<!ATTLIST channelCopyinheritBtn id CDATA #REQUIRED>
+<!ATTLIST channelCopyinheritBtn x CDATA #REQUIRED>
+<!ATTLIST channelCopyinheritBtn y CDATA #REQUIRED>
+
+<!-- channelCopyOkBtn-->
+<!ELEMENT channelCopyOkBtn (#PCDATA)>
+<!ATTLIST channelCopyOkBtn id CDATA #REQUIRED>
+<!ATTLIST channelCopyOkBtn x CDATA #REQUIRED>
+<!ATTLIST channelCopyOkBtn y CDATA #REQUIRED>
+
+<!-- channelCopyCancelBtn-->
+<!ELEMENT channelCopyCancelBtn (#PCDATA)>
+<!ATTLIST channelCopyCancelBtn id CDATA #REQUIRED>
+<!ATTLIST channelCopyCancelBtn x CDATA #REQUIRED>
+<!ATTLIST channelCopyCancelBtn y CDATA #REQUIRED>
+
+<!-- metadataOkBtn-->
+<!ELEMENT metadataOkBtn (#PCDATA)>
+<!ATTLIST metadataOkBtn id CDATA #REQUIRED>
+<!ATTLIST metadataOkBtn x CDATA #REQUIRED>
+<!ATTLIST metadataOkBtn y CDATA #REQUIRED>
+
+<!-- metadataCancelBtn-->
+<!ELEMENT metadataCancelBtn (#PCDATA)>
+<!ATTLIST metadataCancelBtn id CDATA #REQUIRED>
+<!ATTLIST metadataCancelBtn x CDATA #REQUIRED>
+<!ATTLIST metadataCancelBtn y CDATA #REQUIRED>
+
+<!-- doNotCropField-->
+<!ELEMENT doNotCropField (#PCDATA)>
+<!ATTLIST doNotCropField id CDATA #REQUIRED>
+<!ATTLIST doNotCropField x CDATA #REQUIRED>
+<!ATTLIST doNotCropField y CDATA #REQUIRED>
+
+<!-- doNotResize-->
+<!ELEMENT doNotResize (#PCDATA)>
+<!ATTLIST doNotResize id CDATA #REQUIRED>
+<!ATTLIST doNotResize x CDATA #REQUIRED>
+<!ATTLIST doNotResize y CDATA #REQUIRED>
+
+<!-- mandatoryClick-->
+<!ELEMENT mandatoryClick (#PCDATA)>
+<!ATTLIST mandatoryClick id CDATA #REQUIRED>
+<!ATTLIST mandatoryClick x CDATA #REQUIRED>
+<!ATTLIST mandatoryClick y CDATA #REQUIRED>
+
+<!-- addToCarousel-->
+<!ELEMENT addToCarousel (#PCDATA)>
+<!ATTLIST addToCarousel id CDATA #REQUIRED>
+<!ATTLIST addToCarousel x CDATA #REQUIRED>
+<!ATTLIST addToCarousel y CDATA #REQUIRED>
+
+<!-- disableTapBehaviour-->
+<!ELEMENT disableTapBehaviour (#PCDATA)>
+<!ATTLIST disableTapBehaviour id CDATA #REQUIRED>
+<!ATTLIST disableTapBehaviour x CDATA #REQUIRED>
+<!ATTLIST disableTapBehaviour y CDATA #REQUIRED>
+
+<!-- disableImageEnhancement-->
+<!ELEMENT disableImageEnhancement (#PCDATA)>
+<!ATTLIST disableImageEnhancement id CDATA #REQUIRED>
+<!ATTLIST disableImageEnhancement x CDATA #REQUIRED>
+<!ATTLIST disableImageEnhancement y CDATA #REQUIRED>
+
+<!-- positionalsPage-->
+<!ELEMENT positionalsPage (#PCDATA)>
+<!ATTLIST positionalsPage id CDATA #REQUIRED>
+<!ATTLIST positionalsPage x CDATA #REQUIRED>
+<!ATTLIST positionalsPage y CDATA #REQUIRED>
+
+<!-- positionalsHorizontalAlign-->
+<!ELEMENT positionalsHorizontalAlign (#PCDATA)>
+<!ATTLIST positionalsHorizontalAlign id CDATA #REQUIRED>
+<!ATTLIST positionalsHorizontalAlign x CDATA #REQUIRED>
+<!ATTLIST positionalsHorizontalAlign y CDATA #REQUIRED>
+
+<!-- positionalsVerticalAlign-->
+<!ELEMENT positionalsVerticalAlign (#PCDATA)>
+<!ATTLIST positionalsVerticalAlign id CDATA #REQUIRED>
+<!ATTLIST positionalsVerticalAlign x CDATA #REQUIRED>
+<!ATTLIST positionalsVerticalAlign y CDATA #REQUIRED>
+
+<!-- positionalsColumnWidth-->
+<!ELEMENT positionalsColumnWidth (#PCDATA)>
+<!ATTLIST positionalsColumnWidth id CDATA #REQUIRED>
+<!ATTLIST positionalsColumnWidth x CDATA #REQUIRED>
+<!ATTLIST positionalsColumnWidth y CDATA #REQUIRED>
+
+<!-- metadataPanelSaveBtn-->
+<!ELEMENT metadataPanelSaveBtn (#PCDATA)>
+<!ATTLIST metadataPanelSaveBtn id CDATA #REQUIRED>
+<!ATTLIST metadataPanelSaveBtn x CDATA #REQUIRED>
+<!ATTLIST metadataPanelSaveBtn y CDATA #REQUIRED>
+
+<!-- metadataPanelCloseBtn-->
+<!ELEMENT metadataPanelCloseBtn (#PCDATA)>
+<!ATTLIST metadataPanelCloseBtn id CDATA #REQUIRED>
+<!ATTLIST metadataPanelCloseBtn x CDATA #REQUIRED>
+<!ATTLIST metadataPanelCloseBtn y CDATA #REQUIRED>
+
+<!-- inlineMetdataColumnPercentage-->
+<!ELEMENT inlineMetdataColumnPercentage (#PCDATA)>
+<!ATTLIST inlineMetdataColumnPercentage id CDATA #REQUIRED>
+<!ATTLIST inlineMetdataColumnPercentage x CDATA #REQUIRED>
+<!ATTLIST inlineMetdataColumnPercentage y CDATA #REQUIRED>
+
+<!-- inlineMetdataBaseline-->
+<!ELEMENT inlineMetdataBaseline (#PCDATA)>
+<!ATTLIST inlineMetdataBaseline id CDATA #REQUIRED>
+<!ATTLIST inlineMetdataBaseline x CDATA #REQUIRED>
+<!ATTLIST inlineMetdataBaseline y CDATA #REQUIRED>
+
+<!-- imageOutsideFrame-->
+<!ELEMENT imageOutsideFrame (#PCDATA)>
+<!ATTLIST imageOutsideFrame id CDATA #REQUIRED>
+<!ATTLIST imageOutsideFrame x CDATA #REQUIRED>
+<!ATTLIST imageOutsideFrame y CDATA #REQUIRED>
+
+<!-- workflowTabSent-->
+<!ELEMENT workflowTabSent (#PCDATA)>
+<!ATTLIST workflowTabSent id CDATA #REQUIRED>
+<!ATTLIST workflowTabSent x CDATA #REQUIRED>
+<!ATTLIST workflowTabSent y CDATA #REQUIRED>
+
+<!-- workflowTabApprove-->
+<!ELEMENT workflowTabApprove (#PCDATA)>
+<!ATTLIST workflowTabApprove id CDATA #REQUIRED>
+<!ATTLIST workflowTabApprove x CDATA #REQUIRED>
+<!ATTLIST workflowTabApprove y CDATA #REQUIRED>
+
+<!-- workflowTabWait-->
+<!ELEMENT workflowTabWait (#PCDATA)>
+<!ATTLIST workflowTabWait id CDATA #REQUIRED>
+<!ATTLIST workflowTabWait x CDATA #REQUIRED>
+<!ATTLIST workflowTabWait y CDATA #REQUIRED>
+
+<!-- workflowApplyBtn-->
+<!ELEMENT workflowApplyBtn (#PCDATA)>
+<!ATTLIST workflowApplyBtn id CDATA #REQUIRED>
+<!ATTLIST workflowApplyBtn x CDATA #REQUIRED>
+<!ATTLIST workflowApplyBtn y CDATA #REQUIRED>
+
+<!-- workflowOkBtn-->
+<!ELEMENT workflowOkBtn (#PCDATA)>
+<!ATTLIST workflowOkBtn id CDATA #REQUIRED>
+<!ATTLIST workflowOkBtn x CDATA #REQUIRED>
+<!ATTLIST workflowOkBtn y CDATA #REQUIRED>
+
+<!-- workflowCancelBtn-->
+<!ELEMENT workflowCancelBtn (#PCDATA)>
+<!ATTLIST workflowCancelBtn id CDATA #REQUIRED>
+<!ATTLIST workflowCancelBtn x CDATA #REQUIRED>
+<!ATTLIST workflowCancelBtn y CDATA #REQUIRED>
+
+<!-- workflowRemovefromWorkflow-->
+<!ELEMENT workflowRemovefromWorkflow (#PCDATA)>
+<!ATTLIST workflowRemovefromWorkflow id CDATA #REQUIRED>
+<!ATTLIST workflowRemovefromWorkflow x CDATA #REQUIRED>
+<!ATTLIST workflowRemovefromWorkflow y CDATA #REQUIRED>
+
+<!-- inlinedropDownratioSelect-->
+<!ELEMENT inlinedropDownratioSelect (#PCDATA)>
+<!ATTLIST inlinedropDownratioSelect id CDATA #REQUIRED>
+<!ATTLIST inlinedropDownratioSelect x CDATA #REQUIRED>
+<!ATTLIST inlinedropDownratioSelect y CDATA #REQUIRED>
+
+<!-- inlineWindowOkBtn-->
+<!ELEMENT inlineWindowOkBtn (#PCDATA)>
+<!ATTLIST inlineWindowOkBtn id CDATA #REQUIRED>
+<!ATTLIST inlineWindowOkBtn x CDATA #REQUIRED>
+<!ATTLIST inlineWindowOkBtn y CDATA #REQUIRED>
+
+<!-- inlineWindowCancelBtn-->
+<!ELEMENT inlineWindowCancelBtn (#PCDATA)>
+<!ATTLIST inlineWindowCancelBtn id CDATA #REQUIRED>
+<!ATTLIST inlineWindowCancelBtn x CDATA #REQUIRED>
+<!ATTLIST inlineWindowCancelBtn y CDATA #REQUIRED>
+
+<!-- pagePlannerMetadataWebPublicationClick-->
+<!ELEMENT pagePlannerMetadataWebPublicationClick (#PCDATA)>
+<!ATTLIST pagePlannerMetadataWebPublicationClick id CDATA #REQUIRED>
+<!ATTLIST pagePlannerMetadataWebPublicationClick x CDATA #REQUIRED>
+<!ATTLIST pagePlannerMetadataWebPublicationClick y CDATA #REQUIRED>
+
+<!-- pagePlannerMetadataOkBtn-->
+<!ELEMENT pagePlannerMetadataOkBtn (#PCDATA)>
+<!ATTLIST pagePlannerMetadataOkBtn id CDATA #REQUIRED>
+<!ATTLIST pagePlannerMetadataOkBtn x CDATA #REQUIRED>
+<!ATTLIST pagePlannerMetadataOkBtn y CDATA #REQUIRED>
+
+<!-- pagePlannerMetadataCancelBtn-->
+<!ELEMENT pagePlannerMetadataCancelBtn (#PCDATA)>
+<!ATTLIST pagePlannerMetadataCancelBtn id CDATA #REQUIRED>
+<!ATTLIST pagePlannerMetadataCancelBtn x CDATA #REQUIRED>
+<!ATTLIST pagePlannerMetadataCancelBtn y CDATA #REQUIRED>
+
+<!-- queryName -->
+<!ELEMENT queryName (#PCDATA)>
+<!ATTLIST queryName id CDATA #REQUIRED>
+<!ATTLIST queryName x CDATA #REQUIRED>
+<!ATTLIST queryName y CDATA #REQUIRED>
+
+<!-- fileName -->
+<!ELEMENT fileName (#PCDATA)>
+<!ATTLIST fileName id CDATA #REQUIRED>
+<!ATTLIST fileName x CDATA #REQUIRED>
+<!ATTLIST fileName y CDATA #REQUIRED>
+
+<!-- clearBtn -->
+<!ELEMENT clearBtn (#PCDATA)>
+<!ATTLIST clearBtn id CDATA #REQUIRED>
+<!ATTLIST clearBtn x CDATA #REQUIRED>
+<!ATTLIST clearBtn y CDATA #REQUIRED>
+
+<!-- loadFromBtn  -->
+<!ELEMENT loadFromBtn (#PCDATA)>
+<!ATTLIST loadFromBtn id CDATA #REQUIRED>
+<!ATTLIST loadFromBtn x CDATA #REQUIRED>
+<!ATTLIST loadFromBtn y CDATA #REQUIRED>
+
+<!-- tryBtn  -->
+<!ELEMENT tryBtn (#PCDATA)>
+<!ATTLIST tryBtn id CDATA #REQUIRED>
+<!ATTLIST tryBtn x CDATA #REQUIRED>
+<!ATTLIST tryBtn y CDATA #REQUIRED>
+
+<!-- okBtn   -->
+<!ELEMENT okBtn (#PCDATA)>
+<!ATTLIST okBtn  id CDATA #REQUIRED>
+<!ATTLIST okBtn  x CDATA #REQUIRED>
+<!ATTLIST okBtn  y CDATA #REQUIRED>
+
+<!-- cancelBtn   -->
+<!ELEMENT cancelBtn (#PCDATA)>
+<!ATTLIST cancelBtn id CDATA #REQUIRED>
+<!ATTLIST cancelBtn x CDATA #REQUIRED>
+<!ATTLIST cancelBtn y CDATA #REQUIRED>
+
+<!-- selectingTablet   -->
+<!ELEMENT selectingTablet (#PCDATA)>
+<!ATTLIST selectingTablet id CDATA #REQUIRED>
+<!ATTLIST selectingTablet x CDATA #REQUIRED>
+<!ATTLIST selectingTablet y CDATA #REQUIRED>
+
+<!-- lineHeight   -->
+<!ELEMENT lineHeight (#PCDATA)>
+<!ATTLIST lineHeight id CDATA #REQUIRED>
+<!ATTLIST lineHeight x CDATA #REQUIRED>
+<!ATTLIST lineHeight y CDATA #REQUIRED>
+
+<!-- letterSpacing   -->
+<!ELEMENT letterSpacing (#PCDATA)>
+<!ATTLIST letterSpacing id CDATA #REQUIRED>
+<!ATTLIST letterSpacing x CDATA #REQUIRED>
+<!ATTLIST letterSpacing y CDATA #REQUIRED>
+
+<!-- fontSize   -->
+<!ELEMENT fontSize (#PCDATA)>
+<!ATTLIST fontSize id CDATA #REQUIRED>
+<!ATTLIST fontSize x CDATA #REQUIRED>
+<!ATTLIST fontSize y CDATA #REQUIRED>
+
+<!-- formattingSaveBtn   -->
+<!ELEMENT formattingSaveBtn (#PCDATA)>
+<!ATTLIST formattingSaveBtn id CDATA #REQUIRED>
+<!ATTLIST formattingSaveBtn x CDATA #REQUIRED>
+<!ATTLIST formattingSaveBtn y CDATA #REQUIRED>
+
+<!-- formattingCloseBtn   -->
+<!ELEMENT formattingCloseBtn (#PCDATA)>
+<!ATTLIST formattingCloseBtn id CDATA #REQUIRED>
+<!ATTLIST formattingCloseBtn x CDATA #REQUIRED>
+<!ATTLIST formattingCloseBtn y CDATA #REQUIRED>
+
+<!-- inProgressClick   -->
+<!ELEMENT inProgressClick (#PCDATA)>
+<!ATTLIST inProgressClick id CDATA #REQUIRED>
+<!ATTLIST inProgressClick x CDATA #REQUIRED>
+<!ATTLIST inProgressClick y CDATA #REQUIRED>
+
+<!-- doneClick   -->
+<!ELEMENT doneClick (#PCDATA)>
+<!ATTLIST doneClick id CDATA #REQUIRED>
+<!ATTLIST doneClick x CDATA #REQUIRED>
+<!ATTLIST doneClick y CDATA #REQUIRED>
+
+<!-- doneClick2   -->
+<!ELEMENT doneClick2 (#PCDATA)>
+<!ATTLIST doneClick2 id CDATA #REQUIRED>
+<!ATTLIST doneClick2 x CDATA #REQUIRED>
+<!ATTLIST doneClick2 y CDATA #REQUIRED>
+
+<!-- editorialWorkFlowOkBtn   -->
+<!ELEMENT editorialWorkFlowOkBtn (#PCDATA)>
+<!ATTLIST editorialWorkFlowOkBtn id CDATA #REQUIRED>
+<!ATTLIST editorialWorkFlowOkBtn x CDATA #REQUIRED>
+<!ATTLIST editorialWorkFlowOkBtn y CDATA #REQUIRED>
+
+<!-- editorialWorkflowCancelBtn   -->
+<!ELEMENT editorialWorkflowCancelBtn (#PCDATA)>
+<!ATTLIST editorialWorkflowCancelBtn id CDATA #REQUIRED>
+<!ATTLIST editorialWorkflowCancelBtn x CDATA #REQUIRED>
+<!ATTLIST editorialWorkflowCancelBtn y CDATA #REQUIRED>
+
+<!-- clickOnText   -->
+<!ELEMENT clickOnText (#PCDATA)>
+<!ATTLIST clickOnText id CDATA #REQUIRED>
+<!ATTLIST clickOnText x CDATA #REQUIRED>
+<!ATTLIST clickOnText y CDATA #REQUIRED>
+
+<!-- clickOnHyperlink   -->
+<!ELEMENT clickOnHyperlink (#PCDATA)>
+<!ATTLIST clickOnHyperlink id CDATA #REQUIRED>
+<!ATTLIST clickOnHyperlink x CDATA #REQUIRED>
+<!ATTLIST clickOnHyperlink y CDATA #REQUIRED>
+
+<!-- hyperlinkOkBtn   -->
+<!ELEMENT hyperlinkOkBtn (#PCDATA)>
+<!ATTLIST hyperlinkOkBtn id CDATA #REQUIRED>
+<!ATTLIST hyperlinkOkBtn x CDATA #REQUIRED>
+<!ATTLIST hyperlinkOkBtn y CDATA #REQUIRED>
+
+<!-- tabCurrentStatus   -->
+<!ELEMENT tabCurrentStatus (#PCDATA)>
+<!ATTLIST tabCurrentStatus id CDATA #REQUIRED>
+<!ATTLIST tabCurrentStatus x CDATA #REQUIRED>
+<!ATTLIST tabCurrentStatus y CDATA #REQUIRED>
+
+<!-- mashtheadStyle   -->
+<!ELEMENT mashtheadStyle (#PCDATA)>
+<!ATTLIST mashtheadStyle id CDATA #REQUIRED>
+<!ATTLIST mashtheadStyle x CDATA #REQUIRED>
+<!ATTLIST mashtheadStyle y CDATA #REQUIRED>
+
+<!-- tabCurrentStatusOkBtn   -->
+<!ELEMENT tabCurrentStatusOkBtn (#PCDATA)>
+<!ATTLIST tabCurrentStatusOkBtn id CDATA #REQUIRED>
+<!ATTLIST tabCurrentStatusOkBtn x CDATA #REQUIRED>
+<!ATTLIST tabCurrentStatusOkBtn y CDATA #REQUIRED>
+
+<!-- chpQueryName   -->
+<!ELEMENT chpQueryName (#PCDATA)>
+<!ATTLIST chpQueryName id CDATA #REQUIRED>
+<!ATTLIST chpQueryName x CDATA #REQUIRED>
+<!ATTLIST chpQueryName y CDATA #REQUIRED>
+
+<!-- searchFor   -->
+<!ELEMENT searchFor (#PCDATA)>
+<!ATTLIST searchFor id CDATA #REQUIRED>
+<!ATTLIST searchFor x CDATA #REQUIRED>
+<!ATTLIST searchFor y CDATA #REQUIRED>
+
+<!-- keywords   -->
+<!ELEMENT keywords (#PCDATA)>
+<!ATTLIST keywords id CDATA #REQUIRED>
+<!ATTLIST keywords x CDATA #REQUIRED>
+<!ATTLIST keywords y CDATA #REQUIRED>
+
+<!-- prodNote   -->
+<!ELEMENT prodNote (#PCDATA)>
+<!ATTLIST prodNote id CDATA #REQUIRED>
+<!ATTLIST prodNote x CDATA #REQUIRED>
+<!ATTLIST prodNote y CDATA #REQUIRED>
+
+<!-- sortBy   -->
+<!ELEMENT sortBy (#PCDATA)>
+<!ATTLIST sortBy id CDATA #REQUIRED>
+<!ATTLIST sortBy x CDATA #REQUIRED>
+<!ATTLIST sortBy y CDATA #REQUIRED>
+
+<!-- dateLoaded   -->
+<!ELEMENT dateLoaded (#PCDATA)>
+<!ATTLIST dateLoaded id CDATA #REQUIRED>
+<!ATTLIST dateLoaded x CDATA #REQUIRED>
+<!ATTLIST dateLoaded y CDATA #REQUIRED>
+
+<!-- liveStory   -->
+<!ELEMENT liveStory (#PCDATA)>
+<!ATTLIST liveStory id CDATA #REQUIRED>
+<!ATTLIST liveStory x CDATA #REQUIRED>
+<!ATTLIST liveStory y CDATA #REQUIRED>
+
+<!-- archieveStory   -->
+<!ELEMENT archieveStory (#PCDATA)>
+<!ATTLIST archieveStory id CDATA #REQUIRED>
+<!ATTLIST archieveStory x CDATA #REQUIRED>
+<!ATTLIST archieveStory y CDATA #REQUIRED>
+
+<!-- okBtnSearchChp   -->
+<!ELEMENT okBtnSearchChp (#PCDATA)>
+<!ATTLIST okBtnSearchChp id CDATA #REQUIRED>
+<!ATTLIST okBtnSearchChp x CDATA #REQUIRED>
+<!ATTLIST okBtnSearchChp y CDATA #REQUIRED>
+
+<!-- editName   -->
+<!ELEMENT editName (#PCDATA)>
+<!ATTLIST editName id CDATA #REQUIRED>
+<!ATTLIST editName x CDATA #REQUIRED>
+<!ATTLIST editName y CDATA #REQUIRED>
+
+<!-- sendToProductionOkBtn   -->
+<!ELEMENT sendToProductionOkBtn (#PCDATA)>
+<!ATTLIST sendToProductionOkBtn id CDATA #REQUIRED>
+<!ATTLIST sendToProductionOkBtn x CDATA #REQUIRED>
+<!ATTLIST sendToProductionOkBtn y CDATA #REQUIRED>
+
+<!-- imageSelect01   -->
+<!ELEMENT imageSelect01 (#PCDATA)>
+<!ATTLIST imageSelect01 id CDATA #REQUIRED>
+<!ATTLIST imageSelect01 x CDATA #REQUIRED>
+<!ATTLIST imageSelect01 y CDATA #REQUIRED>
+
+<!-- imageSelectBtn   -->
+<!ELEMENT imageSelectBtn (#PCDATA)>
+<!ATTLIST imageSelectBtn id CDATA #REQUIRED>
+<!ATTLIST imageSelectBtn x CDATA #REQUIRED>
+<!ATTLIST imageSelectBtn y CDATA #REQUIRED>
+
+<!-- cancelSelectBtn   -->
+<!ELEMENT cancelSelectBtn (#PCDATA)>
+<!ATTLIST cancelSelectBtn id CDATA #REQUIRED>
+<!ATTLIST cancelSelectBtn x CDATA #REQUIRED>
+<!ATTLIST cancelSelectBtn y CDATA #REQUIRED>
+
+<!-- clickOnMagazineTree   -->
+<!ELEMENT clickOnMagazineTree (#PCDATA)>
+<!ATTLIST clickOnMagazineTree id CDATA #REQUIRED>
+<!ATTLIST clickOnMagazineTree x CDATA #REQUIRED>
+<!ATTLIST clickOnMagazineTree y CDATA #REQUIRED>
+
+<!-- selectEating   -->
+<!ELEMENT selectEating (#PCDATA)>
+<!ATTLIST selectEating id CDATA #REQUIRED>
+<!ATTLIST selectEating x CDATA #REQUIRED>
+<!ATTLIST selectEating y CDATA #REQUIRED>
+
+<!-- insertPageOkBtn   -->
+<!ELEMENT insertPageOkBtn (#PCDATA)>
+<!ATTLIST insertPageOkBtn id CDATA #REQUIRED>
+<!ATTLIST insertPageOkBtn x CDATA #REQUIRED>
+<!ATTLIST insertPageOkBtn y CDATA #REQUIRED>
+
+<!-- insertPageCancelBtn   -->
+<!ELEMENT insertPageCancelBtn (#PCDATA)>
+<!ATTLIST insertPageCancelBtn id CDATA #REQUIRED>
+<!ATTLIST insertPageCancelBtn x CDATA #REQUIRED>
+<!ATTLIST insertPageCancelBtn y CDATA #REQUIRED>
+
+<!-- uuidProperties   -->
+<!ELEMENT uuidProperties (#PCDATA)>
+<!ATTLIST uuidProperties id CDATA #REQUIRED>
+<!ATTLIST uuidProperties x CDATA #REQUIRED>
+<!ATTLIST uuidProperties y CDATA #REQUIRED>
+
+<!-- yesBtn   -->
+<!ELEMENT yesBtn (#PCDATA)>
+<!ATTLIST yesBtn id CDATA #REQUIRED>
+<!ATTLIST yesBtn x CDATA #REQUIRED>
+<!ATTLIST yesBtn y CDATA #REQUIRED>
+
+<!-- noBtn   -->
+<!ELEMENT noBtn (#PCDATA)>
+<!ATTLIST noBtn id CDATA #REQUIRED>
+<!ATTLIST noBtn x CDATA #REQUIRED>
+<!ATTLIST noBtn y CDATA #REQUIRED>
+
+<!-- actionOkBtn   -->
+<!ELEMENT actionOkBtn (#PCDATA)>
+<!ATTLIST actionOkBtn id CDATA #REQUIRED>
+<!ATTLIST actionOkBtn x CDATA #REQUIRED>
+<!ATTLIST actionOkBtn y CDATA #REQUIRED>
+
+<!-- overrideCloseBtn   -->
+<!ELEMENT overrideCloseBtn (#PCDATA)>
+<!ATTLIST overrideCloseBtn id CDATA #REQUIRED>
+<!ATTLIST overrideCloseBtn x CDATA #REQUIRED>
+<!ATTLIST overrideCloseBtn y CDATA #REQUIRED>

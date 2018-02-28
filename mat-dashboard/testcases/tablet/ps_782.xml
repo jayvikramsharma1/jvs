@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="FractionalDeeplinking">
+	<steps>
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="createDeeplinking" method="createChildArticle"
+			require="TemplatePlan" />
+		<step name="clickingOnFractionalDeeplink" method="createFractionalDeeplink"
+			require="NewStory" />
+		<step name="clickingOnCreateButton" method="storyCreateBtn"
+			require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="BS_Autom20" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory" />
+		<step name="openingChildArticle" method="openchildarticle"
+			require="TemplatePlan" />
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+	<step name="preparingFractionalDeeplink" method="fractionalDeeplinkingImage"
+			require="ArticlePreparation">
+			<inputs>
+				<input type="INTEGER" value="1" />
+				<input value="" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+	</steps>
+</testCase>

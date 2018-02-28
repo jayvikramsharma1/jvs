@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifest SYSTEM "../schema/manifest.dtd">
+<manifest>
+	<runner channel="tablet" edition="national">
+		<testcase>login</testcase>
+		<testcase>editioncreation_national</testcase>
+		<testcase>book</testcase>
+		<testcase>section</testcase>
+		<testcase>book_section_metadata</testcase>
+		<testcase>tablet_metadata</testcase>
+		<testcase>slot_preview</testcase>
+		<testcase>hide_headline</testcase>
+		<testcase>slot_publish</testcase>
+		<testcase>slot_republish_witharticlechange</testcase>
+		<testcase>hide_navigation</testcase>
+		<testcase>yellow_panel</testcase>
+		<testcase>yellow_panel_color_override</testcase>
+		<testcase>inlineimage_landscape</testcase>
+		<testcase>InlinImageLandscaperight</testcase>
+		<testcase>inlinelandscape_right_left</testcase>
+		<testcase>inlineimage_potrait_leftallignment</testcase>
+		<testcase>inlineimage_potrait_rightallignment</testcase>
+		<testcase>inlineimage_potrait_righttoleftallignment</testcase>
+		<testcase>pull_quote</testcase>
+		<testcase>headlinespan2</testcase>
+		<testcase>headlinespan1</testcase>
+		<testcase>floor_line_image</testcase>
+		<testcase>remove_floorlineimage</testcase>
+		<testcase>blue_panel</testcase>
+		<testcase>blue_panel_color_override</testcase>
+		<testcase>disablefloorline_navigation</testcase>
+		<testcase>tablet_override_feild</testcase>
+		<testcase>one_column</testcase>
+		<testcase>two_column</testcase>
+		<testcase>three_column</testcase>
+		<testcase>top_allignment</testcase>
+		<testcase>middle_allignment</testcase>
+		<testcase>bottom_allignment</testcase>
+		<testcase>baseline</testcase>
+		<testcase>reordering_page</testcase>
+		<testcase>positional_override_page</testcase>
+		<testcase>positionaloverridepage_2</testcase>
+		<testcase>positionaloverridepage_3</testcase>
+		<testcase>positionaloverridepage_4</testcase>
+		<testcase>positionaloverridepage_5</testcase>
+		<testcase>inline_columnwidth</testcase>
+		<testcase>headlinetext_allignmentleft</testcase>
+		<testcase>headlinetext_allignmentcenter</testcase>
+		<testcase>headlinetext_allignmentright</testcase>
+		<testcase>publish_article</testcase>
+		<!-- SundayTimes_Phase1_regression_Pack3 <testcase>st_login</testcase> 
+			<testcase>st_disablefloorline_navigation</testcase> <testcase>st_tablet_override_feild</testcase> 
+			<testcase>st_one_column</testcase> <testcase>st_two_column</testcase> <testcase>st_three_column</testcase> 
+			<testcase>st_top_allignment</testcase> <testcase>st_middle_allignment</testcase> 
+			<testcase>st_bottom_allignment</testcase> <testcase>st_baseline</testcase> 
+			<testcase>st_positional_override_page</testcase> <testcase>st_positionaloverridepage_2</testcase> 
+			<testcase>st_positionaloverridepage_3</testcase> <testcase>st_positionaloverridepage_4</testcase> 
+			<testcase>st_positionaloverridepage_5</testcase> <testcase>st_publish_article</testcase> 
+			<testcase>st_headlinetext_allignmentleft</testcase> <testcase>st_headlinetext_allignmentcenter</testcase> 
+			<testcase>st_headlinetext_allignmentright</testcase> <testcase>st_inline_columnwidth</testcase> -->
+		<!-- Times_Phase1_regression_Pack3 <testcase>login</testcase> <testcase>disablefloorline_navigation</testcase> 
+			<testcase>tablet_override_feild</testcase> <testcase>one_column</testcase> 
+			<testcase>two_column</testcase> <testcase>three_column</testcase> <testcase>top_allignment</testcase> 
+			<testcase>middle_allignment</testcase> <testcase>bottom_allignment</testcase> 
+			<testcase>baseline</testcase> <testcase>positional_override_page</testcase> 
+			<testcase>positionaloverridepage_2</testcase> <testcase>positionaloverridepage_3</testcase> 
+			<testcase>positionaloverridepage_4</testcase> <testcase>positionaloverridepage_5</testcase> 
+			<testcase>inline_columnwidth</testcase> -->
+		<!-- SundayTimes_Phase1_regression_Pack2 <testcase>st_login</testcase> 
+			<testcase>st_inlineimage_landscape_left</testcase> <testcase>st_inlineimagelandscaperight</testcase> 
+			<testcase>st_inlinelandscape_right_left</testcase> <testcase>st_inlineimage_potrait_leftallignment</testcase> 
+			<testcase>st_inlineimage_potrait_rightallignment</testcase> <testcase>st_inlineimage_potrait_righttoleftallignment</testcase> 
+			<testcase>st_pull_quote</testcase> <testcase>st_headlinespan2</testcase> 
+			<testcase>st_headlinespan1</testcase> <testcase>st_floor_line_image</testcase> 
+			<testcase>st_remove_floorlineimage</testcase> <testcase>st_blue_panel</testcase> 
+			<testcase>st_blue_panel_color_override</testcase> -->
+		<!-- SundayTimes_Phase1_regression_Pack1 <testcase>st_login</testcase> 
+			<testcase>st_create_edition</testcase> <testcase>st_newsbook</testcase> <testcase>st_section</testcase> 
+			<testcase>st_book_section_metadata</testcase> <testcase>st_tablet_metadata</testcase> 
+			<testcase>st_slot_preview</testcase> <testcase>st_hide_headline</testcase> 
+			<testcase>st_slot_publish</testcase> <testcase>st_slot_republish_witharticlechange</testcase> 
+			<testcase>st_hide_navigation</testcase> <testcase>st_yellow_panel</testcase> 
+			<testcase>st_yellow_panel_color_override</testcase> -->
+		<!-- Times_Phase1_regression_Pack1 -->
+		<!-- <testcase>login</testcase> <testcase>editioncreation_national</testcase> 
+			<testcase>book</testcase> <testcase>section</testcase> <testcase>book_section_metadata</testcase> 
+			<testcase>tablet_metadata</testcase> <testcase>slot_preview</testcase> <testcase>hide_headline</testcase> 
+			<testcase>slot_publish</testcase> <testcase>slot_republish_witharticlechange</testcase> 
+			<testcase>hide_navigation</testcase> <testcase>yellow_panel</testcase> <testcase>yellow_panel_color_override</testcase> -->
+		<!-- Times_Phase1_regression_Pack2 -->
+		<!--<testcase>inlineimage_landscape</testcase> <testcase>InlinImageLandscaperight</testcase> 
+			<testcase>inlinelandscape_right_left</testcase> <testcase>inlineimage_potrait_leftallignment</testcase> 
+			<testcase>inlineimage_potrait_rightallignment</testcase> <testcase>inlineimage_potrait_righttoleftallignment</testcase> 
+			<testcase>pull_quote</testcase> <testcase>headlinespan2</testcase> <testcase>headlinespan1</testcase> 
+			<testcase>floor_line_image</testcase> <testcase>remove_floorlineimage</testcase> 
+			<testcase>blue_panel</testcase> <testcase>blue_panel_color_override</testcase> -->
+		<!-- Creating Strories using CHP -->
+		<!-- <testcase>chp_story_news</testcase> <testcase>chp_story_business</testcase> 
+			<testcase>chp_story_sports</testcase> <testcase>chp_story_comments</testcase> 
+			<testcase>chp_story_ireland</testcase> -->
+	</runner>
+	<runner channel="tablet" edition="ireland">
+		<!-- <testcase>login</testcase> <testcase>editioncreate_irish</testcase> 
+			<testcase>irish_book</testcase> <testcase>irish_section</testcase> <testcase>irish_book_section_metadata</testcase> 
+			<testcase>irish_tablet_metadata</testcase> <testcase>irish_slot_preview</testcase> 
+			<testcase>irish_hide_headline</testcase> <testcase>irish_slot_publish</testcase> 
+			<testcase>irish_slot_republish_witharticlechange</testcase> <testcase>irish_hide_navigation</testcase> 
+			<testcase>irish_yellow_panel</testcase> <testcase>irish_yellow_panel_color_override</testcase> 
+			<testcase>irish_inlineimage_landscape_left</testcase> <testcase>irish_inlinImageLandscaperight</testcase> 
+			<testcase>irish_inlinelandscape_right_left</testcase> <testcase>irishinline_potrait</testcase> 
+			<testcase>irishinlineimage_potrait</testcase> <testcase>irishInlineImagerighttoleft</testcase> 
+			<testcase>irish_pull_quote</testcase> <testcase>irish_headlinespan2</testcase> 
+			<testcase>irish_headlinespan1</testcase> <testcase>irish_floor_line_image</testcase> 
+			<testcase>irish_remove_floorlineimage</testcase> <testcase>irish_blue_panel</testcase> 
+			<testcase>irish_blue_panel_color_override</testcase> <testcase>irish_disablefloorline_navigation</testcase> 
+			<testcase>irish_one_column</testcase> <testcase>irish_two_column</testcase> 
+			<testcase>irish_three_column</testcase> <testcase>irish_top_allignment</testcase> 
+			<testcase>irish_middle_allignment</testcase> <testcase>irish_bottom_allignment</testcase> 
+			<testcase>irish_baseline</testcase> <testcase>irish_reordering_page</testcase> 
+			<testcase>irish_positional_override_page</testcase> <testcase>irish_positionaloverridepage_2</testcase> 
+			<testcase>irish_positionaloverridepage_3</testcase> <testcase>irish_positionaloverridepage_4</testcase> 
+			<testcase>irish_positionaloverridepage_5</testcase> <testcase>irish_inline_columnwidth</testcase> 
+			<testcase>irish_headlinetext_allignmentleft</testcase> <testcase>irish_headlinetext_allignmentcenter</testcase> 
+			<testcase>irish_headlinetext_allignmentright</testcase> <testcase>irish_publish_article</testcase> -->
+		<!-- SundayTimes_Phase1_regression_Pack3<testcase>st_login</testcase> <testcase>st_irish_disablefloorline_navigation</testcase> 
+			<testcase>st_irish_tablet_override_feild</testcase> <testcase>st_irish_one_column</testcase> 
+			<testcase>st_irish_two_column</testcase> <testcase>st_irish_three_column</testcase> 
+			<testcase>st_irish_top_allignment</testcase> <testcase>st_irish_middle_allignment</testcase> 
+			<testcase>st_irish_bottom_allignment</testcase> <testcase>st_irish_baseline</testcase> 
+			<testcase>st_irish_reordering_page</testcase> <testcase>st_irish_positional_override_page</testcase> 
+			<testcase>st_irish_positionaloverridepage_2</testcase> <testcase>st_irish_positionaloverridepage_3</testcase> 
+			<testcase>st_irish_positionaloverridepage_4</testcase> <testcase>st_irish_positionaloverridepage_5</testcase> 
+			<testcase>st_irish_headlinetext_allignmentleft</testcase> <testcase>st_irish_headlinetext_allignmentcenter</testcase> 
+			<testcase>st_irish_headlinetext_allignmentright</testcase> <testcase>st_irish_inline_columnwidth</testcase> 
+			<testcase>st_irish_publish_article</testcase> -->
+		<!-- SundayTimes_Phase1_regression_Pack2 <testcase>st_login</testcase> 
+			<testcase>st_irish_inlineimage_landscape_left</testcase> <testcase>st_irish_inlineimagelandscaperight</testcase> 
+			<testcase>st_irish_inlinelandscape_right_left</testcase> <testcase>st_irish_inlineimage_potrait_leftallignment</testcase> 
+			<testcase>st_irish_inlineimage_potrait_rightallignment</testcase> <testcase>st_irish_inlineimage_potrait_righttoleftallignment</testcase> 
+			<testcase>st_irish_pull_quote</testcase> <testcase>st_irish_headlinespan2</testcase> 
+			<testcase>st_irish_headlinespan1</testcase> <testcase>st_irish_floor_line_image</testcase> 
+			<testcase>st_irish_remove_floorlineimage</testcase> <testcase>st_irish_blue_panel</testcase> 
+			<testcase>st_irish_blue_panel_color_override</testcase> -->
+		<!-- SundayTimes_Irish_Phase1_regression_Pack1 -->
+		<!-- <testcase>st_login</testcase> <testcase>st_create_edition_ireland</testcase> 
+			<testcase>st_irish_newsbook</testcase> <testcase>st_irish_section</testcase> 
+			<testcase>st_irish_book_section_metadata</testcase> <testcase>st_irish_tablet_metadata</testcase> 
+			<testcase>st_irish_slot_preview</testcase> <testcase>st_irish_hide_headline</testcase> 
+			<testcase>st_irish_slot_publish</testcase> <testcase>st_irish_slot_republish_witharticlechange</testcase> 
+			<testcase>st_irish_hide_navigation</testcase> <testcase>st_irish_yellow_panel</testcase> 
+			<testcase>st_irish_yellow_panel_color_override</testcase> -->
+		<!-- Times_Irish_Phase1_regression_Pack1 -->
+		<!-- <testcase>login</testcase> <testcase>editioncreate_irish</testcase> 
+			<testcase>bookIrish</testcase> <testcase>irish_section</testcase> <testcase>irish_book_section_metadata</testcase> 
+			<testcase>irish_tablet_metadata</testcase> <testcase>irish_slot_preview</testcase> 
+			<testcase>irish_hide_headline</testcase> <testcase>irish_slot_publish</testcase> 
+			<testcase>irish_slot_republish_witharticlechange</testcase> <testcase>irish_hide_navigation</testcase> 
+			<testcase>irish_yellow_panel</testcase> <testcase>irish_yellow_panel_color_override</testcase> -->
+		<!-- Times_Irish_Phase1_regression_Pack2 -->
+		<!--<testcase>irish_inlineimage_landscape_left</testcase> <testcase>irish_inlinImageLandscaperight</testcase> 
+			<testcase>irish_inlinelandscape_right_left</testcase> <testcase>irishinline_potrait</testcase> 
+			<testcase>irishinlineimage_potrait</testcase> <testcase>irishInlineImagerighttoleft</testcase> 
+			<testcase>irish_pull_quote</testcase> <testcase>irish_headlinespan2</testcase> 
+			<testcase>irish_headlinespan1</testcase> <testcase>irish_floor_line_image</testcase> 
+			<testcase>irish_remove_floorlineimage</testcase> <testcase>irish_blue_panel</testcase> 
+			<testcase>irish_blue_panel_color_override</testcase> -->
+	</runner>
+	<runner channel="digital" edition="ireland">
+		<testcase>login</testcase>
+	</runner>
+	<runner channel="print" edition="ireland">
+		<testcase>login</testcase>
+	</runner>
+</manifest>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="AddtoCarosual" comments="Executing the testcase in Slot4">
+	<steps>
+	<step name="selectingtheSlot" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="SA_AddtoCarosual1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory" />
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy" />
+		<step name="ScrollingToInlineArea" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="18" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="addCarosual1" method="addcarosual1" require="ArticlePreparation">
+			<inputs>
+				<input value="BS_1_AddCarosual*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="InsertingImageinline" method="dropDownBtn" require="AssertInsertInline">
+			<inputs>
+				<input value="0" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingOk" method="assetInsertOkBtn" require="AssertInsertInline">
+		</step>
+		<step name="addCarosual2" method="addcarosual2" require="ArticlePreparation">
+			<inputs>
+				<input value="BS_2_AddCarosual*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="InsertingImageinline2" method="dropDownBtn" require="AssertInsertInline">
+			<inputs>
+				<input value="0" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingOkforsecondimage" method="assetInsertOkBtn"
+			require="AssertInsertInline">
+		</step>
+		<step name="MovingUp" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="60" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="entertheArticleText" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man might very 
+			likely be mutually related in the same fashion and there can be nothing so 
+			remote that we cannot reach to it. All those things which falls under the 
+			cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it. All those 
+			things which falls under the cognizance of man might very likely be mutually 
+			related in the same fashion and there can be nothing so remote that we cannot 
+			reach to it. All those things which falls under the cognizance of man might 
+			very likely be mutually related in the same fashion and there can be nothing 
+			so remote that we cannot reach to it. All those things which falls under 
+			the cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it. All those 
+			things which falls under the cognizance of man might very likely be mutually 
+			related in the same fashion and there can be nothing so remote that we cannot 
+			reach to it. All those things which falls under the cognizance of man might 
+			very likely be mutually related in the same fashion and there can be nothing 
+			so remote that we cannot reach to it. All those things which falls under 
+			the cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="preparingtheArticle" method="storyPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="Addition Image Article" type="STRING" />
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_3_AddCarosual*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="SaveAndCloseArticle" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+		<step name="OpenTheSelectedSlotforAddToCarosual" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="opentheArticleforAddToCarosual" method="openarticle"
+			require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="Movingdown" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="25" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickonFirstAdditionalImage" method="addcarosualchange1"
+			require="ArticlePreparation" screenshot="true" />
+		<step name="ClickAddToCarosual" method="addToCarousel" require="ArticleImageMetadata"
+			screenshot="true" />
+		<step name="ClickSaveforFirstAdditionalImage" method="medataPanelSaveBtn"
+			require="ArticleImageMetadata">
+		</step>
+		<step name="clickforimageUUID" method="inlineImageUUID2" require="ArticlePreparation">
+		</step>
+		<step name="MovingTopOftheArticle" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="publishtheArticle" method="publishArticle" require="ArticlePreparation">
+			<expected>
+				<result message="Additional image send to AddToCarosual"
+					value="true" element="cpi:addtoCarousel" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+		<step name="MovingdownforsecondImage" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="35" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickonSecondAdditionalImage" method="addcarosualchange2"
+			require="ArticlePreparation" screenshot="true" />
+		<step name="ClcikAddToCarosualforSecondImage" method="addToCarousel"
+			require="ArticleImageMetadata" screenshot="true" />
+		<step name="ClickSaveforSecondAdditionalImage" method="medataPanelSaveBtn"
+			require="ArticleImageMetadata">
+		</step>
+		<step name="clickforimageUUIDforSecondImage" method="inlineImageUUID3"
+			require="ArticlePreparation">
+		</step>
+		<step name="MovingTopOftheArticleForMainImage" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="50" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="publishtheArticleforSecondImage" method="publishArticle"
+			require="ArticlePreparation">
+			<expected>
+				<result message="Additional image send to AddToCarosual"
+					value="true" element="cpi:addtoCarousel" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+		<step name="imageMetadata" method="clickingOnImage" require="ArticlePreparation"
+			screenshot="true">
+		</step>
+		<step name="clickonSecondAdditionalImagetoPerformAddToCarosual" method="addToCarousel"
+			require="ArticleImageMetadata" screenshot="true" />
+		<step name="ClickSavebutton" method="medataPanelSaveBtn" require="ArticleImageMetadata">
+		</step>
+		<step name="gettingmainImageUUID" method="imageUUIDBtn"
+			require="ArticlePreparation"/>
+		<step name="publishtheArticleformainImage" method="publishArticle"
+			require="ArticlePreparation">
+			<expected>
+				<result message="Additional image send to AddToCarosual"
+					value="true" element="cpi:addtoCarousel" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+		<step name="SaveAndCloseArticleafterAddingCarosual" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepageafterAddingCarosual" method="close_window" require="TemplatePlan" />
+	</steps>
+</testCase>

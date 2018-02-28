@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="LineHeight"
+	comments="Executing testcase in Main Book in Register section Slot2">
+	<steps>
+		<!-- <step name="moveDowntoNewsSlot" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_LineHeight*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_LineHeight*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" /> -->
+		<step name="OpenTheSelectedSlotAgaintoChangeTheArtilcleHeadlineSize"
+			method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openTheStory" method="open_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation">
+		</step>
+		<step name="clickOnHeadline" method="clickOnTitleHeadline"
+			require="ArticlePreparation" screenshot="true">
+		</step>
+		<step name="enterLineHeight" method="lineHeight" require="Formatting"
+			screenshot="true">
+			<inputs>
+				<input value="5rem" type="STRING" />
+			</inputs>
+		</step>
+		<step name="SaveFontSize" method="formattingSaveBtn" require="Formatting" />
+		<step name="closetheArticlePreparationPagewithArticleChange"
+			method="closeArticlePreparation" require="ArticlePreparation" />
+		<step name="closetemplatepagewithUpdateArticle" method="close_window"
+			require="TemplatePlan" />
+		<step name="republishTheSlot" method="publish" require="EditorialPlan" screenshot="true">
+			<expected>
+				<result message="lineheight should be 5 rem" value="span"
+					element="//cpi:headline/xhtml:div/xhtml:span[@style='line-height: 5rem; display: inline-block;']"
+					type="S3" feedType="article" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

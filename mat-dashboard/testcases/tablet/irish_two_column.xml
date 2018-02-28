@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="irishTwoColumnWidthinImageMetadataWindow"
+	comments="Executing the testcases in Main Book at Business section in slot3. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228367">
+	<steps>
+		<!-- <step name="editorialPageDown" method="editorialPageDown" require="EditorialPlan"> 
+			<inputs> <input value="down" type="STRING" /> <input value="10" type="INTEGER" 
+			/> </inputs> </step> -->
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_1_23_irish_twoColumn*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_23_irish_twoColumn*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveandPublishtheArticle" method="saveArticle"
+			require="ArticlePreparation" />
+		<step name="MovingTopOftheArticle" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="imageMetadata" method="clickingOnImage" require="ArticlePreparation"
+			screenshot="true">
+		</step>
+		<step name="oneColumWidth" method="positionalsColumnWidth"
+			require="ArticleImageMetadata" screenshot="true">
+			<inputs>
+				<input value="2" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="ClickSavebutton" method="medataPanelSaveBtn" require="ArticleImageMetadata">
+		</step>
+		<step name="MovingTopOftheArticletogetImageUUID" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="gettingImageUUID" method="imageUUIDBtn" require="ArticlePreparation">
+		</step>
+		<step name="closeStoryPreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Image Column Width is 2" value="2"
+					element="cpi:widthInColumn" type="S3" feedType="imagePositional"
+					s3Content="true" />
+			</expected>
+		</step>
+		<step name="OpenTheSelectedSlottoAmendImagePosition" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="opentheArticletoMakechangeinImagePosition" method="openarticle"
+			require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performOneColumnWidth" method="columwidth" require="ArticlePreparation"
+			screenshot="true">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="MovingTopOftheArticletocaptureagainWithAmend" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="capturetheamend" method="captureColumnWidthChange"
+			require="ArticlePreparation" screenshot="true" />
+		<step name="MovingTopOftheArticletogetImageUUIDwithAmend" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="gettingImageUUIDwithAmend" method="imageUUIDBtn"
+			require="ArticlePreparation">
+		</step>
+		<step name="closeStoryPreparationWindowwithAmend" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepagewithAmend" method="close_window"
+			require="TemplatePlan" />
+		<step name="publishtheSlotwithAmend" method="publish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Image Column Width is 3" value="3"
+					element="cpi:widthInColumn" type="S3" feedType="imagePositional" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

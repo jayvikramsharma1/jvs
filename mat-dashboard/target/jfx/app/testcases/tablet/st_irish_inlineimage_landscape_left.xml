@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundayTimesIrishInsertInlineLandscapeLeftAllignment"
+	comments="Executing the testcase in Irish Edition in Sports Book at Sports Cover Section at Slot3. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228343">
+	<steps>
+		<step name="clickingOnSportsBook" method="stSportsIreland"
+			require="STEditionCreation" />
+		<step name="slotSelectionSportsBook" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+			<step name="moveDowntoNewsSlot" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan">
+		</step>
+		<step name="selectingTabletPattern" method="templatePattern"
+			require="EditorialPlan">
+			<inputs>
+				<input value="0" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickOntheSearchBoxandSelecttheDesign" method="searchTemplateDesign"
+			require="EditorialPlan">
+			<inputs>
+				<input value="ST_TD_NEWS_Mark_Inline_Images_NEW_15-Dec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="addingTemplateDesignPattern" method="tdSlot3"
+			require="EditorialPlan" />
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="expandIrish" method="stIrelandExpand" require="NewStory">
+			<inputs>
+				<input value="9" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="ST_SA_1_30_irish_InlineImagelandscapeLeftAllignment"
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory"
+			screenshot="true" />
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy">
+
+		</step>
+		<step name="ArticleDescription" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertinlineimage" method="inlineImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_30_ST_irish_inline_Landscape_left*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="InsertingImageinline" method="dropDownBtn" require="AssertInsertInline">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingOk" method="assetInsertOkBtn" require="AssertInsertInline">
+		</step>
+		<step name="saveArticle" method="saveArticle" require="ArticlePreparation">
+		</step>
+		<step name="movingDownToGetTheINLIneImageUUID" method="inlineImageUUID"
+			require="ArticlePreparation">
+		</step>
+
+		<step name="inlineStoryPreparation" method="inlineStoryPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="InLine Image LeftAllignment" type="STRING" />
+			</inputs>
+		</step>
+		<step name="getImageFromCHP" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_30_ST_irish_Landscape_left*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savetheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closeArticlePreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Validating Inline Image is presented in the article"
+					value="link" element="cpi:copy/xhtml:div/xhtml:p/xhtml:link[@rel='related']"
+					type="S3" feedType="article" />
+			</expected>
+		</step>
+		<step name="validateTheInlineimageofWidth1600" method="test"
+			require="EditorialPlan">
+			<expected>
+				<result message="Validating Inline Image of width is 1600"
+					value="1600" element="cpi:width" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+		<step name="validateTheInlineimageofHeight900" method="test"
+			require="EditorialPlan">
+			<expected>
+				<result message="Validating Inline Image of Height is 900"
+					value="900" element="cpi:height" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="OpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savethechanges" method="saveArticle" require="ArticlePreparation" />
+		<step name="SelectTheInlineImage" method="mousewheeler" require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="17" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="leftAllignment" method="horizontalAlignment" require="ArticlePreparation"
+			screenshot="true">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="CaptureleftAllignmentChanges" method="captureHorizontalAlignmentChange" require="ArticlePreparation" screenshot="true">
+		</step>
+		<step name="saveTheArticleWithHorizontalAlignmentChange" method="saveArticle"
+			require="ArticlePreparation">
+		</step>
+		<step name="inlineImageUUID" method="inlineImageUUID" require="ArticlePreparation">
+		</step>
+		<step name="closeArticlePreparationWindowwithAllignment" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepagewithAlignmentChange" method="close_window"
+			require="TemplatePlan" />
+		<step name="publishtheSlotwithAllignmentChange" method="stPublish"
+			require="EditorialPlan" screenshot="true">
+			<expected>
+				<result message="Horizontal Alignment is Left" value="left"
+					element="cpi:horizontalAlignment" type="S3" feedType="imagePositional" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

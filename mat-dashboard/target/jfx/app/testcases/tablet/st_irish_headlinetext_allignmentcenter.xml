@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundayTimesIrishHeadlineTextAllignmentCenter"
+	comments="Executing the test case in Business Book at Business Cover Section at Slot5. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228288">
+	<steps>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_1_15_st_irish_Headline_Center*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_15_st_irish_Headline_Center*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openQuickMetadata" method="quickmetadata" require="ArticlePreparation" />
+		<step name="Selectingthetablettab" method="selectingTablet"
+			require="QuickMetadataTablet" />
+		<step name="clickingHideHeadlinebutton" method="headlineSpanDropDownPosition"
+			require="QuickMetadataTablet" screenshot="true">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingQuickMetadataSaveButton" method="saveBtnDefault"
+			require="QuickMetadataTablet" />
+		<step name="publishtheArticlewhichhideheadline" method="publishArticle"
+			require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Headline Text Allignment Should be Center"
+					value="center" element="cpi:headlineTextAlignment" type="S3"
+					feedType="articleMetadata" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="PublishingArticle">
+	<steps>
+		<step name="slotSelection" method="slot" require="EditorialPlan">
+			<inputs>
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="BS_Publishing_article_Story_6*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="preparingtheArticle" method="storyPreparationCHP"
+			require="ArticlePreparation">
+			<inputs>
+			<input value="Publishing Article" type="STRING" />
+				<input value="Automation Standfirst" type="STRING" />
+				<input value="Automation onecolumnStandfirst" type="STRING" />
+				<input value="Automation floorlineHeadline" type="STRING" />
+			</inputs>
+		</step>
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_Publishing_article_Image_6*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="publishandClosetheArticlePreparationPage" method="saveAndCloseStoryPreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="navigatingtoTabPageFlow" method="releasePage"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickingontheStatus" method="tabPageFlow" require="TabPageFlow">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="navigatingtoWorkFlowWindow" method="workflowNational"
+			require="EditorialPlan" />
+		<step name="ChangingStatustoDone" method="doneStatus" require="EditorialWorkFlow" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+	</steps>
+</testCase>

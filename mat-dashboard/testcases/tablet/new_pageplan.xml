@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="NewPagePlanWindow">
+	<steps>
+		<step name="newpageplan" method="createPagePlan" require="PagePlanner">
+			<inputs>
+				<input value="14/02/2017" type="STRING"/>
+			</inputs>
+		</step>
+	</steps>
+</testCase>

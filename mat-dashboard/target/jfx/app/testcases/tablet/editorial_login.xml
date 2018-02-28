@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="EditorialUser">
+	<steps>
+		<step name="closeEditorialWindow" method="closeWindow" require="EditorialPlan"/>
+			<step name="closeMainWindow" method="closeWindow" require="PagePlanner"/>
+				<step name="doEditorialLogin" method="editorialLogin" require="EditorialLogin">
+					<inputs>
+						<input value="timesdigital_dpp" type="STRING" />
+						<input value="NR360Generic" type="STRING" />
+					</inputs>
+				</step>
+				<step name="openPagePlan" method="openExistingPagePlan"
+					require="PagePlanner">
+					<inputs>
+						<input value="04/05/2017" type="STRING" />
+					</inputs>
+				</step>
+				<step name="expandingNationalPublishing" method="nationalPlanExtend"
+					require="EditorialPlan" />
+				<step name="navigateToWorkflowWindow" method="workflowNational"
+					require="EditorialPlan" />
+				<step name="changingStatustoDone" method="doneStatus" require="EditorialWorkFlow" />
+				<step name="ExpandingNationalPublishing" method="irishPlanExtend"
+					require="EditorialPlan" />
+				<step name="navigateToWorkflowWindowforIrish" method="workflowIrish"
+					require="EditorialPlan" />
+				<step name="changingStatustoDonetoIrish" method="doneStatus" require="EditorialWorkFlow" />
+	</steps>
+</testCase>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="Chpstories">
+	<steps>
+		<step name="clickingOnSearchCHP" method="chpQuery" require="PagePlanner" />
+		<step name="querySelect" method="quickCHPQuery" require="CHP">
+			<inputs>
+				<input value="story" type="STRING" />
+			</inputs>
+		</step>
+		<step name="searchingStory" method="storySearch" require="CHP">
+			<inputs>
+				<input value="football" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonStory" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionStory" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_AutoCHPStories1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="searchForPictures" method="pictureSearch" require="CHP">
+			<inputs>
+				<input value="footBall" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonImage" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionImage" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_AutoCHPImage1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closingCHP" method="closeChp" require="CHP" />
+	</steps>
+</testCase>

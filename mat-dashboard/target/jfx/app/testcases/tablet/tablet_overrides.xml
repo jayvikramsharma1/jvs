@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="TabletOverride">
+	<steps>
+		<step name="OpentheSelectedSlot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="OverrideOneColumnStandfirst" method="overrideStandfirst"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="Verifying Override onecolumnStandfirst" type="STRING" />
+			</inputs>
+		</step>
+		<step name="Overridefloorlineheadline" method="floorlineHeadline"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="Verifying floorlineHeadline for tablet override" type="STRING" />
+			</inputs>
+		</step>
+		<step name="PublishingandClosingtheArticle" method="saveAndCloseStoryPreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepage" method="close_window"
+			require="TemplatePlan" />
+			<step name="publishtheSlot" method="publish"
+			require="EditorialPlan" />
+	</steps>
+</testCase>

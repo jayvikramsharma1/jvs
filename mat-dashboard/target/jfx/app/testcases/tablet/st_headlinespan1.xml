@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundayTimesHeadlineSpanText1" comments="Executing the testcase in Business book at Business -small Business Section at Slot1. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228264">
+	<steps>
+	<step name="moveDowntoNewsSlot" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_8_2_ST_headlinspan1*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_8_2_ST_headlinspan1*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openQuickMetadata" method="quickmetadata" require="ArticlePreparation" />
+		<step name="Selectingthetablettab" method="selectingTablet"
+			require="QuickMetadataTablet" />
+			<step name="selectingHeadlineSpanText1" method="headlineSpanDropDownnumber"
+			require="QuickMetadataTablet" screenshot="true">
+			<inputs>
+				<input value="2" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickingQuickMetadataSaveButton" method="saveBtnPosition"
+			require="QuickMetadataTablet" />
+			<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublish" require="EditorialPlan" screenshot="true">
+		<expected>
+				<result message="Article Headline Span Text Should be 1" value="1"
+					element="cpi:headlineSpan" type="S3" feedType="articleMetadata" />
+			</expected>
+			</step>
+	</steps>
+</testCase>

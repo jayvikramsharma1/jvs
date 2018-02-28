@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundayTimesIrishReoderingThePages"
+	comments="Swapping the Slots in Magazine Book. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228267">
+	<steps>
+		<step name="editorialPagUp" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="magazineSlotSelection" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="allContent" method="allContent" require="EditorialPlan" />
+		<step name="selectMagazineSlotBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="editorialPageDown" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="selectTheSlot" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savePagePlan" method="saveArticle" require="EditorialPlan" />
+		<step name="publishtheSection" method="stPublishSlotUUID" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Validating before swapping" value="Magazine"
+					element="cpi:sectionname" type="S3" feedType="section" s3Content="true" />
+			</expected>
+		</step>
+		<step name="editorialPageDownforswapping" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="captureScreen" method="screenCapture" require="EditorialPlan"
+			screenshot="true" />
+		<!-- <step name="selectdifferentslot" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="editorialPageUp" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="selectNewsSectionslot" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savePagePlan" method="saveArticle" require="EditorialPlan" />
+		<step name="publishtheSection" method="publishSlotUUID" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Validating before swapping" value="Business"
+					element="cpi:sectionname" type="S3" feedType="section" s3Content="true" />
+			</expected>
+		</step>
+		<step name="editorialPagedownagain" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step> -->
+		<step name="swapslots" method="reorderingPages" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="swapslots1" method="reorderingPages2" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="swapslots2" method="reorderingPages3" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="captureScreenafterSwapping" method="screenCapture"
+			require="EditorialPlan" screenshot="true" />
+		<step name="slotSelectionMainBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="editorialPageupagain" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="selectMagazineSlotAgain" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savePagePlanafterSwapping" method="saveArticle"
+			require="EditorialPlan" />
+		<step name="publishtheSectionafterSwapping" method="stPublishSlotUUID" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Validating before swapping" value="Magazine"
+					element="cpi:sectionname" type="S3" feedType="section" s3Content="true" />
+			</expected>
+		</step>
+	</steps>
+</testCase>
+		
+		

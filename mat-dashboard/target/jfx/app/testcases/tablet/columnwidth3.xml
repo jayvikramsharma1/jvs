@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="threeColumnWidth" comments="Executing the testcases in ireland at business section in slot6">
+	<steps>
+		<!-- <step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_3columnwidth*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_3columnwidth*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveandPublishtheArticle" method="saveArticle"
+			require="ArticlePreparation" />
+			<step name="MovingTopOftheArticle" method="mousewheeler"
+			require="ArticlePreparation" >
+			<inputs>
+			<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="performOneColumnWidth" method="columwidth" require="ArticlePreparation">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="MovingTopOftheArticletogetImageUUID" method="mousewheeler"
+			require="ArticlePreparation" >
+			<inputs>
+		<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="gettingImageUUID" method="imageUUIDBtn"
+			require="ArticlePreparation">
+		</step>
+		<step name="closeStoryPreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan"/> -->
+			<step name="OpenTheSelectedSlottoAmendImagePosition"
+			method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="opentheArticletoMakechangeinImagePosition" method="openarticle"
+			require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performOneColumnWidth" method="columwidth" require="ArticlePreparation" screenshot="true">
+			<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="MovingTopOftheArticletogetImageUUID" method="mousewheeler"
+			require="ArticlePreparation" >
+			<inputs>
+		<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="gettingImageUUID" method="imageUUIDBtn"
+			require="ArticlePreparation">
+		</step>
+		<step name="closeStoryPreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan">
+			<expected>
+				<result message="Image Column Width" value="1"
+					element="cpi:widthInColumn" type="S3" feedType="imagePositional" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

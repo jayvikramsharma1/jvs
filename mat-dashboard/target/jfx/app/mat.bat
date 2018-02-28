@@ -1,0 +1,1 @@
+java -jar mat-dashboard-0.0.1-SNAPSHOT-jfx.jar

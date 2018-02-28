@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="PS_780">
+	<steps>
+	    
+	     <!-- <step name="workflowChange" method="workflowNational" require="EditorialPlan" /> -->
+	    <!--  <step name="pageplanexpand" method="nationalPlanExtend" require="EditorialPlan" /> -->
+	 	<step name="DragFrame" method="dragFrame" require="EditorialPlan" />
+		<step name="ClickMagazine" method="clickOnMagazine" require="EditorialPlan" />
+		<step name="ClickInsert" method="clickOnInsert" require="EditorialPlan" /> 
+		<step name="ClickOnMag" method="InsertPageEating" require="InsertPages"/>
+		<step name="slotSelection" method="slot" require="EditorialPlan">
+			<inputs>
+				<input value="eatingSlot" type="STRING" />
+			</inputs>
+		</step>	
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="BS_eating_food_Story_01*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="preparingtheArticle" method="storyPreparationCHP"
+			require="ArticlePreparation">
+			<inputs>
+			<input value="Automation Eating section" type="STRING" />
+				<input value="Automation Eating Standfirst" type="STRING" />
+				<input value="Automation Eating onecolumnStandfirst" type="STRING" />
+				<input value="Automation Eating floorlineHeadline" type="STRING" />
+			</inputs>
+		</step> 
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_eating_food_Image_01*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="publishandClosetheArticlePreparationPage" method="saveAndCloseStoryPreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="navigatingtoTabPageFlow" method="releasePage"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot4" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickingontheStatus" method="tabPageFlow" require="TabPageFlow">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="navigatingtoWorkFlowWindow" method="workflowNational"
+			require="EditorialPlan" />
+		<step name="ChangingStatustoDone" method="doneStatus" require="EditorialWorkFlow" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+	</steps>
+</testCase>

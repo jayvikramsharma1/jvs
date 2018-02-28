@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifest SYSTEM "../schema/manifest.dtd">
+<manifest>
+<!-- The Times Test Cases -->
+<runner channel="tablet" edition="national">
+	<testcase>login</testcase>
+</runner>
+</manifest>

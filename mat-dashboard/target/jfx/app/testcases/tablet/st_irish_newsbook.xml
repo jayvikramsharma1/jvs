@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="SundaytimesIrishNewsBook" comments="Executing testcase in Irish Edition in News Book slot. TC_ID:https://newsroom360.testrail.com/index.php?/tests/view/228395">
+	<steps>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="bookCover" method="bookcover" require="NewSearchQuery" screenshot="true">
+			<inputs>
+				<input value="BS_irish_ST_1_17_BookCover*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="stPublishSlotUUID" require="EditorialPlan" screenshot="true">
+			<expected>
+				<result message="Published the cover book for National News Book" value="sundaytimesireland"
+					element="cpi:publication" type="S3" feedType="book" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

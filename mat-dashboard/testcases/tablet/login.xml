@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="LoginTest" comments="login into the application">
+	<steps>
+		<step name="login" method="doLogin" require="Login" />
+		<step name="closeMODWindow" method="close" require="MoD" />
+		<step name="openPagepLan" method="openExistingPagePlan"
+			require="PagePlanner">
+			<inputs>
+				<input value="12/08/2017" type="STRING" />
+			</inputs>
+		</step>
+		<!-- <step name="ExpandingNatioanlPublishing" method="nationalPlanExtend"
+			require="EditorialPlan" />
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan"/> 
+		<step name="slotSelection" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="allContent" method="allContent" require="EditorialPlan" /> -->
+		<!-- <step name="ExpandingNationalPublishing" method="nationalPlanExtend" 
+			require="EditorialPlan" /> <step name="slotSelectionMainBook" method="selectSlot" 
+			require="EditorialPlan"> <inputs> <input value="slot2" type="STRING" /> </inputs> 
+			</step> <step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan"> 
+			</step> <step name="slotSelection" method="selectSlot" require="EditorialPlan"> 
+			<inputs> <input value="slot1" type="STRING" /> </inputs> </step> -->
+	</steps>
+</testCase>

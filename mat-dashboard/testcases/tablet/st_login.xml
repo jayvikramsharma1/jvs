@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="LoginTest" comments="login into the application">
+	<steps>
+		<step name="login" method="doLogin" require="Login" />
+		<step name="closeMODWindow" method="close" require="MoD" />
+		<!-- <step name="CreatingnewPagepLan" method="stCreatePagePlan" require="PagePlanner"> 
+			<inputs> <input value="20170702_Auto_Pack" type="STRING" /> <input value="02/07/2017" 
+			type="STRING" /> <input value="4" type="INTEGER" /> </inputs> </step> -->
+		<step name="OpenPageplan" method="openExistingPagePlan" require="PagePlanner">
+			<inputs>
+				<input value="23/07/2017" type="STRING" />
+			</inputs>
+		</step>
+		<step name="ExpandingIrishPublishing" method="irishPlanExtend"
+			require="EditorialPlan" />
+		<step name="slotSelectionNewsBook" method="irishMainbookBtn" require="EditorialPlan">
+		</step>
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan">
+		</step>
+		<!-- <step name="slotSelectionNewsBook" method="selectSlot" require="EditorialPlan"> 
+			<inputs> <input value="slot2" type="STRING" /> </inputs> </step> -->
+		<!-- <step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan"> 
+			</step> <step name="slotSelection" method="selectSlot" require="EditorialPlan"> 
+			<inputs> <input value="slot1" type="STRING" /> </inputs> </step> <step name="ExpandingNationalPublishing" 
+			method="nationalPlanExtend" require="EditorialPlan" /> -->
+	</steps>
+</testCase>

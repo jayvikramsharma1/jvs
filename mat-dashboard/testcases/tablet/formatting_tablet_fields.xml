@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="FormattingTabletFields">
+	<steps>
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOnHeadline" method="clickOnTitleHeadline"
+			require="ArticlePreparation">
+		</step>
+		<step name="settingLineHeight" method="lineHeight" require="Formatting">
+			<inputs>
+				<input value="+5rem" type="STRING" />
+			</inputs>
+		</step>
+		<step name="formattingSaveBtn" method="formattingSaveBtn"
+			require="Formatting">
+		</step>
+		<step name="saveandPublishtheArticle" method="publishArticle"
+			require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan">
+		<expected>
+				<result message="Panel should set as blue" value="line-height: +5rem; display: inline-block"
+					element="cpi:headline/div/span/@style" type="S3" feedType="article" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT manifest (runner+)>
+<!ELEMENT runner (testcase*)>
+<!ATTLIST runner channel (tablet|print|digital) #REQUIRED>
+<!ATTLIST runner edition (national|ireland) #REQUIRED>
+<!ELEMENT testcase (#PCDATA)>
+
+

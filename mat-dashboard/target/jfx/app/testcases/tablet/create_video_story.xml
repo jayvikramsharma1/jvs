@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="AddingVideoStory">
+	<steps>
+	 <step name="createVideoStory" method="createVideoStory" require="PagePlanner" />
+	 <step name="clickCreateButton" method="storyCreateBtn" require="NewStory" />
+	 <step name="saveVideoStory" method="saveFileAs" require="SaveStory">
+			<inputs>
+				<input value="SA_AutomationVideoStory1" type="STRING" />
+			</inputs> 
+		</step>
+		<step name="enterTitle" method="titleHeadline" require= "VideoStory">
+			<inputs>
+				<input value="Automation" type="STRING" />
+			</inputs> 
+		</step>
+		<step name="openQuickMetadata" method="quickmetadata" require="VideoStory" />
+		<step name="enterEmbeddedCode" method="embeddeCode" require="VideoStory" />
+		<step name="saveQuicMetadata" method="saveBtnDefault" require="QuickMetadataTablet" />
+		<step name="openCandidateBrowser" method="openCandidateBrowser" require="ArticlePreparation" >
+		<inputs>
+				<input value="1" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="videoStoryImage" method="candidateBrowserImage1" require="VideoStory" />
+		<step name="saveandPublishtheArticle" method="saveArticle"
+			require="ArticlePreparation" />
+		<step name="closeArticlePreparationWindow" method="closevideoArticlePreparation"
+			require="VideoStory" />
+	 <!-- <step name="selectingPropertyUUID" method="gettingEditionPropertyUuid" require="PropertyWindow" >
+	 <expected>
+				<result message="Getting Edition Property" value="link"
+					element="atom:link[@title='Main Book']" type="S3" feedType="edition" />
+			</expected>
+			</step> -->
+			<!-- <inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs> 
+		</step>
+		<step name="GettingQuickAccessBar" method="getQuickAccessBar" require="ArticlePreparation" />
+	    <step name="ClickingOnSearchIcon" method="clickOnSearchIcon" require="ArticlePreparation" /> 
+	    <step name="GetVideoStory" method="fileName" require="NewSearchQuery" >
+	    <inputs>
+				<input value="BS_videostory0902" type="STRING" />
+			</inputs>
+	    </step>
+	    <step name="ClickingOnOkbutton" method="okBtn" require="NewSearchQuery" />
+	     <step name="ScrollingToInlineArea" method="mousewheeler" require="ArticlePreparation" >
+	     <inputs>
+				<input value="down" type="STRING" />
+				<input value="18" type="INTEGER" />
+			</inputs>
+	    </step> 
+	    <step name="DragVideoStory" method="dragAndDropVideoStory" require="ArticlePreparation" />
+	     <step name="SaveAndCloseArticle" method="saveAndCloseStoryPreparation" require="ArticlePreparation" />
+	    <step name="closetemplatepage" method="close_window"
+			require="TemplatePlan" />
+			<step name="publishtheSlot" method="publish"
+			require="EditorialPlan" />  -->
+	</steps>
+	</testCase>

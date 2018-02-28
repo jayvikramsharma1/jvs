@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="BookCoverIrish" comments="Creating cover book for Ireland">
+	<steps>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="bookCover" method="bookcover" require="NewSearchQuery"
+			screenshot="true">
+			<inputs>
+				<input value="BS_1_23_Irish_Cover*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Published the cover book for Ireland" value="timesireland"
+					element="cpi:publication" type="S3" feedType="book" />
+			</expected>
+		</step>
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan" />
+		<step name="slotSelection" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="allContent" method="allContent" require="EditorialPlan" />
+	</steps>
+</testCase>

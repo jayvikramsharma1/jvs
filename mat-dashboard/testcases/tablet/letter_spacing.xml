@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="LetterSpacing"
+	comments="Executing testcase in Main Book in Register section Slot3">
+	<steps>
+		<!-- <step name="moveDowntoNewsSlot" method="editorialPageDown" require="EditorialPlan"> 
+			<inputs> <input value="down" type="STRING" /> <input value="10" type="INTEGER" 
+			/> </inputs> </step> -->
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_LetterSpacing*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_LetterSpacing*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+		<step name="OpenTheSelectedSlotAgaintoChangeTheArtilcleHeadlineSize"
+			method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openTheStory" method="open_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation">
+		</step>
+		<step name="clickOnHeadline" method="clickOnTitleHeadline"
+			require="ArticlePreparation" screenshot="true">
+		</step>
+		<step name="enterletterspacing" method="letterSpacing" require="Formatting"
+			screenshot="true">
+			<inputs>
+				<input value="0.5rem" type="STRING" />
+			</inputs>
+		</step>
+		<step name="SaveFontSize" method="formattingSaveBtn" require="Formatting" />
+		<step name="closetheArticlePreparationPagewithArticleChange"
+			method="closeArticlePreparation" require="ArticlePreparation" />
+		<step name="closetemplatepagewithUpdateArticle" method="close_window"
+			require="TemplatePlan" />
+		<step name="republishTheSlot" method="publish" require="EditorialPlan">
+			<expected>
+				<result message="letter 
+			Spacing should be 0.5 rem"
+					value="span"
+					element="//cpi:headline/xhtml:div/xhtml:span[@style='letter-spacing: 
+			0.5rem; display: inline-block;']"
+					type="S3" feedType="article" />
+			</expected>
+		</step>
+		<step name="OpenTheSelectedSlotAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openTheStoryAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="open_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticleAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUIDAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="articleUUIDBtn" require="ArticlePreparation">
+		</step>
+		<step name="clickOnHeadlineAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="clickOnTitleHeadline" require="ArticlePreparation"
+			screenshot="true">
+		</step>
+		<step name="SelecttheText" method="selectAllSlot" require="Formatting">
+		</step>
+		<step name="enterLineHeightAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="letterSpacing" require="Formatting" screenshot="true">
+			<inputs>
+				<input value="10px" type="STRING" />
+			</inputs>
+		</step>
+		<step name="SaveFontSizeAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="formattingSaveBtn" require="Formatting" />
+		<step
+			name="closetheArticlePreparationPagewithArticleChangeAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="closeArticlePreparation" require="ArticlePreparation" />
+		<step
+			name="closetemplatepagewithUpdateArticleAgaintoChangeTheArtilcleHeadlineSizeinpx"
+			method="close_window" require="TemplatePlan" />
+		<step name="republishTheSlotAgain" method="publish" require="EditorialPlan">
+			<expected>
+				<result message="letter Spacing should be 10px" value="span"
+					element="//cpi:headline/xhtml:div/xhtml:span[@style='letter-spacing: 10px; display: inline-block;']"
+					type="S3" feedType="article" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ChpStoriesAdvancedsearch">
+	<steps>
+		<step name="clickingOnSearchCHP" method="chpadvancedSearch"
+			require="CHPFolder">
+			<inputs>
+				<input value="News" type="STRING" />
+				<input type="STRING" value="2000" />
+				<input type="STRING" value="2500" />
+			</inputs>
+		</step>
+		<step name="clickonStory" method="sendToProductionCHAdvanced01"
+			require="PagePlanner" />
+		<step name="sendToProductionStory" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_News_Image_1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonImage02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionImage02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_Sports_Image_2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="closingCHP" method="closeChp" require="CHP" />
+		<!-- <step name="openExistingPagePlan" method="openExistingPagePlan" require="PagePlanner"> 
+			<inputs> <input value="17/04/2017" type="STRING" /> </inputs> </step> <step 
+			name="slotSelection" method="slot" require="EditorialPlan"> <inputs> <input 
+			value="slot4" type="STRING" /> </inputs> </step> <step name="clickOpenArticle" 
+			method="create_article" require="TemplatePlan"> <inputs> <input value="articleSpec" 
+			type="STRING" /> </inputs> </step> <step name="Newstory" method="storyCreateBtn" 
+			require="NewStory" /> <step name="saveStory" method="saveFileAs" require="SaveStory"> 
+			<inputs> <input value="BS_Story888_14" type="STRING" /> </inputs> </step> 
+			<step name="OpenArticle" method="openarticle" require="TemplatePlan"> <inputs> 
+			<input value="articleSpec" type="STRING" /> </inputs> </step> <step name="PerformChannelCopy" 
+			method="createChannelCopy" require="ChannelCopy" /> <step name="articleText" 
+			method="articleDescription" require="ArticlePreparation"> <inputs> <input 
+			value="down" type="STRING" /> <input value="10" type="INTEGER" /> <input 
+			value="All those things which falls under the cognizance of man might very 
+			likely be mutually related in the same fashion and there can be nothing so 
+			remote that we cannot reach to it.All those things which falls under the 
+			cognizance of man might very likely be mutually related in the same fashion 
+			and there can be nothing so remote that we cannot reach to itAll those things 
+			which falls under the cognizance of man might very likely be mutually related 
+			in the same fashion and there can be nothing so remote that we cannot reach 
+			to itAll those things which falls under the cognizance of man might very 
+			likely be mutually related in the same fashion and there can be nothing so 
+			remote that we cannot reach to it " type="STRING" /> </inputs> </step> <step 
+			name="preparingtheInlineArticle" method="inlineStoryPreparation" require="ArticlePreparation"> 
+			<inputs> <input value="up" type="STRING" /> <input value="30" type="INTEGER" 
+			/> <input value="Potrait Image Article" type="STRING" /> <input value="Automation 
+			Standfirst" type="STRING" /> <input value="Automation onecolumnStandfirst" 
+			type="STRING" /> <input value="Automation floorlineHeadline" type="STRING" 
+			/> </inputs> </step> <step name="OverrideOneColumnStandfirst" method="overrideStandfirst" 
+			require="ArticlePreparation"> <inputs> <input value=" Override onecolumnStandfirst" 
+			type="STRING" /> </inputs> </step> <step name="gettingQuickAccesssBar" method="searchQuery" 
+			require="ArticlePreparation" /> <step name="getFIleName" method="getQueryImage" 
+			require="NewSearchQuery"> <inputs> <input value="BS_Potrait_Image_15*" type="STRING" 
+			/> </inputs> </step> <step name="potraitImage" method="getImage" require="CHP" 
+			/> <step name="saveandPublishtheArticle" method="saveAndCloseStoryPreparation" 
+			require="ArticlePreparation" /> <step name="closetemplatepage" method="close_window" 
+			require="TemplatePlan" /> <step name="publishtheSlot" method="publish" require="EditorialPlan" 
+			/> <step name="OpentheSelectedSlot01" method="openSlotSelection" require="EditorialPlan"> 
+			<inputs> <input value="slot4" type="STRING" /> </inputs> </step> <step name="clickOpenArticle01" 
+			method="openarticle" require="TemplatePlan"> <inputs> <input value="articleSpec" 
+			type="STRING" /> </inputs> </step> <step name="onecolumnStandfirst01" method="onecolumnStandfirst" 
+			require="ArticlePreparation"> <inputs> <input value="onecolumnStandfirst" 
+			type="STRING" /> </inputs> </step> <step name="Overridefloorlineheadline01" 
+			method="floorlineHeadline" require="ArticlePreparation"> <inputs> <input 
+			value="floorlineHeadline for tablet override" type="STRING" /> </inputs> 
+			</step> <step name="PublishingandClosingtheArticle01" method="saveAndCloseStoryPreparation" 
+			require="ArticlePreparation"> </step> <step name="closetemplatepage01" method="close_window" 
+			require="TemplatePlan" /> <step name="publishtheSlot01" method="publish" 
+			require="EditorialPlan"> <expected> <result message="Validating the standfirst" 
+			value="onecolumnStandfirst" element="cpi:subhead/xhtml:div" type="S3" feedType="article" 
+			/> </expected> </step> -->
+	</steps>
+</testCase>

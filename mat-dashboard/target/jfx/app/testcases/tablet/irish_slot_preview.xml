@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="irishSlotPreview" comments="Executing testcase in Front Section at Slot2">
+	<steps>
+		<!-- <step name="moveDowntoNewsSlot" method="editorialPageDown" require="EditorialPlan"> 
+			<inputs> <input value="down" type="STRING" /> <input value="10" type="INTEGER" 
+			/> </inputs> </step> -->
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_1_23_Irish_previewSlot*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_23_irish_Slotpreview*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="previewtheSlot" method="slotPreview" require="EditorialPlan"
+			screenshot="true"/>
+			<step name="publishtheSlot" method="publish" require="EditorialPlan"
+				screenshot="true">
+				<expected>
+					<result message="Added PullQuote to the Article" value="link"
+						element="atom:link[@cpi:qualifier='articleMetaData']" type="S3"
+						feedType="article" />
+				</expected>
+			</step>
+	</steps>
+</testCase>

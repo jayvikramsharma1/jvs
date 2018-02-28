@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="LoginTest">
+	<steps>
+		<step name="login" require="Login" method="doLogin" />
+	</steps>
+</testCase>

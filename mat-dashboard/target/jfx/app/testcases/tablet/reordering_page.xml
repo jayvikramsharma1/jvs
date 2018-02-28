@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ReoderingThePages"
+	comments="Swapping the Slots in Business Section. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228267">
+	<steps>
+		<!-- <step name="editorialPageDown" method="editorialPageDown" require="EditorialPlan"> 
+			<inputs> <input value="down" type="STRING" /> <input value="20" type="INTEGER" 
+			/> </inputs> </step> <step name="newsSlotSelection" method="slot" require="EditorialPlan"> 
+			<inputs> <input value="newsSlot3" type="STRING" /> </inputs> </step> <step 
+			name="allContent" method="allContent" require="EditorialPlan" /> <step name="selectTheSlot" 
+			method="selectSlot" require="EditorialPlan"> <inputs> <input value="slot2" 
+			type="STRING" /> </inputs> </step> <step name="editorialPageDown" method="editorialPageDown" 
+			require="EditorialPlan"> <inputs> <input value="up" type="STRING" /> <input 
+			value="30" type="INTEGER" /> </inputs> </step> <step name="captureScreen" 
+			method="screenCapture" require="EditorialPlan" screenshot="true" /> <step 
+			name="selectdifferentslot" method="selectSlot" require="EditorialPlan"> <inputs> 
+			<input value="slot1" type="STRING" /> </inputs> </step> -->
+			<step name="selectingUnslot" method="unslot" require="EditorialPlan">
+		</step>
+		<step name="selectSlot" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="editorialPageUp" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="35" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="selectBusinessSectionslot" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savePagePlan" method="saveArticle" require="EditorialPlan" />
+		<step name="publishtheSection" method="publishSlotUUID" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Validating before swapping" value="Business"
+					element="cpi:sectionname" type="S3" feedType="section" s3Content="true" />
+			</expected>
+		</step> 
+		<step name="editorialPagedownagain" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="captureScreen" method="screenCapture" require="EditorialPlan"
+			screenshot="true" />
+		<step name="swapslots" method="reorderingPages" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="swapslots1" method="reorderingPages2" require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="swapslots2" method="reorderingPages3" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="captureScreenafterSwapping" method="screenCapture"
+			require="EditorialPlan" screenshot="true" />
+		<step name="slotSelectionMainBook" method="selectSlot" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="editorialPageupagain" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="selectBusinessSlotAgain" method="selectSlot"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="savePagePlanafterSwapping" method="saveArticle"
+			require="EditorialPlan" />
+		<step name="publishtheSectionafterSwapping" method="publishSlotUUID"
+			require="EditorialPlan" screenshot="true">
+			<expected>
+				<result message="Validating after swapping" value="Business"
+					element="cpi:sectionname" type="S3" feedType="section" />
+			</expected>
+		</step>
+		<step name="editorialPagedownfornextcase" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="30" type="INTEGER" />
+			</inputs>
+		</step>
+	</steps>
+</testCase>
+		
+		

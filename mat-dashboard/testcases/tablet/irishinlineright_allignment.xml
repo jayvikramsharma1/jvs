@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="IrishInsertInlineRightAllignmentPosition" comments="Executing the Testcase in Opinion Section at Slot3">
+	 <steps>
+	 <step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="OpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openImageMetadataWindow" method="clickOnInlineImagePotrait" require="ArticlePreparation" screenshot="true">
+		<inputs>
+				<input value="down" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="SettingtheColumnwidth" method="horizontalAllignment"
+			require="ArticleImageMetadata" screenshot="true">
+			<inputs>
+				<input value="2" type="INTEGER" />
+			</inputs>
+		</step>
+		<!-- <step name="RightAllignment" method="horizontalAlignment" require="ArticlePreparation">
+			<inputs>
+				<input value="2" type="INTEGER" />
+			</inputs>
+		</step> -->
+		<step name="saveTheArticleWithHorizontalAlignmentChange" method="saveArticle"
+			require="ArticlePreparation">
+		</step>
+		<step name="inlineImageUUID" method="inlineImagePotraitUUID" require="ArticlePreparation">
+		</step>
+		<step name="closeArticlePreparationWindow" method="closeArticlePreparation"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepagewithAlignmentChange" method="close_window"
+			require="TemplatePlan" />
+		<step name="publishtheSlotwithAlignmentChange" method="publish"
+			require="EditorialPlan" screenshot="true">
+			<expected>
+				<result message="Horizontal Alignment is right" value="right"
+					element="cpi:horizontalAlignment" type="S3" feedType="imagePositional" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

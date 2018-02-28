@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="IrishPullQuote"
+	comments="Executing the testcase in the World Section at Slot3. TC_ID: https://newsroom360.testrail.com/index.php?/tests/view/228256">
+	<steps>
+		<step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="openselectedslot" method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="insertStory" method="create_article" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectWorkFloder" method="workFolder" require="NewStory">
+			<inputs>
+				<input value="2" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickCreateStoryBtn" method="storyCreateBtn" require="NewStory" />
+		<step name="articleName" method="fileName" require="SaveStory">
+			<inputs>
+				<input value="SA_5_23_Irish_PullQuotes" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickSaveAsBtn" method="saveasBtn" require="SaveStory"
+			screenshot="true" />
+		<step name="clickOpenArticle" method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="performChannelCopy" method="createChannelCopy"
+			require="ChannelCopy">
+		</step>
+		<step name="pullquoteinsert" method="insertPullQuote" require="ArticlePreparation"
+			screenshot="true">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="18" type="INTEGER" />
+				<input value="Do or Die" type="STRING" />
+			</inputs>
+		</step>
+		<step name="capture" method="capture" require="ArticlePreparation"
+			screenshot="true" />
+		<step name="movingtopoftheArticlePreparationPage" method="mousewheeler"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="20" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="entertheArticleText" method="articleDescription"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+				<input
+					value="All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it. All those things which falls under the cognizance of man might very likely be mutually related in the same fashion and there can be nothing so remote that we cannot reach to it."
+					type="STRING" />
+			</inputs>
+		</step>
+		<step name="preparingtheArticle" method="inlineStoryPreparation"
+			require="ArticlePreparation">
+			<inputs>
+				<input value="up" type="STRING" />
+				<input value="30" type="INTEGER" />
+				<input value="Pull Quotes" type="STRING" />
+			</inputs>
+		</step>
+		<step name="getImageFromCHP" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_1_23_IrishPullQuotes*" type="STRING" />
+			</inputs>
+		</step>
+		<!-- <step name="SelectingImagefromCandidatebrowser" method="candidateBrowserImage1"
+			require="ArticlePreparation" /> -->
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="publishandClosetheArticlePreparationPage" method="saveAndCloseStoryPreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan"
+			screenshot="true">
+			<expected>
+				<result message="Added PullQuote to the Article" value="link"
+					element="atom:link[@cpi:qualifier='pullQuote']" type="S3" feedType="article" />
+			</expected>
+		</step>
+	</steps>
+</testCase>	

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="DisableSavingArticletosetFalse" comments="Executing the testcase in Law Section at Slot2">
+	<steps>
+		<step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_Metadata_Fasle*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_Metadata_Fasle*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUIDafteramend" method="articleUUIDBtn"
+			require="ArticlePreparation" />
+		<step name="openQuickMetadata" method="quickmetadata" require="ArticlePreparation" />
+		<step name="selectingTheTabletTab" method="selectingTablet"
+			require="QuickMetadataTablet" />
+
+		<step name="clickOnDisableSavingArticle" method="disableSavingArticle"
+			require="QuickMetadataTablet">
+		</step>
+		<step name="saveQuickMetadata" method="saveBtnPosition" require="QuickMetadataTablet" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+		<step name="OpenTheSelectedSlottosetFalsefordisablesaveArticle"
+			method="openSlotSelection" require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="opentheArticletosetFalsefordisablesaveArticle"
+			method="openarticle" require="TemplatePlan">
+			<inputs>
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="openQuickMetadatatosetFalsefordisablesaveArticle"
+			method="quickmetadata" require="ArticlePreparation" />
+		<step name="selectingTheTabletTabtosetFalsefordisablesaveArticle"
+			method="selectingTablet" require="QuickMetadataTablet" />
+
+		<step name="clickOnDisableSavingArticletosetFalsefordisablesaveArticle"
+			method="disableSavingArticleFalse" require="QuickMetadataTablet">
+		</step>
+		<step name="saveQuickMetadatawithamend" method="saveBtnPosition"
+			require="QuickMetadataTablet" />
+		<step name="closetheArticlePreparationPageafteramend" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepagewithamend" method="close_window"
+			require="TemplatePlan" />
+		<step name="publishtheSlotwithAmend" method="publish" require="EditorialPlan">
+			<expected>
+				<result message="Saving Article Should hide" value="false"
+					element="cpi:hideSaving" type="S3" feedType="articleMetadata" />
+			</expected>
+		</step>
+	</steps>
+</testCase>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="RelatedLink_ChildArticle"  comments="Executing testcase in News Section">
+	<steps>
+	<step name="moveDowntoNewsSlot" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="OpenTheSelectedSlot" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_1*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_RelatedLink_1*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUID" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPage" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" />
+		<step name="OpenTheSelectedSlotfor2ndStory" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccessfor2ndStory" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileNamefor2ndStory" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_2*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindowfor2ndStory" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindowfor2ndStory" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_RelatedLink_2*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticlefor2ndStory" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUIDfor2ndStory" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPagefor2ndStory" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepagefor2ndStory" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlotfor2ndStory" method="publish" require="EditorialPlan" />
+		<step name="moveDowntoNewsSlotfor3rdStory" method="editorialPageDown"
+			require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="OpenTheSelectedSlotfor3rdStory" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot1" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccessfor3rdStory" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileNamefor3rdStory" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_3*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindowfor3rdStory" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindowfor3rdStory" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_RelatedLink_3*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticlefor3rdStory" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUIDfor3rdStory" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPagefor3rdStory" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepagefor3rdStory" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlotfor3rdStory" method="publish" require="EditorialPlan" />
+		<step name="OpenTheSelectedSlotfor4thStory" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot2" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccessfor4thStory" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileNamefor4thStory" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_4*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindowfor4thStory" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindowfor4thStory" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_RelatedLink_4*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticlefor4thStory" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUIDfor4thStory" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPagefor4thStory" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepagefor4thStory" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlotfor4thStory" method="publish" require="EditorialPlan" />
+		<step name="opentheshapelibrary" method="shapeLibrary" require="EditorialPlan">
+		</step>
+		<step name="selectingTabletPattern" method="templatePattern"
+			require="EditorialPlan">
+			<inputs>
+				<input value="0" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="clickOntheSearchBoxandSelecttheDesign" method="searchTemplateDesign"
+			require="EditorialPlan">
+			<inputs>
+				<input value="TT_TD_Front_AUTO9BestOfNews_Mark" type="STRING" />
+			</inputs>
+		</step>
+		<step name="selectingtheSlot1" method="tdSlot3" require="EditorialPlan" />
+			<step name="OpenTheSelectedSlotforMainArticle" method="openSlotSelection"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccessfor1stArticle" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileNamefor1stArticle" method="dwpMethodeQueryChildArticle" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_1*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonSearchIconfor2ndArticle" method="searchQuery" require="TemplatePlan" />
+		<step name="fileNamefor2ndArticle" method="dwpMethodeQueryChildArticle" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_2*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonSearchIconfor3rdArticle" method="searchQuery" require="TemplatePlan" />
+		<step name="fileNamefor3rdArticle" method="dwpMethodeQueryChildArticle" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_3*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonSearchIconfor4thArticle" method="searchQuery" require="TemplatePlan" />
+		<step name="fileNamefor4thArticle" method="dwpMethodeQueryChildArticle" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_4*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonSearchIconforMainArticle" method="searchQuery" require="TemplatePlan" />
+		<step name="fileNameforMainArticle" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="SA_RelatedLink_5*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindowforMainArticle" method="checkChannelCopyWindow"
+			require="CHP" />
+		<step name="GetselectWindowforMainArticle" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_RelatedLink_5*" type="STRING" />
+			</inputs>
+		</step>
+		<step name="saveTheArticleforMainArticle" method="saveArticle" require="ArticlePreparation" />
+		<step name="getArticleUUIDforMainArticle" method="articleUUIDBtn" require="ArticlePreparation" />
+		<step name="closetheArticlePreparationPageforMainArticle" method="closeArticlePreparation"
+			require="ArticlePreparation" />
+		<step name="closetemplatepageforMainArticle" method="close_window" require="TemplatePlan" />
+		<step name="publishtheSlotforMainArticle" method="publish" require="EditorialPlan" />
+	</steps>
+</testCase>

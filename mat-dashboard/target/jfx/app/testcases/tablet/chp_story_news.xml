@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="ChpStoriesNews" comments="Importing stories from CHP">
+	<steps>
+		<step name="clickingOnSearchCHP" method="chpQuery" require="PagePlanner" />
+		<step name="querySelect" method="quickCHPQuery" require="CHP">
+			<inputs>
+				<input value="story" type="STRING" />
+			</inputs>
+		</step>
+		 <step name="searchingStory" method="storySearch" require="CHP">
+			<inputs>
+				<input value="News" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonStory01" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionStory01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_onecolumnwidth" type="STRING" />
+			</inputs>
+		</step>
+
+		<step name="clickonStory02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionStory02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="SA_twocolumnwidth" type="STRING" />
+			</inputs>
+		</step> 
+		<step name="searchForPictures" method="pictureSearch" require="CHP" />
+		<step name="clickonImage01" method="sendToProduction01" require="PagePlanner" />
+
+		<step name="sendToProductionImage01" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_onecolumnwidth" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickonImage02" method="sendtoProduction02" require="PagePlanner" />
+		<step name="sendToProductionImage02" method="sendToProduction"
+			require="SendToProduction">
+			<inputs>
+				<input value="BS_twocolumnwidth" type="STRING" />
+			</inputs>
+		</step>
+
+		<!-- <step name="clickonStory02" method="createTopic01" require="PagePlanner" 
+			/> <step name="createTopicFrom" method="topicActions" require="NewTopic"> 
+			<inputs> <input value="BS_AutomationCreateTopic08" type="STRING" /> </inputs> 
+			</step> <step name="closingTopicPage" method="pkgWindow" require="TopicPage" 
+			/> <step name="clickingOnYes" method="yesBtn" require="PopUpToSaveTopic" 
+			/> <step name="searchForPictures" method="pictureSearch" require="NewChpQuery"> 
+			<inputs> <input value="white house" type="STRING" /> </inputs> </step> <step 
+			name="clickonImage01" method="sendToProduction01" require="PagePlanner" /> 
+			<step name="sendToProductionImage01" method="sendToProduction" require="SendToProduction"> 
+			<inputs> <input value="BS_AtomationImage19" type="STRING" /> </inputs> </step> 
+			<step name="clickonImage02" method="createTopic02" require="PagePlanner" 
+			/> <step name="createTopicFrom02" method="topicActions" require="NewTopic"> 
+			<inputs> <input value="BS_topicfromImage04" type="STRING" /> </inputs> </step> 
+			<step name="closingTopicPageImage" method="pkgWindow" require="TopicPage" 
+			/> <step name="clickingOnYesImage" method="yesBtn" require="PopUpToSaveTopic" 
+			/> -->
+
+
+
+
+
+
+		<!-- <step name="openpageplan" method="openExistingPagePlan" require="PagePlanner"> 
+			<inputs> <input value="11/03/2017" type="STRING" /> </inputs> </step> <step 
+			name="slotSelection" method="slot" require="EditorialPlan"> <inputs> <input 
+			value="slot2" type="STRING" /> </inputs> </step> <step name="querySearchdwp" 
+			method="methodeQuery" require="TemplatePlan" /> <step name="fileName" method="dwpMethodeQuery" 
+			require="NewSearchQuery"> <inputs> <input value="BS_AtomationStoryCHP04*" 
+			type="STRING" /> <input value="articleSpec" type="STRING" /> </inputs> </step> 
+			<step name="CheckingWindow" method="checkChannelCopyWindow" require="NewChpQuery" 
+			/> <step name="GetselectWindow" method="addImage" require="NewChpQuery" /> 
+			<step name="querySearchXML" method="searchQuery" require="ArticlePreparation" 
+			/> <step name="getImage" method="getQueryImage" require="NewSearchQuery"> 
+			<inputs> <input value="BS_AtomationImage03.jpg" type="STRING" /> </inputs> 
+			</step> <step name="GetImage" method="getImage" require="NewChpQuery" /> -->
+	</steps>
+</testCase>

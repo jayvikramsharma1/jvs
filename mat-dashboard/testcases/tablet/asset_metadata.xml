@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testCase SYSTEM "../../schema/testcase.dtd">
+<testCase name="AssetMetadata">
+	<steps>
+		<step name="movedown" method="editorialPageDown" require="EditorialPlan">
+			<inputs>
+				<input value="down" type="STRING" />
+				<input value="10" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="slotSelection" method="slot" require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="gettingQuickAccess" method="methodeQuery" require="TemplatePlan" />
+		<step name="fileName" method="dwpMethodeQuery" require="NewSearchQuery">
+			<inputs>
+				<input value="BS_asset_metadata_Story5*" type="STRING" />
+				<input value="articleSpec" type="STRING" />
+			</inputs>
+		</step>
+		<step name="CheckingWindow" method="checkChannelCopyWindow"
+			require="CHP" />
+			<step name="preparingtheArticle" method="storyPreparationCHP"
+			require="ArticlePreparation">
+			<inputs>
+			<input value="Disable tap behaviour" type="STRING" />
+				<input value="Automation Standfirst" type="STRING" />
+				<input value="Automation onecolumnStandfirst" type="STRING" />
+				<input value="Automation floorlineHeadline" type="STRING" />
+			</inputs>
+		</step>
+		<step name="GetselectWindow" method="addImageCHP" require="CHP">
+			<inputs>
+				<input value="BS_asset_metadata_Image_5*" type="STRING" />
+			</inputs>
+		</step>
+		<!-- <step name="saveandPublishtheArticle" method="publishArticle"
+			require="ArticlePreparation" /> -->
+		<step name="imageMetadata" method="clickingOnImage" require="ArticlePreparation">
+		</step>
+		<step name="clickOnDisableTap" method="disableTapBehaviour"
+			require="ArticleImageMetadata">
+		</step>
+		<step name="clickSaveBtn" method="medataPanelSaveBtn" require="ArticleImageMetadata">
+		</step>
+		<step name="closeStoryPreparation" method="gettingImageUUID"
+			require="ArticlePreparation">
+		</step>
+		<step name="closetemplatepage" method="close_window" require="TemplatePlan" />
+		<step name="navigatingtoTabPageFlow" method="releasePage"
+			require="EditorialPlan">
+			<inputs>
+				<input value="slot3" type="STRING" />
+			</inputs>
+		</step>
+		<step name="clickingontheStatus" method="tabPageFlow" require="TabPageFlow">
+			<inputs>
+				<input value="3" type="INTEGER" />
+			</inputs>
+		</step>
+		<step name="navigatingtoWorkFlowWindow" method="workflowNational"
+			require="EditorialPlan" />
+		<step name="ChangingStatustoDone" method="editorialPlanDoneStatus"
+			require="EditorialWorkFlow" />
+		<step name="publishtheSlot" method="publish" require="EditorialPlan" >
+		<expected>
+				<result message="Disable Tap Behavior" value="true"
+					element="cpi:disabletapBehaviour" type="S3" feedType="imageMetadata" />
+			</expected>
+		</step>
+	</steps>
+</testCase>
+		
