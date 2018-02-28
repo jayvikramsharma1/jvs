@@ -1,0 +1,26 @@
+.jfx-tab-pane *.tab-header-area *.tab-header-background {
+  -fx-background-color:  #162a4c;
+}
+
+.jfx-tab-pane {
+  -fx-tab-min-width:150px;
+  -fx-tab-max-width:300px;
+  -fx-tab-min-height:25px;
+  -fx-tab-max-height:30px;
+}
+
+
+.jfx.jfx-tab-pane .tab:selected {
+    -fx-background-color: #5d82a0;   
+ }
+
+.jfx-tab-pane .tab-label{
+	 -fx-background-color:#162a4c; 
+	-fx-font-family: Calibri; 
+	 -fx-text-fill: #ffffff;
+	 -fx-font-size: 12;	  	
+}
+
+.jfx-tab-pane .tab-selected-line {
+     -fx-stroke-width: 2pt;
+}
